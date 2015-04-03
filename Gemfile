@@ -31,6 +31,7 @@ gem 'will_paginate'
 
 gem 'mailboxer'
 gem 'chosen-rails'
+gem 'gravatar_image_tag'
 
 gem 'pry'
 gem 'pry-stack_explorer'
