@@ -14,4 +14,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :conversations, only: [:index, :show, :destroy] do
+    member do
+      post :restore
+    end
+  end
+
 end
