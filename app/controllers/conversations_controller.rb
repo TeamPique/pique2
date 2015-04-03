@@ -6,6 +6,10 @@ class ConversationsController < ApplicationController
     @conversations = @mailbox.inbox.paginate(page: params[:page], per_page: 10)
   end
 
+  def show
+    @conversation = current_user.mailbox.conversations.find_by(id: params[:id])
+  end
+
   private
 
   def get_mailbox
