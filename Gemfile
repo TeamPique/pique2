@@ -29,7 +29,8 @@ gem 'devise-bootstrap-views'
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
 
-gem "mailboxer"
+gem 'mailboxer'
+gem 'chosen-rails'
 
 gem 'pry'
 gem 'pry-stack_explorer'
