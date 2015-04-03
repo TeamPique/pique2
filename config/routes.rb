@@ -6,4 +6,12 @@ Rails.application.routes.draw do
 
   resources :conversations, only: [:index, :show, :destroy]
 
+  resources :messages, only: [:new, :create]
+
+  resources :conversations, only: [:index, :show, :destroy] do
+    member do
+      post :reply
+    end
+  end
+
 end
