@@ -11,4 +11,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
+
+  def meetup
+    id = request.env["omniauth.auth"]["info"]["id"]
+    @response = HTTParty.get("https://api.meetup.com/2/profiles.json/?member_id=" + id.to_s + "&key=" + MEETUP_KEY)
+    render "users/meetup"
+    # meetups_hash
+  end
 end
