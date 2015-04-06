@@ -5,8 +5,43 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- <p class="notice"><#%= notice %></p>
+<p class="alert"><#%= alert %></p> -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Pique</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <% if user_signed_in? %>
+          <li class="active"><a href="/conversations">Your Conversations <span class="sr-only">(current)</span></a></li>
+          <li><a href="/users/edit">Edit Profile</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+        </ul>
+        <% else %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Login", user_omniauth_authorize_path(:linkedin) %></li>
+        </ul>
+        <% end %>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
-  <script type="text/template" id="survey-home-template">
+
+<%= yield %>
+
+<script type="text/template" id="survey-home-template">
     <div class="container wow bounceInUp">
       <div class="row">
         <div class="col-xs-12 col-sm-4 col-sm-offset-1 text-center">
@@ -92,42 +127,5 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
    </script>
-</head>
-<body>
-<!-- <p class="notice"><#%= notice %></p>
-<p class="alert"><#%= alert %></p> -->
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Pique</a>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <% if user_signed_in? %>
-          <li class="active"><a href="/conversations">Your Conversations <span class="sr-only">(current)</span></a></li>
-          <li><a href="/users/edit">Edit Profile</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
-        </ul>
-        <% else %>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Login", user_omniauth_authorize_path(:linkedin) %></li>
-        </ul>
-        <% end %>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-<%= yield %>
-
-
 </body>
 </html>
