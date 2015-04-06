@@ -1,18 +1,23 @@
 @import 'chosen';
 
-h3 {
-  font-family: 'Nunito', sans-serif;
+#surv-header-col {
+  background: url('https://s3.amazonaws.com/arcb_project/1521020400/59280/3.jpg');
+  height: 550px;
+  color: #fff;
+  background-color: #a3a3a3;
+  opacity: .9;
+}
+
+#surv-header-col h1 {
+  margin-top: 26%;
+  font-family: 'Nunito';
 }
 
 h2 {
   padding-bottom: 40px;
 }
 
-#home {
-	height: 100vh;
-}
-
-#section-1, #section-2, #section-3, #section-4, {
+#question-1, #question-2, #question-3, #question-4, {
 	height: 100vh;	
 }
 
@@ -20,24 +25,11 @@ ul#questions-list li {
   display: inline-block;
 }
 
-.messages {
-  max-height: 400px;
-  overflow-y: auto;
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
-
 .question {	
 	height: 200px;
   width: 200px;
 	border: 1px solid #a3a3a3;
 	border-radius: 5%;
-}
-
-button#work-btn, button#idea-btn {
-  border-radius: 1px;
-  font-size: 12px;
-  background-image: linear-gradient(to bottom, #4B92C0 0%, #427FA9 100%);
 }
 
 #footer {
@@ -73,4 +65,11 @@ p.title.sub:after {
     position: relative;
     vertical-align: middle;
     width: 26%;
+}
+
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
