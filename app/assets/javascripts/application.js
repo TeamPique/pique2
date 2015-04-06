@@ -15,6 +15,10 @@
 //= require underscore
 //= require backbone
 //= require wow
+//= require_tree ./models/
+//= require_tree ./collections/
+//= require_tree ./views/
+//= require main
 //= require chosen-jquery
 //= require messages
 //= require_tree .
