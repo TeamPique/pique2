@@ -18,7 +18,8 @@
 //= require_tree ./models/
 //= require_tree ./collections/
 //= require_tree ./views/
-//= require main
+//= require_tree ./views/
+//= require_tree ./views/
 //= require chosen-jquery
 //= require messages
 //= require_tree .

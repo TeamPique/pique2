@@ -12,6 +12,8 @@
  *
  *= require bootstrap
  *= require devise_bootstrap_views
+ *= require bootstrap-theme
+ *= require animate
  *= require_tree .
  *= require_self
  */

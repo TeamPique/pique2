@@ -1,0 +1,143 @@
+body {
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  color: #fff;
+  background-size: cover;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Nunito', sans-serif;serif;
+  padding-bottom: 10px;
+  color: #FCFCFC;
+}
+
+h4 {
+  color: #4A8FBC;
+  text-shadow: 0px 1px #012;
+  font-family: calibri;
+  font-weight: bold;
+} 
+
+p {
+  font-size: 10px;
+  padding-bottom: 25px;
+}
+
+p.title {
+  font-size: 10px;
+}
+
+li p {
+  font-size: 11px;
+  margin-top: -30px;
+}
+
+ul#counter {
+  margin-top: -40px;
+  padding-left: 0px;
+}
+ul#counter li {
+  display: inline-block;
+  padding: 20px;
+}
+
+input#name, input#email {
+  background-color:rgba(0,0,0,0) !important;
+  border-radius: 1.5px;
+  border: 1px solid #77858B;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #F2F3F5;
+  font-size: 12px;
+}
+
+button#register-btn, button#learn-btn {
+  border-radius: 1px;
+  font-size: 12px;
+  background-image: linear-gradient(to bottom, #4B92C0 0%, #427FA9 100%);
+}
+
+button#learn-btn {
+  height: 30px;
+  width: 100px;
+}
+
+#header {
+  margin-top: 85px;
+}
+
+#countdown {
+  padding-top: 50px;
+  min-height: 245px;
+}
+
+.form-control {
+  height: 50px;
+}
+
+#footer {
+	margin-top: 50px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-align: center;
+  display: block;
+}
+
+#sign-up {
+  margin-top: -20px;
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  #sign-up {
+    padding-left: 15px;
+  }
+}
+
+p.title {
+    overflow: hidden;
+    text-align: center;
+    
+}
+p.title.launching-in:before,
+p.title.launching-in:after {
+    background-color: #647278;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 27%;
+}
+p.title:before {
+    right: 1.5em;
+    margin-left: -50%;
+}
+p.title:after {
+    left: 1.5em;
+    margin-right: -50%;
+}
+
+p.title.sign-up:before,
+p.title.sign-up:after {
+    background-color: #647278;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 26%;
+}
+
+p.title.footer:before,
+p.title.footer:after {
+    background-color: #647278;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 14%;
+}
