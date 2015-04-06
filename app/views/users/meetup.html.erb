@@ -1,0 +1,6 @@
+<h1> <%= current_user.name %>'s Meetup Groups </h1>
+<ul>
+  <% @response["results"].each do |group| %>
+    <li> <%= group["group"]["name"] %> </li>
+    <% end %>
+</ul>
