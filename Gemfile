@@ -40,6 +40,7 @@ gem 'pry'
 gem 'pry-stack_explorer'
 gem 'pry-doc'
 gem 'pry-coolline'
+gem 'paperclip'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -65,4 +66,3 @@ group :production do
 # Use Unicorn as the app server
   gem 'unicorn'
 end
-
