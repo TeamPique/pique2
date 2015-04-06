@@ -47,17 +47,17 @@
   </script>
 
   <script type="text/template" id="question-template">
-    <div class="container" id="section-<%= id %>">
+    <div class="container" id="section-<%%= id %>">
       <div class="row text-center">
-        <p class="title sub"><%= header %></p>
-        <h2><%= question %></h2>
+        <p class="title sub"><%%= header %></p>
+        <h2><%%= question %></h2>
         <ul id="questions-list">
-        <% for (var i = 0; i < options.length; i++) { %>
-        <%  var option = options[i]; %>
-        <li class="question text-center" data-id="<%= id %>">
-          <h3><%= option %></h3>
+        <%% for (var i = 0; i < options.length; i++) { %>
+        <%%  var option = options[i]; %>
+        <li class="question text-center" data-id="<%%= id %>">
+          <h3><%%= option %></h3>
         </li>
-        <% }; %>
+        <%% }; %>
         </ul>
       </div>
     </div>
