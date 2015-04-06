@@ -46,6 +46,12 @@ class ConversationsController < ApplicationController
     redirect_to conversations_path
   end
 
+  def reply
+    current_user.reply_to_conversation(@conversation, params[:body])
+    flash[:success] = 'Reply sent'
+    redirect_to conversation_path(@conversation)
+  end
+
   private
 
   def get_conversation
@@ -61,12 +67,6 @@ class ConversationsController < ApplicationController
 
   def get_mailbox
     @mailbox ||= current_user.mailbox
-  end
-
-  def reply
-    current_user.reply_to_conversation(@conversation, params[:body])
-    flash[:success] = 'Reply sent'
-    redirect_to conversation_path(@conversation)
   end
 
 end
