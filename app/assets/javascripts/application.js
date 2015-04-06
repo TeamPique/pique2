@@ -17,8 +17,8 @@
 //= require backbone
 //= require bootstrap
 //= require wow
-//= require_tree ./backbone/models/
-//= require_tree ./backbone/collections/
-//= require_tree ./backbone/views/
+//= require_tree ./models/
+//= require_tree ./collections/
+//= require_tree ./views/
 //= require messages
 //= require_tree .

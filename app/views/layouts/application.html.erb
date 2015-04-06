@@ -3,7 +3,7 @@
 <head>
   <title>Pique</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -40,6 +40,8 @@
 
 
 <%= yield %>
+
+
 
 <script type="text/template" id="survey-home-template">
     <div class="container wow bounceInUp">
@@ -127,5 +129,8 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
    </script>
+
+  <%= javascript_include_tag 'application' %>
+
 </body>
 </html>
