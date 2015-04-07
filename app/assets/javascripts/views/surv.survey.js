@@ -22,7 +22,6 @@ surv.Survey = Backbone.View.extend({
     }
   },
 	question: function(model) {
-		console.log('sup');
 		var model = model || this.collection.get(1);
 		var id = model.get('id');
 		$divId = $('#question-' + id);
