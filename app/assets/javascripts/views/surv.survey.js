@@ -24,6 +24,12 @@ surv.Survey = Backbone.View.extend({
 	question: function(model) {
 		var model = model || this.collection.get(1);
 		this.$el.append(this.surveyTemplate(model.toJSON()));
+		// this.pan();
 		return this;
 	},
+	// pan: function() {
+	//   $('html, body').animate({
+	//     scrollTop: $("#question-2").offset().top
+	//   }, 2000);
+	// },
 });

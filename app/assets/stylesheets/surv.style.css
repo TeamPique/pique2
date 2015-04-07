@@ -1,5 +1,9 @@
 @import 'chosen';
 
+#surv-landing {
+  height: 100vh;
+}
+
 #surv-header-col {
   background: url('https://s3.amazonaws.com/arcb_project/1521020400/59280/3.jpg');
   height: 550px;
@@ -11,6 +15,10 @@
 #surv-header-col h1 {
   margin-top: 26%;
   font-family: 'Nunito';
+}
+
+#surv-question-header {
+  padding: 50px;
 }
 
 h2 {
