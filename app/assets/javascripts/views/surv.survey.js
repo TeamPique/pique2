@@ -22,14 +22,17 @@ surv.Survey = Backbone.View.extend({
     }
   },
 	question: function(model) {
+		console.log('sup');
 		var model = model || this.collection.get(1);
-		this.$el.append(this.surveyTemplate(model.toJSON()));
-		// this.pan();
+		var id = model.get('id');
+		$divId = $('#question-' + id);
+		$divId.append(this.surveyTemplate(model.toJSON()));
+		this.pan(id);
 		return this;
 	},
-	// pan: function() {
-	//   $('html, body').animate({
-	//     scrollTop: $("#question-2").offset().top
-	//   }, 2000);
-	// },
+	pan: function(id) {
+	  $('html, body').animate({
+	    scrollTop: $("#question-" + id).offset().top
+	  }, 2000);
+	},
 });
