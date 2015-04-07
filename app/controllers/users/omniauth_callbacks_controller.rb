@@ -18,4 +18,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     render "users/meetup"
     # meetups_hash
   end
+
+  def dribbble
+    username = request.env["omniauth.auth"]["info"]["nickname"]
+    @response = HTTParty.get("https://api.dribbble.com/v1/users/" + username + "/buckets?access_token=" + DRIBBBLE_ACCESS_TOKEN)
+    render "users/dribbble"
+  end
 end
