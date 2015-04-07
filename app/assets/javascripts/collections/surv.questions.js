@@ -10,7 +10,7 @@ var questionnaire = [
 		id: 1,
 		header: 'Question 1 of 4',
 		options: [
-			'No important',
+			'Not important',
 			'Important'
 		]
 	},
