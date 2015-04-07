@@ -27,7 +27,10 @@ surv.Survey = Backbone.View.extend({
 		var id = model.get('id');
 		$divId = $('#question-' + id);
 		$divId.append(this.surveyTemplate(model.toJSON()));
-		this.pan(id);
+		setTimeout(function() {
+			this.pan(id);
+			
+		}.bind(this), 500);
 		return this;
 	},
 	pan: function(id) {
