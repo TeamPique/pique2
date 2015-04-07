@@ -12,7 +12,7 @@
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 body {
-  background: #333;
+  background: #4C94C4;
   color: #fff;
   font-weight: 400;
   font-size: 1em;
@@ -159,11 +159,11 @@ a:hover, a:focus {
 /* Individual styles */
 
 body {
-  background: #e74c3c;
+  background: #4C94C4;
 }
 
 .grid figcaption h2 {
-  color: #e74c3c;
+  color: #4C94C4;
 }
 
 .grid figcaption p {
@@ -181,6 +181,10 @@ body {
   font-weight: 300;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
+}
+
+.grid svg {
+  margin-left: -100px;
 }
 
 .grid a:hover figure button {
