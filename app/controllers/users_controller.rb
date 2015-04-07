@@ -10,6 +10,24 @@ class UsersController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  def index
+    @users = User.all
+  end
+
+  def show
+    @user = User.find_by(params[:id])
+  end
+
+  def new
+    @user = User.new
+  end
+
+  private
+
+  def portfolio_params
+    params.permit(:portfolio,:id)
+  end
+
 end
 
 
@@ -17,6 +35,4 @@ end
 # user_signed_in? -- verifies if a user is signed in
 # current_user -- accesses signed-in user's info
 # user_session -- accesses the scope for the session
-def portfolio_params
-  params.permit(:portfolio,:id)
-end
+

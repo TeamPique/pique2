@@ -13,5 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require chosen-jquery
+//= require underscore
+//= require backbone
+//= require bootstrap
+//= require wow
+//= require_tree ./models/
+//= require_tree ./collections/
+//= require_tree ./views/
 //= require messages
 //= require_tree .
