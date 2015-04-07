@@ -20,8 +20,27 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def dribbble
-    username = request.env["omniauth.auth"]["info"]["nickname"]
-    @response = HTTParty.get("https://api.dribbble.com/v1/users/" + username + "/buckets?access_token=" + DRIBBBLE_ACCESS_TOKEN)
+    buckets_url = request.env["omniauth.auth"]["extra"]["raw_info"]["buckets_url"]
+    @response = HTTParty.get(buckets_url + '?access_token=' + DRIBBBLE_ACCESS_TOKEN)
     render "users/dribbble"
+  end
+
+  def github
+    Octokit.auto_paginate = true
+    Octokit.default_media_type = "application/vnd.github.moondragon+json"
+    client = Octokit::Client.new :access_token => request.env["omniauth.auth"]["credentials"]["token"]
+    @response = client.repositories.map do |repository|
+      repository[:name]
+    # has_push_access = repository[:permissions][:push]
+
+    # access_type = if has_push_access
+    #                 "write"
+    #               else
+    #                 "read-only"
+    #               end
+
+  # puts "User has #{access_type} access to #{full_name}."
+    end
+  render "users/github"
   end
 end

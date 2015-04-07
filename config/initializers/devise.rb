@@ -8,6 +8,7 @@ Devise.setup do |config|
   config.omniauth :linkedin, "78u6mki0xkbfo7", "tXd41Yjtq4RYMjSS"
   config.omniauth :meetup, MEETUP_OAUTH_KEY, MEETUP_SECRET_KEY
   config.omniauth :dribbble, DRIBBBLE_CLIENT_ID, DRIBBBLE_CLIENT_SECRET
+  config.omniauth :github, GITHUB_CLIENT_ID, GITHUB_SECRET_ID
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
