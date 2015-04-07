@@ -27,6 +27,8 @@ gem 'devise'
 gem 'omniauth-linkedin'
 gem 'omniauth-meetup'
 gem 'omniauth-dribbble'
+gem 'omniauth-github'
+gem 'octokit', '~> 3.8.0'
 gem 'devise-bootstrap-views'
 
 gem 'popular'

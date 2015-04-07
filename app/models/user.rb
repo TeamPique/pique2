@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  devise :omniauthable, :omniauth_providers => [:linkedin, :meetup, :dribbble]
+  devise :omniauthable, :omniauth_providers => [:linkedin, :meetup, :dribbble, :github]
 
   has_attached_file :portfolio, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :portfolio, content_type: /\Aimage\/.*\Z/
