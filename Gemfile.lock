@@ -101,6 +101,8 @@ GEM
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.8)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     foreigner (1.7.4)
       activerecord (>= 3.0.0)
     globalid (0.3.3)
@@ -281,6 +283,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   devise-bootstrap-views
+  font-awesome-rails
   gravatar_image_tag
   httparty
   jbuilder (~> 2.0)

@@ -45,6 +45,8 @@ gem 'pry-coolline'
 gem 'paperclip'
 gem 'httparty'
 
+gem "font-awesome-rails"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
