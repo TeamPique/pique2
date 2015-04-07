@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20150403220355) do
 
   # These are extensions that must be enabled in order to support this database
@@ -91,6 +92,23 @@ ActiveRecord::Schema.define(version: 20150403220355) do
 
   add_index "mailboxer_receipts", ["notification_id"], name: "index_mailboxer_receipts_on_notification_id", using: :btree
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type", using: :btree
+
+  create_table "projects", force: :cascade do |t|
+    t.integer  "users_id"
+    t.string   "name"
+    t.string   "owner"
+    t.string   "collaborators"
+    t.boolean  "active"
+    t.integer  "number_of_collaborators"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "about"
+    t.string   "team"
+    t.string   "openings"
+    t.string   "case_studies"
+  end
+
+  add_index "projects", ["users_id"], name: "index_projects_on_users_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                   default: "", null: false
