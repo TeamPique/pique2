@@ -7,7 +7,7 @@ Devise.setup do |config|
   # config.secret_key = '069772755bb2f174a3722622c9aa11b1175344b5f862899d323c7abcb82afc4c3a003b16685c2ccab1263eae12127bc9d70646af8e1bd135b786241c50ff886e'
   config.omniauth :linkedin, "78u6mki0xkbfo7", "tXd41Yjtq4RYMjSS"
   config.omniauth :meetup, MEETUP_OAUTH_KEY, MEETUP_SECRET_KEY
-  config.omniauth :dribbble, "4eb6486c94df6412f0b96f69b44772bd3c5e37ebc1fa37699114dbb93bbd8286", "502b1fbccbddab96ec8f90a288f059e4405796a8f92ddbba9f7e2d99ded19283"
+  config.omniauth :dribbble, DRIBBBLE_CLIENT_ID, DRIBBBLE_CLIENT_SECRET
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
