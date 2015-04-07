@@ -44,24 +44,7 @@
 
 <%= yield %>
 
-  <script type="text/template" id="question-template">    
-    <div class="row">
-      <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-header">
-        <p class="title sub"><%%= header %></p>
-        <h2><%%= question %></h2>
-      </div>
-      <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-options">
-        <ul id="questions-list">
-          <%% for (var i = 0; i < options.length; i++) { %>
-          <%%  var option = options[i]; %>
-          <li class="question smoothScroll text-center" data-id="<%%= id %>">
-            <h3><%%= option %></h3>
-          </li>
-          <%% }; %>
-        </ul>
-      </div>
-    </div>
-  </script>
+
 
   <%= javascript_include_tag 'application' %>
 
