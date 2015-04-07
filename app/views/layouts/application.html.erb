@@ -2,8 +2,11 @@
 <html>
 <head>
   <title>Pique</title>
+  <%= favicon_link_tag 'av.png'%>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Nunito:400,300,700' %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Kite+One' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -39,11 +42,44 @@
   </nav>
 
 
-
-
-
-
 <%= yield %>
+
+
+
+<script type="text/template" id="survey-home-template">
+    <div class="container wow bounceInUp">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-1 text-center">
+          <h3>I want to work on a project</h3>
+          <button class="btn btn-primary" id="work-btn">GET STARTED</button>
+        </div>
+        
+        <div class="col-xs-12 col-sm-4 col-sm-offset-2 text-center">
+          <h3>I have an idea + want to build it!</h3>
+          <button class="btn btn-primary" id="idea-btn">GET STARTED</button>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/template" id="question-template">
+    <div class="container" id="section-<%%= id %>">
+      <div class="row text-center">
+        <p class="title sub"><%%= header %></p>
+        <h2><%%= question %></h2>
+        <ul id="questions-list">
+        <%% for (var i = 0; i < options.length; i++) { %>
+        <%%  var option = options[i]; %>
+        <li class="question text-center" data-id="<%%= id %>">
+          <h3><%%= option %></h3>
+        </li>
+        <%% }; %>
+        </ul>
+      </div>
+    </div>
+  </script>
+
+  <%= javascript_include_tag 'application' %>
 
 </body>
 </html>

@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'omniauth-linkedin'
+gem 'omniauth-meetup'
+gem 'omniauth-dribbble'
 gem 'devise-bootstrap-views'
 
 gem 'popular'
@@ -32,12 +34,16 @@ gem 'popular'
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
 
-gem "mailboxer"
+gem 'mailboxer'
+gem 'chosen-rails'
+gem 'gravatar_image_tag'
 
 gem 'pry'
 gem 'pry-stack_explorer'
 gem 'pry-doc'
 gem 'pry-coolline'
+gem 'paperclip'
+gem 'httparty'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -63,4 +69,3 @@ group :production do
 # Use Unicorn as the app server
   gem 'unicorn'
 end
-

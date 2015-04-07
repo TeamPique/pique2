@@ -6,7 +6,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  devise :omniauthable, :omniauth_providers => [:linkedin]
+  devise :omniauthable, :omniauth_providers => [:linkedin, :meetup, :dribbble]
+
+  has_attached_file :portfolio, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :portfolio, content_type: /\Aimage\/.*\Z/
 
   acts_as_messageable
 
@@ -28,6 +31,7 @@ class User < ActiveRecord::Base
     end
   end
 
+<<<<<<< HEAD
    popular friendship_profile: true
 
   # You can also use a symbol here but the friendship won't be passed to your method
@@ -47,4 +51,10 @@ class User < ActiveRecord::Base
   user.name.befriend user.name #=> "Justin friended Jenny"
   user.name.unfriend user.name #=> "Justin unfriended Jenny"
   end
+=======
+  def mailboxer_email(object)
+    email
+  end
+
+>>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f
 end
