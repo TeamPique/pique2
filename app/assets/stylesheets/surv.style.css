@@ -72,14 +72,19 @@ h2 {
   height: 100vh;
 }
 
+ul#questions-list {
+  padding-left: 0px;
+}
+
 ul#questions-list li {
   display: inline-block;
 }
 
-.question { 
+.surv-question { 
   height: 200px;
   width: 200px;
   border-radius: 5%;
+
 }
 
 #footer {

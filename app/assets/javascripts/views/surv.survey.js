@@ -7,7 +7,7 @@ surv.Survey = Backbone.View.extend({
 		this.question();
 	},
 	events: {
-		'click .question' : 'rotate'
+		'click .surv-question' : 'rotate'
 	},
   rotate: function(e) {
     e.preventDefault();
