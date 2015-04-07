@@ -12,7 +12,7 @@
 <body>
 <!-- <p class="notice"><#%= notice %></p>
 <p class="alert"><#%= alert %></p> -->
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -37,43 +37,27 @@
           <li><%= link_to "Login", user_omniauth_authorize_path(:linkedin) %></li>
         </ul>
         <% end %>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
+      </div>
+    </div>
+  </nav> -->
 
 
 <%= yield %>
 
-
-
-<script type="text/template" id="survey-home-template">
-    <div class="container wow bounceInUp">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 col-sm-offset-1 text-center">
-          <h3>I want to work on a project</h3>
-          <button class="btn btn-primary" id="work-btn">GET STARTED</button>
-        </div>
-        
-        <div class="col-xs-12 col-sm-4 col-sm-offset-2 text-center">
-          <h3>I have an idea + want to build it!</h3>
-          <button class="btn btn-primary" id="idea-btn">GET STARTED</button>
-        </div>
-      </div>
-    </div>
-  </script>
-
-  <script type="text/template" id="question-template">
-    <div class="container" id="section-<%%= id %>">
-      <div class="row text-center">
+  <script type="text/template" id="question-template">    
+    <div class="row">
+      <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-header">
         <p class="title sub"><%%= header %></p>
         <h2><%%= question %></h2>
+      </div>
+      <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-options">
         <ul id="questions-list">
-        <%% for (var i = 0; i < options.length; i++) { %>
-        <%%  var option = options[i]; %>
-        <li class="question text-center" data-id="<%%= id %>">
-          <h3><%%= option %></h3>
-        </li>
-        <%% }; %>
+          <%% for (var i = 0; i < options.length; i++) { %>
+          <%%  var option = options[i]; %>
+          <li class="question smoothScroll text-center" data-id="<%%= id %>">
+            <h3><%%= option %></h3>
+          </li>
+          <%% }; %>
         </ul>
       </div>
     </div>

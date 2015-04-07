@@ -4,7 +4,7 @@ surv.Survey = Backbone.View.extend({
 	el: '#questionnaire',
 	surveyTemplate: _.template($('#question-template').html()),
 	initialize: function() {
-		this.renderQuestion();
+		this.question();
 	},
 	events: {
 		'click .question' : 'rotate'
@@ -18,12 +18,24 @@ surv.Survey = Backbone.View.extend({
     } else {
 	    var next = id += 1;
 	    var question = this.collection.get(next);
-	    this.renderQuestion(question);
+	    this.question(question);
     }
   },
-	renderQuestion: function(model) {
+	question: function(model) {
+		console.log('sup');
 		var model = model || this.collection.get(1);
-		this.$el.append(this.surveyTemplate(model.toJSON()));
+		var id = model.get('id');
+		$divId = $('#question-' + id);
+		$divId.append(this.surveyTemplate(model.toJSON()));
+		setTimeout(function() {
+			this.pan(id);
+			
+		}.bind(this), 500);
 		return this;
+	},
+	pan: function(id) {
+	  $('html, body').animate({
+	    scrollTop: $("#question-" + id).offset().top
+	  }, 2000);
 	},
 });
