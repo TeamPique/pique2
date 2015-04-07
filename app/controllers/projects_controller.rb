@@ -1,5 +1,4 @@
 class ProjectsController < ApplicationController
-  belongs_to_many :users
 
   def index
     @projects = Project.all
