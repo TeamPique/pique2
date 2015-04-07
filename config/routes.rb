@@ -36,4 +36,7 @@ Rails.application.routes.draw do
   resources :friendships
   resources :users
   resources :projects
+
+  get '/questionnaire', to: 'home#questionnaire'
+
 end
