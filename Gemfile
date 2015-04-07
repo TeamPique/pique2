@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'omniauth-linkedin'
+gem 'omniauth-meetup'
+gem 'omniauth-dribbble'
 gem 'devise-bootstrap-views'
 
 gem 'popular'
@@ -41,6 +43,7 @@ gem 'pry-stack_explorer'
 gem 'pry-doc'
 gem 'pry-coolline'
 gem 'paperclip'
+gem 'httparty'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

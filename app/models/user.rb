@@ -1,10 +1,12 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :friendships
+  has_many :projects
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  devise :omniauthable, :omniauth_providers => [:linkedin]
+  devise :omniauthable, :omniauth_providers => [:linkedin, :meetup, :dribbble]
 
   has_attached_file :portfolio, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :portfolio, content_type: /\Aimage\/.*\Z/
@@ -31,6 +33,26 @@ class User < ActiveRecord::Base
 
   def mailboxer_email(object)
     email
+  end
+
+   popular friendship_profile: true
+
+  # You can also use a symbol here but the friendship won't be passed to your method
+  after_befriend 'notify_friendship_created value'
+  after_unfriend 'notify_unfriended value'
+
+  def self.notify_friendship_created(friendship)
+    puts "#{name} friended #{friendship.friend.name}"
+  end
+
+  def self.notify_unfriended(friendship)
+    puts "#{name} unfriended #{friendship.friend.name}"
+
+    # @justin = User.create name: "Justin"
+    # @jenny = User.create name: "Jenny"
+
+  user.name.befriend user.name #=> "Justin friended Jenny"
+  user.name.unfriend user.name #=> "Justin unfriended Jenny"
   end
 
 end

@@ -1,0 +1,9 @@
+<h1> <%= current_user.name %>'s Dribbble Buckets </h1>
+<ul>
+  <% @response.each do |group| %>
+    <li> <%= group["name"] %> </li>
+      <ul style="list-style-type:circle">
+        <li><%= group["description"] %> </li>
+      </ul>
+    <% end %>
+</ul>
