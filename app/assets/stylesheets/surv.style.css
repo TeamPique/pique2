@@ -273,12 +273,12 @@ body {
 }
 
 .grid figure button {
+  background-color: #d8765d;
+  color: #fff;
   bottom: 0;
   left: 0;
   padding: 15px;
   width: 100%;
-  background: #fff;
-  color: #333;
   font-weight: 300;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
