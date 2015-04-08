@@ -3,7 +3,7 @@ class CreateVisitors < ActiveRecord::Migration
     create_table :visitors do |t|
       t.integer :user_id
       t.integer :visitor_id
-      t.datetime :date
+      t.date :date
 
       t.timestamps null: false
     end
