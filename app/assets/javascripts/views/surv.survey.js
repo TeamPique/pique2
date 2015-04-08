@@ -12,14 +12,11 @@ surv.Survey = Backbone.View.extend({
   rotate: function(e) {
     e.preventDefault();
     var id = $(e.currentTarget).data('id');
-    if (id === 5) {
-    	alert('You need to build the rest of the site!');
-    	return false;
-    } else {
+    if (id !== 5) {
 	    var next = id += 1;
 	    var question = this.collection.get(next);
 	    this.question(question);
-    }
+    } 
   },
 	question: function(model) {
 		var model = model || this.collection.get(1);

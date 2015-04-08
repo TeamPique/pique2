@@ -10,8 +10,8 @@ var questionnaire = [
 		id: 1,
 		header: 'Question 1 of 4',
 		options: [
-			'Not important',
-			'Important'
+			['Not important'],
+			['Important']
 		]
 	},
 	{
@@ -19,13 +19,13 @@ var questionnaire = [
 		id: 2,
 		header: 'Question 2 of 4',
 		options: [
-			'Social Good',
-			'Social Media',
-			'Ed Tech',
-			'Fin Tech',
-			'Fashion',
-			'Food',
-			'Travel'
+			['Social Good'],
+			['Social Media'],
+			['Ed Tech'],
+			['Fin Tech'],
+			['Fashion'],
+			['Food'],
+			['Travel']
 		]
 	},
 	{
@@ -33,11 +33,10 @@ var questionnaire = [
 		id: 3,
 		header: 'Question 3 of 4',
 		options: [
-			'Networking',
-			'Building Portfolio',
-			'Building MVP',
-			'Love Building Cool Things'
-
+			['Networking'],
+			['Building Portfolio'],
+			['Building MVP'],
+			['Love Building Cool Things']
 		]
 	},
 	{
@@ -45,12 +44,12 @@ var questionnaire = [
 		id: 4,
 		header: 'Question 4 of 4',
 		options: [
-			'Designers',
-			'Developers',
-			'Project Managers',
-			'Marketers',
-			'Biz Dev',
-			'Anyone with Strong Work Ethic'
+			['Designers'],
+			['Developers'],
+			['Project Managers'],
+			['Marketers'],
+			['Biz Dev'],
+			['Anyone with Strong Work Ethic']
 		]
 	},
 	{
@@ -58,8 +57,8 @@ var questionnaire = [
 		id: 5,
 		header: 'All Done',
 		options: [
-			'I have a project',
-			'I want to build'
+			['I have a project', '/projects'],
+			['I want to build', '/users']
 		]
 	}
 ];
