@@ -80,11 +80,13 @@ ul#questions-list li {
   display: inline-block;
 }
 
+li.surv-question {
+  margin: 20px;
+}
+
 .surv-question { 
   height: 200px;
   width: 200px;
-  border-radius: 5%;
-
 }
 
 #footer {
