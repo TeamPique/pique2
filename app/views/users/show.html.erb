@@ -1,7 +1,7 @@
 <h1> SHOW PAGE USER </h1>
 
 <p> <%= current_user.name %> </p>
-
+<input type="hidden" name="cur_user" value=<%=@user.id%>>
 <%= form_for current_user, :url => '#', :html => { :multipart => true, :id => "paperclipPortfolio" }  do |form| %>
   <%= form.file_field :portfolio %>
 <% end %>
