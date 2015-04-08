@@ -3,6 +3,7 @@ var surv = surv || {};
 surv.Survey = Backbone.View.extend({
 	el: '#questionnaire',
 	surveyTemplate: _.template($('#question-template').html()),
+	startTemplate: _.template($('#start-template').html()),
 	initialize: function() {
 		this.question();
 	},
@@ -12,21 +13,23 @@ surv.Survey = Backbone.View.extend({
   rotate: function(e) {
     e.preventDefault();
     var id = $(e.currentTarget).data('id');
-    if (id !== 5) {
-	    var next = id += 1;
-	    var question = this.collection.get(next);
-	    this.question(question);
-    }
+    var next = id += 1;
+    var question = this.collection.get(next);
+    this.question(question);
   },
 	question: function(model) {
 		var model = model || this.collection.get(1);
 		var id = model.get('id');
 		$divId = $('#question-' + id);
-		$divId.append(this.surveyTemplate(model.toJSON()));
+		if (id === 5) {
+			$divId.append(this.startTemplate(model.toJSON()));	
+		} else {
+			$divId.append(this.surveyTemplate(model.toJSON()));
+		}
 		setTimeout(function() {
 			this.pan(id);
 		}.bind(this), 500);
-		return this;
+		return false;
 	},
 	pan: function(id) {
 	  $('html, body').animate({

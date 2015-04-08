@@ -80,11 +80,11 @@ ul#questions-list li {
   display: inline-block;
 }
 
-li.surv-question {
+li.surv-question, li.surv-route {
   margin: 20px;
 }
 
-.surv-question { 
+.surv-question, .surv-route { 
   height: 200px;
   width: 200px;
 }
