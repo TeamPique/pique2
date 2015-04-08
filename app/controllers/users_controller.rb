@@ -3,6 +3,8 @@ class UsersController < ApplicationController
 
   def show
     current_user
+    visitor = params[:visitor]
+    cur_user = params[:cur_user]
   end
 
   def update
@@ -12,10 +14,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-  end
-
-  def show
-    @user = User.find_by(params[:id])
   end
 
   def new
