@@ -32,17 +32,10 @@ class User < ActiveRecord::Base
     end
   end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   def mailboxer_email(object)
     email
   end
 
->>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
-=======
->>>>>>> kamari_friending
    popular friendship_profile: true
 
   # You can also use a symbol here but the friendship won't be passed to your method
@@ -63,12 +56,4 @@ class User < ActiveRecord::Base
   user.name.unfriend user.name #=> "Justin unfriended Jenny"
   end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f
-=======
->>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
-=======
->>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f
->>>>>>> kamari_friending
 end
