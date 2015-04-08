@@ -16,7 +16,7 @@ surv.Survey = Backbone.View.extend({
 	    var next = id += 1;
 	    var question = this.collection.get(next);
 	    this.question(question);
-    } 
+    }
   },
 	question: function(model) {
 		var model = model || this.collection.get(1);
