@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> kamari_friending
 <<<<<<< HEAD:app/controllers/users/users_controller.rb
   def index
     @users = User.all
@@ -17,8 +20,11 @@ class UsersController < ApplicationController
 
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
+=======
+>>>>>>> kamari_friending
   def show
     @current_user
   end
@@ -29,6 +35,9 @@ class UsersController < ApplicationController
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> kamari_friending
 >>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f:app/controllers/users_controller.rb
 end
 
@@ -39,6 +48,7 @@ end
 # user_session -- accesses the scope for the session
 def portfolio_params
   params.permit(:portfolio,:id)
+<<<<<<< HEAD
 =======
   def index
     @users = User.all
@@ -55,6 +65,8 @@ def portfolio_params
   end
 
 >>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
+=======
+>>>>>>> kamari_friending
 end
 
 

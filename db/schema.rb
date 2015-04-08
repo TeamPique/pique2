@@ -13,13 +13,19 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> kamari_friending
 ActiveRecord::Schema.define(version: 20150406192610) do
 =======
 ActiveRecord::Schema.define(version: 20150403220355) do
 >>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f
+<<<<<<< HEAD
 =======
 ActiveRecord::Schema.define(version: 20150408165241) do
 >>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
+=======
+>>>>>>> kamari_friending
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
