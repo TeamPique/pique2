@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    current_user
+    @current_user
   end
 
   def update
@@ -12,10 +12,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-  end
-
-  def show
-    @user = User.find_by(params[:id])
   end
 
   def new
