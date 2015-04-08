@@ -34,7 +34,7 @@ surv.Survey = Backbone.View.extend({
 	pan: function(id) {
 	  $('html, body').animate({
 	    scrollTop: $("#question-" + id).offset().top
-	  }, 2000);
+	  }, 1000);
 	  this.svg();
 	},
 	svg: function() {

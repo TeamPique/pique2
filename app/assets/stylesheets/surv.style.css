@@ -61,11 +61,11 @@ a:hover, a:focus {
 }
 
 #surv-question-header {
-  padding: 50px;
+  padding: 20px;
 }
 
-h2 {
-  padding-bottom: 40px;
+#surv-question-options h2 {
+  font-family: 'Nunito';
 }
 
 .row {
@@ -115,7 +115,7 @@ p.title:after {
 
 p.title.sub:before,
 p.title.sub:after {
-    background-color: #647278;
+    background-color: #FCFCFC;
     content: "";
     display: inline-block;
     height: 1px;

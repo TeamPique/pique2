@@ -19,11 +19,9 @@ var questionnaire = [
 		id: 2,
 		header: 'Question 2 of 4',
 		options: [
-			'Mobile Apps',
-			'Web Apps',
 			'Social Good',
 			'Social Media',
-			'Networking',
+			'Ed Tech',
 			'Fin Tech',
 			'Fashion',
 			'Food',
@@ -36,15 +34,14 @@ var questionnaire = [
 		header: 'Question 3 of 4',
 		options: [
 			'Networking',
-			'Build Portfolio',
+			'Building Portfolio',
 			'Building MVP',
-			'Improve Skills',
 			'Love Building Cool Things'
 
 		]
 	},
 	{
-		question: 'What type of users are you interested in collaborating with?',
+		question: 'What members of the Pique community are you interested in collaborating with?',
 		id: 4,
 		header: 'Question 4 of 4',
 		options: [
@@ -61,7 +58,7 @@ var questionnaire = [
 		id: 5,
 		header: 'All Done',
 		options: [
-			'I have an idea',
+			'I have a project',
 			'I want to build'
 		]
 	}
