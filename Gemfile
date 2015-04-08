@@ -27,6 +27,8 @@ gem 'devise'
 gem 'omniauth-linkedin'
 gem 'omniauth-meetup'
 gem 'omniauth-dribbble'
+gem 'omniauth-github'
+gem 'octokit', '~> 3.8.0'
 gem 'devise-bootstrap-views'
 
 gem 'popular'
@@ -44,6 +46,8 @@ gem 'pry-doc'
 gem 'pry-coolline'
 gem 'paperclip'
 gem 'httparty'
+
+gem "font-awesome-rails"
 
 # Use Unicorn as the app server
 # gem 'unicorn'

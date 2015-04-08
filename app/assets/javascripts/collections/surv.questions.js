@@ -2,7 +2,6 @@ var surv = surv || {};
 
 surv.Questions = Backbone.Collection.extend({
 	model: surv.Question,
-	url: '/questions'
 });
 
 var questionnaire = [
@@ -11,8 +10,8 @@ var questionnaire = [
 		id: 1,
 		header: 'Question 1 of 4',
 		options: [
-			'No important',
-			'Important'
+			['Not important'],
+			['Important']
 		]
 	},
 	{
@@ -20,15 +19,13 @@ var questionnaire = [
 		id: 2,
 		header: 'Question 2 of 4',
 		options: [
-			'Mobile Apps',
-			'Web Apps',
-			'Social Good',
-			'Social Media',
-			'Networking',
-			'Fin Tech',
-			'Fashion',
-			'Food',
-			'Travel'
+			['Social Good'],
+			['Social Media'],
+			['Ed Tech'],
+			['Fin Tech'],
+			['Fashion'],
+			['Food'],
+			['Travel']
 		]
 	},
 	{
@@ -36,25 +33,32 @@ var questionnaire = [
 		id: 3,
 		header: 'Question 3 of 4',
 		options: [
-			'Networking',
-			'Build Portfolio',
-			'Building MVP',
-			'Improve Skills',
-			'Love Building Cool Things'
-
+			['Networking'],
+			['Building Portfolio'],
+			['Building MVP'],
+			['Love Building Cool Things']
 		]
 	},
 	{
-		question: 'What type of users are you interested in collaborating with?',
+		question: 'What members of the Pique community are you interested in collaborating with?',
 		id: 4,
 		header: 'Question 4 of 4',
 		options: [
-			'Designers',
-			'Developers',
-			'Project Managers',
-			'Marketers',
-			'Biz Dev',
-			'Anyone with Strong Work Ethic'
+			['Designers'],
+			['Developers'],
+			['Project Managers'],
+			['Marketers'],
+			['Biz Dev'],
+			['Anyone with Strong Work Ethic']
+		]
+	},
+	{
+		question: 'Ready to get started?',
+		id: 5,
+		header: 'All Done',
+		options: [
+			['I have a project', '/projects'],
+			['I want to build', '/users']
 		]
 	}
 ];

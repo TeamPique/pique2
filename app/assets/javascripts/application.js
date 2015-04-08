@@ -17,6 +17,8 @@
 //= require backbone
 //= require bootstrap
 //= require wow
+//= require snap.svg-min
+//= require smoothscroll
 //= require_tree ./models/
 //= require_tree ./collections/
 //= require_tree ./views/

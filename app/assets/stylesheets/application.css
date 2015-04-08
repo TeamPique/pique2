@@ -13,7 +13,10 @@
  *= require bootstrap
  *= require devise_bootstrap_views
  *= require bootstrap-theme
+ *= require font-awesome
  *= require animate
  *= require_tree .
  *= require_self
  */
+
+@import 'chosen';

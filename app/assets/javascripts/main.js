@@ -1,6 +1,6 @@
 var surv = surv || {};
 
-new surv.Home();
+new surv.Survey({collection: questions});
 
 new WOW(
     { offset: 120 }

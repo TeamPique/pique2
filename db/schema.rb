@@ -12,10 +12,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150406192610) do
 =======
 ActiveRecord::Schema.define(version: 20150403220355) do
 >>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f
+=======
+ActiveRecord::Schema.define(version: 20150408165241) do
+>>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +113,7 @@ ActiveRecord::Schema.define(version: 20150403220355) do
     t.string   "team"
     t.string   "openings"
     t.string   "case_studies"
+    t.string   "case_studies2"
   end
 
   add_index "projects", ["users_id"], name: "index_projects_on_users_id", using: :btree
