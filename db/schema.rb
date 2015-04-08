@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150406192610) do
+=======
+ActiveRecord::Schema.define(version: 20150403220355) do
+>>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -126,6 +130,10 @@ ActiveRecord::Schema.define(version: 20150406192610) do
     t.datetime "updated_at"
     t.string   "provider"
     t.string   "uid"
+    t.string   "portfolio_file_name"
+    t.string   "portfolio_content_type"
+    t.integer  "portfolio_file_size"
+    t.datetime "portfolio_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
