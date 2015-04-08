@@ -11,21 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> kamari_friending
-ActiveRecord::Schema.define(version: 20150406192610) do
-=======
-ActiveRecord::Schema.define(version: 20150403220355) do
->>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f
-<<<<<<< HEAD
-=======
-ActiveRecord::Schema.define(version: 20150408165241) do
->>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
-=======
->>>>>>> kamari_friending
+ActiveRecord::Schema.define(version: 20150408200351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -119,7 +105,6 @@ ActiveRecord::Schema.define(version: 20150408165241) do
     t.string   "team"
     t.string   "openings"
     t.string   "case_studies"
-    t.string   "case_studies2"
   end
 
   add_index "projects", ["users_id"], name: "index_projects_on_users_id", using: :btree
@@ -149,5 +134,13 @@ ActiveRecord::Schema.define(version: 20150408165241) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "visitors", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "visitor_id"
+    t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
