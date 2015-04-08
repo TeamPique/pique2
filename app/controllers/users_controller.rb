@@ -27,6 +27,8 @@ class UsersController < ApplicationController
 >>>>>>> kamari_friending
   def show
     @current_user
+    visitor = params[:visitor]
+    cur_user = @current_user.id
   end
 
   def update
