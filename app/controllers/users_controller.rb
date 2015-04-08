@@ -1,34 +1,28 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> kamari_friending
-<<<<<<< HEAD:app/controllers/users/users_controller.rb
   def index
     @users = User.all
   end
 
   def show
-    @user = User.find_by(params[:id])
+    if params[:id].to_i == current_user.id
+      render "profile"
+    else
+      visitor_id = User.find(params[:id]).id
+      have_visted = Visitor.where({user_id: visitor_id, visitor_id: current_user.id})
+      if have_visted.empty? == true
+        Visitor.create({user_id: visitor_id, visitor_id: current_user.id, date: Date.today})
+      end
+      @user = User.find(params[:id])
+      render "show"
+    end
+      # visitor = params[:visitor]
+      # cur_user = @current_user.id
   end
 
   def new
     @user = User.new
-  end
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
-=======
->>>>>>> kamari_friending
-  def show
-    @current_user
-    visitor = params[:visitor]
-    cur_user = @current_user.id
   end
 
   def update
@@ -36,44 +30,8 @@ class UsersController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> kamari_friending
->>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f:app/controllers/users_controller.rb
-end
-
-
 #### DEVISE USER HELPERS #####
 # user_signed_in? -- verifies if a user is signed in
 # current_user -- accesses signed-in user's info
 # user_session -- accesses the scope for the session
-def portfolio_params
-  params.permit(:portfolio,:id)
-<<<<<<< HEAD
-=======
-  def index
-    @users = User.all
-  end
-
-  def new
-    @user = User.new
-  end
-
-  private
-
-  def portfolio_params
-    params.permit(:portfolio,:id)
-  end
-
->>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
-=======
->>>>>>> kamari_friending
 end
-
-
-#### DEVISE USER HELPERS #####
-# user_signed_in? -- verifies if a user is signed in
-# current_user -- accesses signed-in user's info
-# user_session -- accesses the scope for the session
-
