@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     @current_user
     visitor = params[:visitor]
+    cur_user = @current_user.id
   end
 
   def update
