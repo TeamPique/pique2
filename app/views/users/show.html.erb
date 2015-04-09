@@ -1,5 +1,5 @@
-<%= @user.name %>
-<img src="<%= @user.image %>">
+<%= current_user.name %>
+<img src="<%= current_user.image %>">
 <div class='projects'>Projects:
   <li><%# @projects.each do |project| %>
   <a href="<%#= project_path(project) %>" alt=""><%#= @project.id %></a><br></li>
@@ -49,8 +49,8 @@ function paperclipAjax(e){
 <br>
 <%= link_to "Github Import", user_omniauth_authorize_path(:github), method: :get %>
 
-<%= @user.name %>
-<img src="<%= @user.image %>">
+<%= current_user.name %>
+<img src="<%= current_user.image %>">
 <div class='projects'>Projects:
   <li><%# @projects.each do |project| %>
   <a href="<%#= project_path(project) %>" alt=""><%#= @project.id %></a><br></li>
