@@ -1,4 +1,4 @@
 <% @projects.each do |project| %>
-  <%= project.id %> has <%= @projects.count %>.</br>
+  <%= project.name %> has <%= @projects.number_of_collaborators %> collaborators.</br>
 
 <% end %>
