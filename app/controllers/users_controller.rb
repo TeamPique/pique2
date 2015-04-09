@@ -10,8 +10,8 @@ class UsersController < ApplicationController
       render "profile"
     else
       visitor_id = User.find(params[:id]).id
-      have_visted = Visitor.where({user_id: visitor_id, visitor_id: current_user.id})
-      if have_visted.empty? == true
+      have_visited = Visitor.where({user_id: visitor_id, visitor_id: current_user.id})
+      if have_visited.empty? == true
         Visitor.create({user_id: visitor_id, visitor_id: current_user.id, date: Date.today})
       end
       @user = User.find(params[:id])
@@ -26,9 +26,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    current_user
-    visitor = params[:visitor]
-    cur_user = current_user.id
+  #   current_user
+  #   visitor = params[:visitor]
+  #   cur_user = current_user.id
+  @user = User.find(params[:id])
   end
 
 

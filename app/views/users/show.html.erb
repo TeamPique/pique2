@@ -1,5 +1,5 @@
-<h1><%= current_user.name %></h1>
-<img src="<%= current_user.image %>">
+<h1><%= @user.name %></h1>
+<img src="<%= @user.image %>">
 <div class='projects'>Projects:
   <li><%# @projects.each do |project| %>
   <a href="<%#= project_path(project) %>" alt=""><%#= @project.id %></a><br></li>
@@ -8,7 +8,7 @@
   <li><%= @project %></li>
 </div>
 
-<input type="hidden" name="visitors" value=<%=@current_user.id%>>
+<input type="hidden" name="visitors" value=<%=@user.id%>>
 <%= form_for current_user, :url => '#', :html => { :multipart => true, :id => "paperclipPortfolio" }  do |form| %>
   <%= form.file_field :portfolio %>
 <% end %>

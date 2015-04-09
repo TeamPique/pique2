@@ -1,6 +1,5 @@
-<h1> SHOW PAGE USER </h1>
+<h1> <%= current_user.name %> </h1>
 
-<p> <%= current_user.name %> </p>
 <img src="<%= current_user.image %>">
 <input type="hidden" name="visitors" value=<%=current_user.id%>>
 <%= form_for current_user, :url => '#', :html => { :multipart => true, :id => "paperclipPortfolio" }  do |form| %>
