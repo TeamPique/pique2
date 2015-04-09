@@ -1,6 +1,6 @@
 <%= @user.name %> has <%= @friends.count %> friends.
 
-<%= button_to "Add to Friends"%>
+<%= button_to "Add to Friends", new_friendship_path, method: "get" %>
 
 <!-- link_to(@user.name, user_path(user)) -->
 
