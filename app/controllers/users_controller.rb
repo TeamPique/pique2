@@ -6,18 +6,32 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(params[:id])
+    if params[:id].to_i == current_user.id
+      render "profile"
+    else
+      visitor_id = User.find(params[:id]).id
+      have_visted = Visitor.where({user_id: visitor_id, visitor_id: current_user.id})
+      if have_visted.empty? == true
+        Visitor.create({user_id: visitor_id, visitor_id: current_user.id, date: Date.today})
+      end
+      @user = User.find(params[:id])
+      render "show"
+    end
+      # visitor = params[:visitor]
+      # cur_user = @current_user.id
   end
 
   def new
     @user = User.new
   end
 
+
   def show
     @current_user
     visitor = params[:visitor]
     cur_user = @current_user.id
   end
+
 
   def update
     current_user.update(portfolio_params)
@@ -27,10 +41,12 @@ class UsersController < ApplicationController
 end
 
 
+
 #### DEVISE USER HELPERS #####
 # user_signed_in? -- verifies if a user is signed in
 # current_user -- accesses signed-in user's info
 # user_session -- accesses the scope for the session
+
 def portfolio_params
   params.permit(:portfolio,:id)
 
@@ -48,11 +64,5 @@ def portfolio_params
     params.permit(:portfolio,:id)
   end
 
+
 end
-
-
-#### DEVISE USER HELPERS #####
-# user_signed_in? -- verifies if a user is signed in
-# current_user -- accesses signed-in user's info
-# user_session -- accesses the scope for the session
-
