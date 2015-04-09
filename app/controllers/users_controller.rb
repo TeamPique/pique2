@@ -25,11 +25,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-
   def show
-    @current_user
+    current_user
     visitor = params[:visitor]
-    cur_user = @current_user.id
+    cur_user = current_user.id
   end
 
 
