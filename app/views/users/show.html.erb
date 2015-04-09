@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> kamari_friending
 <%= @user.name %>
 <img src="<%= @user.image %>">
 <div class='projects'>Projects:
@@ -14,9 +9,6 @@
   <li><%= @project %></li>
 </div>
 
-=======
-=======
->>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
 <h1> SHOW PAGE USER </h1>
 
 <p> <%= current_user.name %> </p>
@@ -53,10 +45,7 @@ function paperclipAjax(e){
 <%= link_to "Meetup Import", user_omniauth_authorize_path(:meetup), method: :get %>
 <br>
 <%= link_to "Dribble Import", user_omniauth_authorize_path(:dribbble), method: :get %>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f
-=======
+
 <br>
 <%= link_to "Github Import", user_omniauth_authorize_path(:github), method: :get %>
 
@@ -70,7 +59,4 @@ function paperclipAjax(e){
   <%# end %>
   <li><%= @project %></li>
 </div>
->>>>>>> c242c310ac661629d60ffeb1b62a47f93dee6a9c
-=======
->>>>>>> d619d61ea12ccca87a471b84d9f096fa1180b47f
->>>>>>> kamari_friending
+
