@@ -1,17 +1,13 @@
-<%= current_user.name %>
+<h1><%= current_user.name %></h1>
 <img src="<%= current_user.image %>">
 <div class='projects'>Projects:
   <li><%# @projects.each do |project| %>
   <a href="<%#= project_path(project) %>" alt=""><%#= @project.id %></a><br></li>
 
-
   <%# end %>
   <li><%= @project %></li>
 </div>
 
-<h1> SHOW PAGE USER </h1>
-
-<p> <%= current_user.name %> </p>
 <input type="hidden" name="visitors" value=<%=@current_user.id%>>
 <%= form_for current_user, :url => '#', :html => { :multipart => true, :id => "paperclipPortfolio" }  do |form| %>
   <%= form.file_field :portfolio %>
@@ -49,14 +45,15 @@ function paperclipAjax(e){
 <br>
 <%= link_to "Github Import", user_omniauth_authorize_path(:github), method: :get %>
 
-<%= current_user.name %>
-<img src="<%= current_user.image %>">
-<div class='projects'>Projects:
+<%#= current_user.name %>
+<!-- <img src="<%#= current_user.image %>"> -->
+<!-- <div class='projects'>Projects:
   <li><%# @projects.each do |project| %>
   <a href="<%#= project_path(project) %>" alt=""><%#= @project.id %></a><br></li>
 
 
   <%# end %>
-  <li><%= @project %></li>
+  <li><%#= @project %></li>
 </div>
 
+ -->
