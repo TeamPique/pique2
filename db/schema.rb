@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150408200351) do
+ActiveRecord::Schema.define(version: 20150409154712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -131,6 +131,10 @@ ActiveRecord::Schema.define(version: 20150408200351) do
     t.string   "portfolio_content_type"
     t.integer  "portfolio_file_size"
     t.datetime "portfolio_updated_at"
+    t.string   "location"
+    t.string   "headline"
+    t.string   "industry"
+    t.string   "public_profile_url"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
