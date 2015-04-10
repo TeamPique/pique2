@@ -1,8 +1,7 @@
-<%= current_user.name %>
-<% @projects.each do |project| %>
+<%= current_user.name %> has
+<%# @projects.each do |project| %>
+  <%= @projects.count %> project(s).</br>
+<%#= project.name %> has <%#= @project.number_of_collaborators %> collaborators.</br>
+<%# end %>
 
-  has <%= @projects.count %> project(s).</br>
-
-  <%= project.name %> has <%= @projects.number_of_collaborators %> collaborators.</br>
-
-<% end %>
+<%#= @project.created_at %>
