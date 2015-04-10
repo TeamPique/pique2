@@ -1,1 +1,11 @@
-test project
+<% @projects.each do |project| %>
+
+  <%= @project.owner %></br></br>
+
+  <%= @project.name %></br></br>
+
+  <%= @project.number_of_collaborators %></br></br>
+
+  <%= @project.active %></br></br>
+
+<% end %></br></br>

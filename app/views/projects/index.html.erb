@@ -1,7 +1,14 @@
-<%= current_user.name %> has
-<%# @projects.each do |project| %>
-  <%= @projects.count %> project(s).</br>
-<%#= project.name %> has <%#= @project.number_of_collaborators %> collaborators.</br>
-<%# end %>
+<img src="<%= current_user.image %>"><%= current_user.name %> has <%= @projects.count %> project(s).</br>
+
+<% @projects.each do |project| %>
+<%= project.name %> has <%= project.number_of_collaborators %> collaborators:</br>
+  <ul>
+    <li><a href='/users/<%= @user.id %>'><%= project.collaborators.split',' %></a></li>
+  </ul>
+<% end %>
 
 <%#= @project.created_at %>
+
+<% @users.each do |user| %>
+  <%= @user.name %>
+<% end %>
