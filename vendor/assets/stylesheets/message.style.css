@@ -6,3 +6,15 @@
 	padding-left: 0;
 	margin-left: 0;
 }
+
+.message-user-av {
+	float: left;
+}
+
+.message-info-preview {
+	float: right;
+}
+
+.message-av {
+	height: 60px;
+}
