@@ -12,112 +12,51 @@
 	<link rel="stylesheet" href="../../../vendor/assets/stylesheets/carousel.css">
 	<link rel="stylesheet" href="../../../vendor/assets/stylesheets/et-line.css">
 	<link rel="stylesheet" href="../../../vendor/assets/stylesheets/style.css">
+	<link rel="stylesheet" href="../../../vendor/assets/stylesheets/message.style.css">
 </head>
 <body>
 	
- <div class="wrapper">
+	<div class="wrapper">
 
-        <div id="opensearch" class="collapse myform">
-            <div class="container-fluid ">
-                <div class="topbar">
-                    <form role="search" action="#" class="search_form_top" method="get">
-                        <input type="text" placeholder="What are you looking for?" name="s" class="form-control" autocomplete="off">
-                    </form>
-                </div>
-            </div>
-        </div>
+	  <header class="header">
+	    <div id="multimenu" class="menu-wrapper">
+	      <nav class="navbar yamm navbar-default" role="navigation">
+	        <div class="container-fluid">
+	          <div class="navbar-header">
+	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	              <span class="sr-only">Toggle navigation</span>
+		            <span class="fa fa-bars"></span>
+	            </button>
+	            <a class="navbar-brand" href="#"><img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png"></a>
+	          </div>
+	          <div id="navbar" class="navbar-collapse collapse">
+	            <ul class="nav navbar-nav navbar-left">
+	              <li><a href="#">People</a></li>
+	              <li><a href="#">Projects</a></li>
+	              <li><a href="#">About</a></li>                           
+	            </ul>
+		        </div><!--/.nav-collapse -->
+		      </div><!--/.container-fluid -->
+	      </nav>
+	    </div><!-- end menu-wrapper -->
+	  </header><!-- end header -->
 
-        <header class="header">
-            <div id="multimenu" class="menu-wrapper">
-                <nav class="navbar yamm navbar-default" role="navigation">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="fa fa-bars"></span>
-                            </button>
-                            <a class="navbar-brand" href="#"><img src="http://piqueapp.github.io/assets/img/av.png" alt=""></a>
-                        </div>
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="dropdown yamm-fw"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pique <span class="dropcar fa fa-angle-down"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-md-3 col-sm-6 col-sx-12">
-                                                        <ul>
-                                                            <li><h3>Things</h3></li>
-                                                            <li><a title="" href="#">More Things</a></li>
-                                                        </ul>
-                                                    </div>
+    <section id="page-content" class="clearfix">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="post-content" class="col-md-9 col-sm-9 col-xs-12 pull-right">
+             <h1>Tom Jones</h1>
+          </div><!-- end col -->
+          <div id="sidebar" class="col-md-3 col-sm-3 col-xs-12 pull-left">
+          	<form>
+              <input type="text" placeholder="Search" class="form-control" autocomplete="off">
+            </form>
+	        </div><!-- end col -->
+        </div><!-- end row -->
+	    </div><!-- end container -->
+    </section><!-- end section -->
 
-                                                    <div class="col-md-3 col-sm-6 col-sx-12">
-                                                        <ul>
-                                                            <li><h3>&nbsp;</h3></li>
-                                                            <li><a title="" href="#">Things</a></li>
-                                                        </ul>   
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-6 col-sx-12">
-                                                        <ul>
-                                                        <li><h3>More Stuff</h3></li>
-                                                            <li><a title="" href="#">Much More Stuff</a></li>
-                                                        </ul>
-                                                    </div>
 
-                                                    <div class="col-md-3 col-sm-6 col-sx-12">
-                                                        <ul>
-                                                        <li><h3>&nbsp;</h3></li>
-                                                            <li><a title="" href="#">Cool Stuff</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown yamm-half"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Messages <span class="dropcar fa fa-angle-down"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6 col-sx-12">
-                                                        <ul>
-                                                            <li><a title="" href="#">Messages</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown yamm-half"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Too Much <span class="dropcar fa fa-angle-down"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6 col-sx-12">
-                                                        <ul>
-                                                            <li><a title="" href="#">Way Too Much</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown normalmenu"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Stop <span class="dropcar fa fa-angle-down"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Too Much</a></li>
-                                    </ul><!-- end dropdown-menu -->
-                                </li><!-- end standard drop down -->
-                                <li><a title="" href="#">Done</a></li>                                
-                            </ul>
-                        </div><!--/.nav-collapse -->
-                    </div><!--/.container-fluid -->
-                </nav>
-            </div><!-- end menu-wrapper -->
-        </header><!-- end header -->
 
 
 <script src="../../../vendor/assets/javascripts/jquery.js"></script>
