@@ -38,5 +38,5 @@ Rails.application.routes.draw do
   resources :projects
 
   get '/questionnaire', to: 'home#questionnaire'
-
+  get '/dashboard',     to: 'home#dashboard'
 end
