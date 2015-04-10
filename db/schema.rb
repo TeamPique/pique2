@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20150409154712) do
     t.string   "team"
     t.string   "openings"
     t.string   "case_studies"
+    t.string   "case_studies2"
   end
 
   add_index "projects", ["users_id"], name: "index_projects_on_users_id", using: :btree
