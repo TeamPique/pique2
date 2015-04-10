@@ -1,11 +1,12 @@
 class ProjectsController < ApplicationController
 
   def index
-    @projects = Project.where(active: true)
+    # @projects = Project.where(active: true)
+    @projects = Project.all
   end
 
   def show
-    @project = Project.find(params[:id])
+    project = Project.find(params[:id])
   end
 
   def new
@@ -13,13 +14,13 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.create(projects_params)
+    project = Project.create(project_params)
     project.save
     redirect_to projects_path
   end
 
 
-  def projects_params
-    params.permit(:name, :owner, :collaborators, :active, :number_of_collaborators, :about, :team, :openings, :case_studies)
+  def project_params
+    params.require(:project).permit(:name, :owner, :collaborators, :active, :number_of_collaborators, :about, :team, :openings, :case_studies)
   end
 end
