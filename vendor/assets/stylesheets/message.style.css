@@ -9,10 +9,13 @@
 
 .message-user-av {
 	float: left;
+	padding-right: 0;
 }
 
 .message-info-preview {
 	float: right;
+	margin-right: 40px;
+	padding-left: 0;
 }
 
 .message-av {
@@ -20,10 +23,7 @@
 }
 
 .sidebar-item {
-	padding-top: 0px;
-	padding-bottom: 0px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	padding: 15px 15px 15px 15px;
 	border-bottom: 1px solid #e8e8e8;
 	border-right: 1px solid #e8e8e8;
 	line-height: 1.2em;
