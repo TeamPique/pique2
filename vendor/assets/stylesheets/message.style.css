@@ -22,8 +22,11 @@
 .sidebar-item {
 	padding-top: 0px;
 	padding-bottom: 0px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 	border-bottom: 1px solid #e8e8e8;
 	border-right: 1px solid #e8e8e8;
+	line-height: 1.2em;
 }
 
 .nav-logo {
