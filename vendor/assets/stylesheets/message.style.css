@@ -1,10 +1,15 @@
 #page-content {
 	padding-top: 0px;
+	background: #E5EAEB;
 }
 
 #sidebar {
 	padding-left: 0;
 	margin-left: 0;
+}
+
+#sidebar form .form-control {
+	width: 104.5%;
 }
 
 .message-user-av {
@@ -23,6 +28,7 @@
 }
 
 .sidebar-item {
+	background: #fff;
 	padding: 15px 15px 15px 15px;
 	border-bottom: 1px solid #e8e8e8;
 	border-right: 1px solid #e8e8e8;
