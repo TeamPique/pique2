@@ -40,11 +40,14 @@
 
 .message-chat {
 	background: #fff;
-	height: 100vh;
+	margin-bottom:  0px;
+	height: 550px;
+	padding-bottom: 3.33333333%;
 }
 
 #post-content {
 	background: #E5EAEB;
 	padding-top: 3.33333333%;
-	padding-bottom: 3.33333333;
+	padding-bottom: 3.33333333%;
+	margin-bottom: 0px;
 }
