@@ -29,3 +29,11 @@
 .nav-logo {
 	height: 60px;
 }
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
