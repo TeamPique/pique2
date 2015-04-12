@@ -72,7 +72,11 @@
 	height: auto;
 	position: absolute;
 	bottom: 0;
+}
 
+input#message-input {
+	border: none;
+	background-image: none;
 }
 
 #post-content {
