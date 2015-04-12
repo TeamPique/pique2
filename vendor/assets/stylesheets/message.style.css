@@ -73,11 +73,16 @@
 	bottom: 0;
 }
 
+.form-group.message-text {
+	border-top: 1px solid #ccc;
+}
+
 input#message-input {
 	border: none;
 	background-image: none;
 	height: 70px;
 	padding-left: 15px;
+	width: 100%;
 }
 
 #post-content {
