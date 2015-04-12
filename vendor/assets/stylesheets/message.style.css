@@ -41,8 +41,7 @@
 
 .right {
 	float: right;
-	padding-right: 10px;
-	padding-left: 10px;
+	padding: 5px 10px 5px 10px;
 	background: #5FA0D4;
 	color: #fff;
 }
@@ -51,8 +50,7 @@
 	float: left;
 	background: #E5EAEB;
 	color: #000;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: 5px 10px 5px 10px;
 }
 
 .message-chat {
@@ -65,6 +63,7 @@
 
 .message-text {
 	padding-right: 40px;
+	padding-bottom: 15px;
 }
 
 .message-chats {
@@ -77,6 +76,8 @@
 input#message-input {
 	border: none;
 	background-image: none;
+	height: 70px;
+	padding-left: 15px;
 }
 
 #post-content {
