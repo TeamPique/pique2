@@ -37,3 +37,12 @@
 .left {
 	float: left;
 }
+
+.message-chat {
+	background: #fff;
+	height: 100vh;
+}
+
+#post-content {
+	background: #E5EAEB;
+}
