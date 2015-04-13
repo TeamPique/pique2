@@ -26,6 +26,13 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
+  def follow_projects
+    project = Project.find(params[:id])
+    project.users_followed << User.find(current_user)
+    project.save
+    redirect_to "show"
+  end
+
 
   def project_params
     params.require(:project).permit(:name, :owner, :collaborators, :number_of_collaborators, :about, :team, :openings, :case_studies)

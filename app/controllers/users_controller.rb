@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def show
     if params[:id].to_i == current_user.id
+      @followed_projects = current_user.projects_followed
       render "profile"
     else
       visitor_id = User.find(params[:id]).id
@@ -24,12 +25,12 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def show
-  #   current_user
-  #   visitor = params[:visitor]
-  #   cur_user = current_user.id
-  @user = User.find(params[:id])
-  end
+  # def show
+  # #   current_user
+  # #   visitor = params[:visitor]
+  # #   cur_user = current_user.id
+  # @user = User.find(params[:id])
+  # end
 
 
   def update
