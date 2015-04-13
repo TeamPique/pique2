@@ -565,9 +565,11 @@ blockquote:after {
     border-bottom:1px solid #f9f9f9;
 }
 
+
+/*commented out the !important on the color - Anderson*/
 #multimenu .navbar-default .social-icons a,
 #multimenu .navbar-default .navbar-nav > li > a {
-        color:#0b0b0b !important;
+        color:#0b0b0b;  
 }
 
 #multimenu .demosbutton:hover,
