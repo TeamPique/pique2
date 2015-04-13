@@ -1,29 +1,39 @@
+var User = Backbone.Model.extend({});
 var Conversation = Backbone.Model.extend({});
 
-var conversaion = new Conversation({
-	user1: 
+
+var tomJones = 
 		{
 			name: 'Tom Jones',
 			avatar: 'http://piqueapp.github.io/assets/img/av.png'
-		},
-	user2:
+		};
+var tomCruise =
 		{
 			name: 'Tom Jones',
 			avatar: 'http://piqueapp.github.io/assets/img/av.png'
-		},
-	messages:
+		};
+
+var u1 = new User(tomJones);
+var u2 = new User(tomCruise);
+
+
+
+var conversation = new Conversation({
+	user1: u1,
+	user2: u2,
+	messages: 
 		[
 			{
 				timestamp: new Date(),
 				message: 'Craig, it\'s important. I just spilled salsa all over my filas.',
-				sender: user1,
-				recipient: user2
+				sender: u1,
+				recipient: u2
 			},
 			{
 				timestamp: new Date(),
 				message: 'I\m not Craig!',
-				sender: user2,
-				recipient: user1
+				sender: u2,
+				recipient: u1
 			}
-		];
+		]
 });

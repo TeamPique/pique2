@@ -6,4 +6,4 @@
 //     { offset: 120 }
 // ).init();
 
-new Message();
+new Message({model: conversation});
