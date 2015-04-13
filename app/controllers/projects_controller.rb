@@ -5,6 +5,10 @@ class ProjectsController < ApplicationController
     @projects = Project.all
     @users = User.all
     @user = User.find_by(params[:id])
+
+    if params[:search]
+      @search_results = Project.search(params[:search]).order("created_at DESC")
+    end
   end
 
   def show
