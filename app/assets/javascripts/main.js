@@ -7,6 +7,10 @@
 // ).init();
 
 
-var conversations = [conversation, conversation2];
-var inbox = new Inbox(conversations)
-new Message({collection: inbox});
+
+var messages1 = [m2, m1];
+var messages2 = [m1, m2];
+var conversation1 = new Conversation(messages1);
+var conversation2 = new Conversation(messages2);
+new Sidebar({collection: conversation1});
+new Sidebar({collection: conversation2});
