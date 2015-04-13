@@ -119,6 +119,14 @@
 </div>
 
 
+  <script type="text/template" id="chat-message-template">
+    <div class="col-xs-12 col-sm-12 col-md-12 message-text">
+      <img class="img-responsive message-av sender-img" src="http://piqueapp.github.io/assets/img/av.png">
+      <p class="sender-message">I am going to murder you.</p>
+      <p class="message-time-date">insert time here </p>
+    </div>
+  </script>
+
 
 <script type="text/template" id="sidebar-message-template">
   <div class="row sidebar-item">
@@ -131,10 +139,6 @@
     </div>
   </div>
 </script>
-
- 
-
-
 
 <script src="../../../vendor/assets/javascripts/jquery.js"></script>
 <script src="../../../vendor/assets/javascripts/underscore.js"></script>
@@ -156,37 +160,6 @@
 <script src="../../../app/assets/javascripts/collections/conversation.js"></script>
 <script src="../../../app/assets/javascripts/views/sidebar.js"></script>
 <script src="../../../app/assets/javascripts/main.js"></script>
-
-
-  <script>
-
-    $(function() {
-      var $chat = $('.message-chats');
-      $chat[0].scrollTop = $chat[0].scrollHeight;
-      moment().format();
-      var time = new Date();
-
-      $('#message-input').keyup(function(e) {
-        if (e.keyCode == 13) {
-          $chat.append(
-            '<div class="col-xs-12 col-sm-12 col-md-12 message-text">' + 
-            '<img class="img-responsive message-av sender-img" src="http://piqueapp.github.io/assets/img/av.png">' +
-            '<p class="sender-message">' + $(this).val() + '</p>' +
-            '<br>' +
-            '<p class="timestamp" data-livestamp=' + moment(time).unix() + '></p>' +
-            '</div>');
-          $chat[0].scrollTop = $chat[0].scrollHeight;
-          $(this).val('');
-        }
-      })
-      .focus();
-    
-
-    });
-
-
-
-  </script>
 
 </body>
 </html>
