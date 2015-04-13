@@ -80,6 +80,7 @@
   border-bottom: 2px solid #b94721;
   color: #fff;
   border-radius: 2px;
+  outline: 0;
 }
 
 .compose-message-btn:hover {
@@ -89,6 +90,12 @@
   color: #fff;
   border-radius: 4px;
   margin-bottom: -2px;
+}
+
+.compose-message-btn:focus {
+	background: #f3733c;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
 }
 
 .message-chat {
