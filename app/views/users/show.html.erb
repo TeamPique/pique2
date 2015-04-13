@@ -8,10 +8,21 @@
   <li><%= @project %></li>
 </div>
 
+<!-- imported project show code (KA) -->
+<img src="<%= current_user.image %>"><%= current_user.name %> has <%= @projects.count %> project(s).</br>
+
+<% @projects.each do |project| %>
+<%= project.name %> has <%= project.number_of_collaborators %> collaborators:</br>
+  <ul>
+    <li><a href='/users/<%= @user.id %>'><%= project.collaborators.split',' %></a></li>
+  </ul>
+<% end %>
+
 <input type="hidden" name="visitors" value=<%=@user.id%>>
 <%= form_for current_user, :url => '#', :html => { :multipart => true, :id => "paperclipPortfolio" }  do |form| %>
   <%= form.file_field :portfolio %>
 <% end %>
+<!--  -->
 
 <script>
 $('#paperclipPortfolio').on('change', paperclipAjax);
