@@ -1,14 +1,9 @@
-<img src="<%= current_user.image %>"><%= current_user.name %> has <%= @projects.count %> project(s).</br>
-
 <% @projects.each do |project| %>
-<%= project.name %> has <%= project.number_of_collaborators %> collaborators:</br>
-  <ul>
-    <li><a href='/users/<%= @user.id %>'><%= project.collaborators.split',' %></a></li>
-  </ul>
-<% end %>
+  <%= project.name %></br></br>
+  <%= project.about %></br></br>
+  <!--   <%#= project.number_of_applicants %></br></br> NOT ADDED TO TABLE YET (KA)-->
+  <!--   <%#= project.number_of_views %></br></br> NOT ADDED TO TABLE YET (KA)-->
+  <!--   <%#= project.number_of_followers %></br></br> NOT ADDED TO TABLE YET (KA)-->
+  <!-- <%#= project.tags %></br></br> NOT ADDED TO TABLE YET (KA)-->
 
-<%#= @project.created_at %>
-
-<% @users.each do |user| %>
-  <%= @user.name %>
 <% end %>
