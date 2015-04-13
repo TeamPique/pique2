@@ -140,6 +140,7 @@
 input#message-input {
 	border: none;
 	background-image: none;
+	background: #F7F9FB;
 	height: 70px;
 	padding-left: 15px;
 	width: 100%;
