@@ -1,4 +1,8 @@
 
+.activity-feed {
+  background: #fff;
+  height: 87vh;
+}
 
 #head-font > li > a {
   font-family: 'Nunito', sans-serif;
@@ -16,7 +20,7 @@
 	margin-left: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
-	height: 619px;
+	height: 87vh;
 	background: #fff;
 }
 
@@ -160,18 +164,10 @@ input#message-input {
 	margin-bottom: 0px;
 }
 
-#post-content .page-header {
+.page-header {
   border-bottom: 2px solid #ddd;
   padding-left: 25px;
-<<<<<<< HEAD
   color: #78b7e4;
   font-family: 'Nunito', sans-serif;
   margin: 35px 0 20px;
-
 }
-=======
-}
-
-
-
->>>>>>> 8c1065032fd13d3d8e9ab2868aeff447795f3dc4
