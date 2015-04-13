@@ -60,6 +60,27 @@
 	margin: 0;
 }
 
+.compose-message {
+  text-align: center;
+}
+
+.compose-message-btn {
+  background: #f3733c;
+  border: none;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.compose-message-btn:hover {
+  border-bottom: 2px solid #f3733c;
+  border-top: 2px solid #fff;
+  background: #f3733c;
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: -2px;
+}
+
 .message-chat {
 	background: #fff;
 	margin-bottom:  0px;
