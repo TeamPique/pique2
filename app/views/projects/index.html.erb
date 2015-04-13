@@ -1,5 +1,15 @@
 <img src="<%= current_user.image %>"><%= current_user.name %> has <%= @projects.count %> project(s).</br>
 
+<!-- rendering the results of a search -->
+<% if @search_results != [] %>
+  <% @search_results.each do |project| %>
+  <%= project.name %> has <%= project.number_of_collaborators %> collaborators:</br>
+    <ul>
+      <li><a href='/users/<%= @user.id %>'><%= project.collaborators.split',' %></a></li>
+    </ul>
+  <% end %>
+<% end %>
+
 <% @projects.each do |project| %>
 <%= project.name %> has <%= project.number_of_collaborators %> collaborators:</br>
   <ul>
