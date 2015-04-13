@@ -163,6 +163,8 @@
 <script src="../../../vendor/assets/javascripts/underscore.js"></script>
 <script src="../../../vendor/assets/javascripts/backbone.js"></script>
 <script src="../../../vendor/assets/javascripts/bootstrap.js"></script>
+<script src="../../../vendor/assets/javascripts/moment.js"></script>
+<script src="../../../vendor/assets/javascripts/livestamp.js"></script>
 <script src="../../../vendor/assets/javascripts/wow.js"></script>
 <script src="../../../vendor/assets/javascripts/jquery.stellar.js"></script>
 <script src="../../../vendor/assets/javascripts/jquery.jigowatt.js"></script>
@@ -180,6 +182,8 @@
     $(function() {
       var $chat = $('.message-chats');
       $chat[0].scrollTop = $chat[0].scrollHeight;
+      moment().format();
+      var time = new Date();
 
       $('#message-input').keyup(function(e) {
         if (e.keyCode == 13) {
@@ -187,13 +191,16 @@
             '<div class="col-xs-12 col-sm-12 col-md-12 message-text">' + 
             '<img class="img-responsive message-av sender-img" src="http://piqueapp.github.io/assets/img/av.png">' +
             '<p class="sender-message">' + $(this).val() + '</p>' + 
-            '</div>');
+            '</div>' + '<a class="timestamp"><span data-livestamp=' + moment(time).unix() + '></span></a>');
           $chat[0].scrollTop = $chat[0].scrollHeight;
           $(this).val('');
         }
       })
       .focus();
+    
+
     });
+
 
 
   </script>
