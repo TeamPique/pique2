@@ -174,6 +174,7 @@
 <script src="../../../vendor/assets/javascripts/jquery.bxslider.js"></script>
 <script src="../../../vendor/assets/javascripts/progressbar.js"></script>
 <script src="../../../vendor/assets/bfassets/js/jquery.prettyPhoto.js"></script>
+<script src="../../../app/assets/javascripts/models/user.js"></script>
 <script src="../../../vendor/assets/javascripts/onepage-scripts.js"></script>
 
 
@@ -190,8 +191,10 @@
           $chat.append(
             '<div class="col-xs-12 col-sm-12 col-md-12 message-text">' + 
             '<img class="img-responsive message-av sender-img" src="http://piqueapp.github.io/assets/img/av.png">' +
-            '<p class="sender-message">' + $(this).val() + '</p>' + 
-            '</div>' + '<a class="timestamp"><span data-livestamp=' + moment(time).unix() + '></span></a>');
+            '<p class="sender-message">' + $(this).val() + '</p>' +
+            '<br>' +
+            '<p class="timestamp" data-livestamp=' + moment(time).unix() + '></p>' +
+            '</div>');
           $chat[0].scrollTop = $chat[0].scrollHeight;
           $(this).val('');
         }
