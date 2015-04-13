@@ -115,31 +115,46 @@
           <div id="post-content" class="col-md-9 col-sm-9 col-xs-9 pull-right">
           		<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 message-chat">
              		<h1 class="page-header"><small>To: </small>Tom Jones</h1>
+
           			<div class="message-chats">
 	          			<div class="col-xs-12 col-sm-12 col-md-12 message-text">
-	          				<p class="right">Sup?</p>
+                    <img class="img-responsive message-av sender-img" src="http://piqueapp.github.io/assets/img/av.png">
+	          				<p class="sender-message">Sup?</p>
+                    <p class="message-time-date">insert time here </p>
 	          			</div>
 								
 									<div class="col-xs-12 col-sm-12 col-md-12 message-text">
-										<p class="left">Not Much</p>
+                    <img class="img-responsive message-av recipient-img" src="http://piqueapp.github.io/assets/img/av.png">
+                    <div class="message-container">
+										  <p class="recipient-message">Not Much</p>
+                      <p class="message-time-date">insert time here </p>
+                    </div>
 									</div>
 								
 									<div class="col-xs-12 col-sm-12 col-md-12 message-text">
-										<p class="left">What you doing?</p>
+                    <img class="img-responsive message-av recipient-img" src="http://piqueapp.github.io/assets/img/av.png">
+										<p class="recipient-message">What you doing?</p>
+                    <p class="message-time-date">insert time here </p>
 									</div>
+
 								
 									<div class="col-xs-12 col-sm-12 col-md-12 message-text">
-										<p class="right">Nothing. Eating a burrito</p>
+                    <img class="img-responsive message-av sender-img" src="http://piqueapp.github.io/assets/img/av.png">
+										<p class="sender-message">Nothing. Eating a burrito</p>
+                    <p class="message-time-date">insert time here </p>
 									</div>
-									<div class="col-xs-12 col-sm-12 col-md-12 message-text form-group">
-										<input id="message-input" placeholder="Type something here..." type="text">
-									</div>
-							</div>
+                </div>
+                <div class="message-textbox col-xs-12 col-sm-12 col-md-12 form-group">
+									<input id="message-input" placeholder="Type something here..." type="text">
+                </div>
 								</div>
         		</div>
           </div>
    	    </div>
   </section>
+
+
+
  
 
 
@@ -158,6 +173,30 @@
 <script src="../../../vendor/assets/javascripts/progressbar.js"></script>
 <script src="../../../vendor/assets/bfassets/js/jquery.prettyPhoto.js"></script>
 <script src="../../../vendor/assets/javascripts/onepage-scripts.js"></script>
+
+
+  <script>
+
+    $(function() {
+      var $chat = $('.message-chats');
+      $chat[0].scrollTop = $chat[0].scrollHeight;
+
+      $('#message-input').keyup(function(e) {
+        if (e.keyCode == 13) {
+          $chat.append(
+            '<div class="col-xs-12 col-sm-12 col-md-12 message-text">' + 
+            '<img class="img-responsive message-av sender-img" src="http://piqueapp.github.io/assets/img/av.png">' +
+            '<p class="sender-message">' + $(this).val() + '</p>' + 
+            '</div>');
+          $chat[0].scrollTop = $chat[0].scrollHeight;
+          $(this).val('');
+        }
+      })
+      .focus();
+    });
+
+
+  </script>
 
 </body>
 </html>

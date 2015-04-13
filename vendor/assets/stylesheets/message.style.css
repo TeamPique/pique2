@@ -1,3 +1,5 @@
+.row-
+
 #page-content {
 	padding-top: 0px;
 	background: #E5EAEB;
@@ -5,7 +7,11 @@
 
 #sidebar {
 	padding-left: 0;
+	padding-right: 0;
 	margin-left: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 619px;
 }
 
 #sidebar form .form-control {
@@ -39,26 +45,29 @@
 	height: 60px;
 }
 
-.right {
+.sender-message {
 	float: right;
 	padding: 5px 10px 5px 10px;
 	background: #5FA0D4;
 	color: #fff;
 }
 
-.left {
+.recipient-message {
 	float: left;
 	background: #E5EAEB;
 	color: #000;
 	padding: 5px 10px 5px 10px;
+	margin: 0;
 }
 
 .message-chat {
 	background: #fff;
 	margin-bottom:  0px;
 	height: 550px;
-	padding-bottom: 3.33333333%;
+	padding: 0 0 3.33333333% 0;
 	position: relative;
+	border: 2px solid #ddd;
+	border-radius: 4px;
 }
 
 .message-text {
@@ -68,13 +77,43 @@
 
 .message-chats {
 	width: 100%;
-	height: auto;
-	position: absolute;
+	height: 345px;
 	bottom: 0;
+	overflow-y: auto;
+}
+
+.message-container {
+  width:100%;
+}
+
+.message-textbox {
+  position: relative;
+  bottom: 0;
+  background: #fff;
+  border-top: 2px solid #ddd;
+  padding: 0;
+}
+
+.message-time-date {
+  font-size: 10px;
+  color: #aaa;
+  clear: both;
+}
+
+.sender-img {
+  height: 38px;
+  float: right;
+  padding-left: 15px;
+}
+
+.recipient-img {
+  height: 38px;
+  float: left;
+  padding-right: 15px;
 }
 
 .form-group.message-text {
-	border-top: 1px solid #ccc;
+	border-top: 2px solid #ddd;
 }
 
 input#message-input {
@@ -83,6 +122,7 @@ input#message-input {
 	height: 70px;
 	padding-left: 15px;
 	width: 100%;
+	outline: none;
 }
 
 #post-content {
@@ -90,4 +130,9 @@ input#message-input {
 	padding-top: 3.33333333%;
 	padding-bottom: 3.33333333%;
 	margin-bottom: 0px;
+}
+
+#post-content .page-header {
+  border-bottom: 2px solid #ddd;
+  padding-left: 25px;
 }
