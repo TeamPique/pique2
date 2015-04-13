@@ -9,7 +9,7 @@
   <% end %>
 
 <!-- rendering the results of a search -->
-<% if @search_results != [] %>
+<% if @search_results != nil %>
   <% @search_results.each do |project| %>
   <%= project.name %> has <%= project.number_of_collaborators %> collaborators:</br>
     <ul>

@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
   def index
+    binding.pry
     @projects = Project.where(active: true)
     @projects = Project.all
     @users = User.all
