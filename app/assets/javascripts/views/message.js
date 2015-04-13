@@ -4,9 +4,9 @@ var Message = Backbone.View.extend({
 	initialize: function() {
 		this.render();
 	},
-	render: function() {
-		var messages = this.model.get('messages');
-		var last 		 = this.model.get('messages').length;
+	addOne: function(model) {
+		var messages = model.get('messages');
+		var last 		 = model.get('messages').length;
 		var preview  = messages[last - 1];		
 		$('#sidebar-items').prepend(this.sidebarMessageTpl());
 		$('.preview-username').html(preview.sender.attributes.name);

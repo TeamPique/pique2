@@ -6,4 +6,7 @@
 //     { offset: 120 }
 // ).init();
 
-new Message({model: conversation});
+
+var conversations = [conversation, conversation2];
+var inbox = new Inbox(conversations)
+new Message({collection: inbox});
