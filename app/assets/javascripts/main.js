@@ -1,7 +1,9 @@
-var surv = surv || {};
+// var surv = surv || {};
 
-new surv.Survey({collection: questions});
+// new surv.Survey({collection: questions});
 
-new WOW(
-    { offset: 120 }
-).init();
+// new WOW(
+//     { offset: 120 }
+// ).init();
+
+new Message();
