@@ -12,7 +12,6 @@ var Message = Backbone.Model.extend({
 	recipient: ''
 });
 
-
 var tomJones = 
 		{
 			name: 'Tom Jones',
@@ -26,34 +25,15 @@ var tomCruise =
 
 var u1 = new User(tomJones);
 var u2 = new User(tomCruise);
-var m1 = new Message({})
-
-
-var conversation = new Conversation({
-	messages: 
-		[
-			{
-				timestamp: new Date(),
-				message: 'I\m not Craig!',
-				sender: u2,
-				recipient: u1
-			}
-		]
+var m1 = new Message({
+	timestamp: new Date(),
+	content: 'Craig, it\'s important. I just spilled salsa all over my filas.',
+	sender: u1,
+	recipient: u2
 });
-
-
-	messages: 
-		[
-			{
-				timestamp: new Date(),
-				message: 'I\m not Craig!',
-				sender: u2,
-				recipient: u1
-			},
-			{
-				timestamp: new Date(),
-				message: 'Craig, it\'s important. I just spilled salsa all over my filas.',
-				sender: u1,
-				recipient: u2
-			},
-		]
+var m2 = new Message({
+	timestamp: new Date(),
+	content: 'I\m not Craig!',
+	sender: u2,
+	recipient: u1
+});
