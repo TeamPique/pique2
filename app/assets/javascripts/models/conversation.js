@@ -1,6 +1,16 @@
-var User = Backbone.Model.extend({});
-var Message = Backbone.Model.extend({});
-var Conversation = Backbone.Model.extend({});
+var User = Backbone.Model.extend({
+	defaults: {
+		username: '',
+		avatar: '',
+		conversations: ''
+	},
+});
+var Message = Backbone.Model.extend({
+	content: '',
+	timestamp: new Date(),
+	sender: '',
+	recipient: ''
+});
 
 
 var tomJones = 
@@ -16,20 +26,12 @@ var tomCruise =
 
 var u1 = new User(tomJones);
 var u2 = new User(tomCruise);
-
+var m1 = new Message({})
 
 
 var conversation = new Conversation({
-	user1: u1,
-	user2: u2,
 	messages: 
 		[
-			{
-				timestamp: new Date(),
-				message: 'Craig, it\'s important. I just spilled salsa all over my filas.',
-				sender: u1,
-				recipient: u2
-			},
 			{
 				timestamp: new Date(),
 				message: 'I\m not Craig!',
@@ -39,9 +41,7 @@ var conversation = new Conversation({
 		]
 });
 
-var conversation2 = new Conversation({
-	user1: u1,
-	user2: u2,
+
 	messages: 
 		[
 			{
@@ -57,4 +57,3 @@ var conversation2 = new Conversation({
 				recipient: u2
 			},
 		]
-});
