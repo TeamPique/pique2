@@ -5,6 +5,10 @@ class ProjectsController < ApplicationController
     @projects = Project.all
     @users = User.all
     @user = User.find_by(params[:id])
+
+    if params[:search]
+      @search_results = Project.where("about LIKE ?", "%#{params[:search]}%")
+    end
   end
 
   def show
@@ -22,8 +26,15 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
+  def follow_projects
+    project = Project.find(params[:id])
+    project.users_followed << User.find(current_user)
+    project.save
+    redirect_to "show"
+  end
+
 
   def project_params
-    params.require(:project).permit(:name, :owner, :collaborators, :active, :number_of_collaborators, :about, :team, :openings, :case_studies)
+    params.require(:project).permit(:name, :owner, :collaborators, :number_of_collaborators, :about, :team, :openings, :case_studies)
   end
 end

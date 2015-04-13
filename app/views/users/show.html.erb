@@ -1,17 +1,20 @@
 <h1><%= @user.name %></h1>
 <img src="<%= @user.image %>">
 <div class='projects'>Projects:
-  <li><%# @projects.each do |project| %>
-  <a href="<%#= project_path(project) %>" alt=""><%#= @project.id %></a><br></li>
+  <li><% @projects.each do |project| %>
+  <a href="<%= project_path(project) %>" alt=""><%= @project.id %></a><br></li>
 
-  <%# end %>
+  <% end %>
   <li><%= @project %></li>
 </div>
+
+
 
 <input type="hidden" name="visitors" value=<%=@user.id%>>
 <%= form_for current_user, :url => '#', :html => { :multipart => true, :id => "paperclipPortfolio" }  do |form| %>
   <%= form.file_field :portfolio %>
 <% end %>
+<!--  -->
 
 <script>
 $('#paperclipPortfolio').on('change', paperclipAjax);
