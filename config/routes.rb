@@ -35,7 +35,11 @@ Rails.application.routes.draw do
 
   resources :friendships
   resources :users
-  resources :projects
+  resources :projects do
+    member do
+        post :follow_projects
+    end
+  end
 
   get '/questionnaire', to: 'home#questionnaire'
   get '/dashboard',     to: 'home#dashboard'
