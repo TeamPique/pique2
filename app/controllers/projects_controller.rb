@@ -1,14 +1,13 @@
 class ProjectsController < ApplicationController
 
   def index
-    binding.pry
     @projects = Project.where(active: true)
     @projects = Project.all
     @users = User.all
     @user = User.find_by(params[:id])
 
     if params[:search]
-      @search_results = Project.search(params[:search]).order("created_at DESC")
+      @search_results = Project.where("about LIKE ?", "%#{params[:search]}%")
     end
   end
 

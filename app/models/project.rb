@@ -3,7 +3,4 @@ class Project < ActiveRecord::Base
 
   attr_accessor :name, :owner, :collaborators, :abouts, :openings
 
-  def self.search(query)
-    where("about like?", "#{query}")
-  end
 end
