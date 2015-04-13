@@ -5,12 +5,12 @@ var Conversation = Backbone.Model.extend({});
 var tomJones = 
 		{
 			name: 'Tom Jones',
-			avatar: 'http://piqueapp.github.io/assets/img/av.png'
+			avatar: 'http://a5.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE1ODA0OTcyMDA1Njg4ODQ1.jpg'
 		};
 var tomCruise =
 		{
-			name: 'Tom Jones',
-			avatar: 'http://piqueapp.github.io/assets/img/av.png'
+			name: 'Thom Jones',
+			avatar: 'http://nuruinternational.org/annual-report/wp-content/uploads/2014/07/Jake.jpg'
 		};
 
 var u1 = new User(tomJones);
