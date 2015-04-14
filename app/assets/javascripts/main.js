@@ -2,15 +2,22 @@ var thomJones =
 		{
 			name: 'Thom Jones',
 			avatar: 'http://nuruinternational.org/annual-report/wp-content/uploads/2014/07/Jake.jpg',
+			id: 1
 		};
-var tomJones = {name: 'Tom Jones',
-			avatar: 'http://a5.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE1ODA0OTcyMDA1Njg4ODQ1.jpg'}
-var ev = {name: 'Evan Turner',
-			avatar: 'http://evturn.com/assets/img/ev-winter-yellow.jpg'}
+var tomJones = 
+		{
+			name: 'Tom Jones',
+			avatar: 'http://a5.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE1ODA0OTcyMDA1Njg4ODQ1.jpg',
+			id: 2
+		};
+var ev = 
+		{
+			name: 'Evan Turner',
+			avatar: 'http://evturn.com/assets/img/ev-winter-yellow.jpg',
+			id: 3
+		};
 
-
-
-var convo1 = new Conversation(				
+var convo1 = new Conversation({				
 					users: [tomJones, thomJones],
 					messages:	[
 							{
@@ -28,8 +35,9 @@ var convo1 = new Conversation(
 								content: 'Fuck the hell off!',
 								sender: thomJones
 							}
-						]);
-var convo2 = new Conversation(
+						]
+					});
+var convo2 = new Conversation({
 				users: [tomJones, thomJones],			
 				messages:	[
 						{
@@ -47,8 +55,9 @@ var convo2 = new Conversation(
 							content: 'Just ate a bisquit',
 							sender: tomJones
 						}
-					]);
-var convo3 = new Conversation(
+					]
+				});
+var convo3 = new Conversation({
 				users: [ev, thomJones],
 				messages:	[
 						{
@@ -66,7 +75,7 @@ var convo3 = new Conversation(
 							content: 'Please leave my wife in this',
 							sender: ev
 						}
-					]);
+					]});
 
 var u2 = new User(thomJones);
 

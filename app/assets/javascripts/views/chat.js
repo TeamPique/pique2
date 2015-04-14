@@ -1,6 +1,7 @@
 var Chat = Backbone.View.extend({
 	el: '.message-view',
 	chatMessageTpl	 : _.template($('#chat-message-template').html()),
+	sidebarPreviewTpl: _.template($('#sidebar-message-template').html()),
 	headerTpl	 : _.template($('#page-header-template').html()),
 	initialize: function() {
 		$chatbox = $('.message-chats');
@@ -14,16 +15,17 @@ var Chat = Backbone.View.extend({
 		'keypress #message-input' : 'chat'
 	},
 	addOne: function(conversation) {
-		var x = conversation.length;
-		var lastMessage = conversation[x - 1].toJSON();
+		var messages = conversation.attributes.messages;
+		var x = messages.length - 1;
+		var lastMessage = messages[x];
+		console.log(lastMessage);
 		$sidebar.append(this.sidebarPreviewTpl(lastMessage));
 		return this;
 	},
 	addAll: function() {
 		var inbox = this.model.get('inbox');
-		this.header(inbox[0].models);
 		for (var i = 0; i < inbox.length; i++) {
-			this.addOne(inbox[i].models);
+			this.addOne(inbox[i])			
 		}
 	},
 	sender: function(e) {
