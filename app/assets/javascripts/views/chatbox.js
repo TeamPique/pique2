@@ -3,12 +3,10 @@ var Chatbox = Backbone.View.extend({
 	chatboxTpl: _.template($('#chatbox-template').html()),
 	initialize: function() {
 		this.render();
-		$chatbox = $('.message-chats');
-		$chatbox[0].scrollTop = $chatbox[0].scrollHeight;
 	},
 	render: function() {
-
-		$chatbox[0].scrollTop = $chatbox[0].scrollHeight;
+		this.$el.html(this.chatboxTpl(this.model.toJSON()));
+		$('.message-chats')[0].scrollTop = $('.message-chats')[0].scrollHeight;
 		return this;
 	},
 });
