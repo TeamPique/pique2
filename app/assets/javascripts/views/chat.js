@@ -1,4 +1,4 @@
-var Inbox = Backbone.View.extend({
+var Chat = Backbone.View.extend({
 	el: '.message-view',
 	sidebarPreviewTpl: _.template($('#sidebar-message-template').html()),
 	chatMessageTpl	 : _.template($('#chat-message-template').html()),

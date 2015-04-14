@@ -1,3 +1,3 @@
-var Inbox = Backbone.Collection.extend({
-	model: Conversation,
-});
+// var Inbox = Backbone.Collection.extend({
+// 	model: Conversation,
+// });

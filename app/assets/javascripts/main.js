@@ -20,10 +20,15 @@ var convo2 = new Conversation(
 						])
 var convo3 = new Conversation(
 						
-							[new Message({timestamp: new Date(), content: 'Craig, it\'s important. I just spilled salsa all over my filas.', sender: tomJones, recipient: thomJones}), new Message({timestamp: new Date(), content: 'I\m not Craig!', sender: thomJones, recipient: tomJones}), new Message({timestamp: new Date(), content: 'Please leave my wife in this', sender: ev, recipient: thomJones})
+							[new Message({
+								timestamp: new Date(), 
+								content: 'Craig, it\'s important. I just spilled salsa all over my filas.', sender: tomJones, 
+								recipient: thomJones}), 
+							new Message({timestamp: new Date(), content: 'I\m not Craig!', sender: thomJones, recipient: tomJones}), new Message({timestamp: new Date(), content: 'Please leave my wife in this', sender: ev, recipient: thomJones})
 						])
 
 var u2 = new User(thomJones);
+
 var u1 = new User({
 			user: tomJones,
 			inbox: 
@@ -37,10 +42,7 @@ var u1 = new User({
 		});
 
 
-
- 
-
-new Inbox({model: u1});
+new Chat({model: u1});
 
 
 
