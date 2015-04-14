@@ -5,12 +5,7 @@ var User = Backbone.Model.extend({
 		conversations: ''
 	},
 });
-var Message = Backbone.Model.extend({
-	content: '',
-	timestamp: new Date(),
-	sender: '',
-	recipient: ''
-});
+var Message = Backbone.Model.extend({});
 
 var tomJones = 
 		{

@@ -3,8 +3,9 @@ var Sidebar = Backbone.View.extend({
 	sidebarPreviewTpl: _.template($('#sidebar-message-template').html()),
 	chatMessageTpl	 : _.template($('#chat-message-template').html()),
 	initialize: function() {
+		$chat = $('.message-chats');
+		$chat[0].scrollTop = $chat[0].scrollHeight;
 		moment().format();
-		var time = new Date();
 		this.render();
 	},
 	events: {
@@ -21,12 +22,19 @@ var Sidebar = Backbone.View.extend({
 		}.bind(this));
 	},
 	chat: function(e) {
+		e.preventDefault();
 		if (e.keyCode == 13) {
-			var $chat = $('.message-chats');
-			$chat[0].scrollTop = $chat[0].scrollHeight;
-			$chat.append(this.chatMessageTpl());
-			$chat[0].scrollTop = $chat[0].scrollHeight;
-    	$(this).val('');
+			var $content = $('#message-input').val();
+			console.log($content)
+			var newMessage = new Message({
+				sender: '',
+				recipient: '',
+				timestamp: new Date(),
+				content: $content,
+				avatar: u1.get('avatar')
+			});
+			$chat.append(this.chatMessageTpl(newMessage.toJSON()));
   	}
+		$chat[0].scrollTop = $chat[0].scrollHeight;
 	},
 });

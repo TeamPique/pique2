@@ -121,9 +121,9 @@
 
   <script type="text/template" id="chat-message-template">
     <div class="col-xs-12 col-sm-12 col-md-12 message-text">
-      <img class="img-responsive message-av sender-img" src="http://piqueapp.github.io/assets/img/av.png">
-      <p class="sender-message">I am going to murder you.</p>
-      <p class="message-time-date">insert time here </p>
+      <img class="img-responsive message-av sender-img" src="<%= avatar %>">
+      <p class="sender-message"><%= content %></p>
+      <p class="message-time-date" data-livestamp="<%= moment(timestamp).unix() %>"></p>
     </div>
   </script>
 
