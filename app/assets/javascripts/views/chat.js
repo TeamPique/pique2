@@ -16,11 +16,4 @@ var Chat = Backbone.View.extend({
 			this.addSidebarItems(inbox[i])			
 		}
 	},
-	send: function(message) {
-		if (message.get('content') !== '') {
-			$chatbox.append(this.chatMessageTpl(message.toJSON()));
-			$chatbox[0].scrollTop = $chatbox[0].scrollHeight;
-			return this;
-		}
-	},
 });
