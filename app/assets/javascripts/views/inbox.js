@@ -8,28 +8,22 @@ var Inbox = Backbone.View.extend({
 		$sidebar = $('#sidebar-items');
 		$chatbox[0].scrollTop = $chatbox[0].scrollHeight;
 		moment().format();
-		this.addOne();
+		this.addAll();
 	},
 	events: {
 		'keypress #message-input' : 'chat'
 	},
-	addOne: function() {
-		var inbox = this.model.get('inbox');
-		var x = (inbox.length - 1);
-		var lastConversation = inbox[x];
-		var messages = inbox[x].models;
-		var y = (messages.length - 1);
-		var lastMessage = messages[y].toJSON();
-		console.log(lastMessage)
-
+	addOne: function(conversation) {
+		var x = conversation.length;
+		var lastMessage = conversation[x - 1].toJSON();
 		$sidebar.prepend(this.sidebarPreviewTpl(lastMessage));
-		// var preview = conversations.preview();
 		return this;
 	},
 	addAll: function() {
-		this.collection.each(function(model) {
-			this.addOne(model);
-		}.bind(this));
+		var inbox = this.model.get('inbox');
+		for (var i = 0; i < inbox.length; i++) {
+			this.addOne(inbox[i].models);
+		}
 	},
 	chat: function(e) {
 		if (e.which === 13) {
