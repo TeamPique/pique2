@@ -1,13 +1,3 @@
-<% @projects.each do |project| %>
-  <%= project.name %></br></br>
-  <%= project.about %></br></br>
-  <!--   <%#= project.number_of_applicants %></br></br> NOT ADDED TO TABLE YET (KA)-->
-  <!--   <%#= project.number_of_views %></br></br> NOT ADDED TO TABLE YET (KA)-->
-  <!--   <%#= project.number_of_followers %></br></br> NOT ADDED TO TABLE YET (KA)-->
-  <!-- <%#= project.tags %></br></br> NOT ADDED TO TABLE YET (KA)-->
-
-<img src="<%= current_user.image %>"><%= current_user.name %> has <%= @projects.count %> project(s).</br>
-
 <!-- search bar -->
 <%= form_tag(projects_path, :method => "get", class: "navbar-form", id: "search-form") do %>
     <div class="input-append">
@@ -20,7 +10,7 @@
 <% if @search_results != nil %>
   <h2>Search Results</h2>
   <% @search_results.each do |project| %>
-  <%= project.name %> has <%= project.number_of_collaborators %> collaborators</br>
+  <a href=<%= project_path(project) %>><%= project.name %></a> has <%= project.openings %> openings.</br>
   <% end %>
 <% end %>
 
@@ -28,9 +18,12 @@
   <h2>All Projects</h2>
 <% end %>
 <% @projects.each do |project| %>
-<%= project.name %> has <%= project.number_of_collaborators %> collaborators</br>
+  <%= project.name %></br>
+  <%= project.about %></br></br>
+  <!--   <%#= project.tags %></br></br> NOT ADDED TO TABLE YET (KA)-->
+  <!-- "LIKE PROJECT icon here" -->
+  <!-- "COMPOSE MESSAGE icon here" -->
 <% end %>
 
-<%#= @project.created_at %>
+<%= button_to 'Add another project', new_project_path, method: 'get' %><br>
 
-<% end %>
