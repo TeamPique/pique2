@@ -5,12 +5,6 @@
   <%= form_for(@project) do |p| %>
     <%= p.label :name, "Project Name" %><br />
     <%= p.text_field :name %><br />
-    <%#= p.label :owner, "Project Owner" %>
-    <%#= p.text_field :owner %><br />
-    <%= p.label :number_of_collaborators, "# of Collaborators" %><br />
-    <%= p.text_field :number_of_collaborators %><br />
-    <%= p.label :collaborators, "Collaborators" %><br />
-    <%= p.text_field :collaborators %><br />
     <%#= p.created_at %>
     <%#= p.updated_at %>
     <%= p.label :about, "About" %><br />

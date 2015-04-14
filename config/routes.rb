@@ -47,5 +47,5 @@ Rails.application.routes.draw do
   resources :comments, only: [:create]
 
   get '/questionnaire', to: 'home#questionnaire'
-  get '/dashboard',     to: 'home#dashboard'
+  # get '/dashboard',     to: 'home#dashboard'
 end
