@@ -20,9 +20,9 @@ var Inbox = Backbone.View.extend({
 		var messages = inbox[x].models;
 		var y = (messages.length - 1);
 		var lastMessage = messages[y].toJSON();
-		console.log(lastMessage.recipient)
+		console.log(lastMessage)
 
-		// $sidebar.prepend(this.sidebarPreviewTpl(lastMessage));
+		$sidebar.prepend(this.sidebarPreviewTpl(lastMessage));
 		// var preview = conversations.preview();
 		return this;
 	},
