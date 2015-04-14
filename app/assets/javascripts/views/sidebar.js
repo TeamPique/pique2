@@ -13,7 +13,7 @@ var Sidebar = Backbone.View.extend({
 		this.$el.append(this.sidebarPreviewTpl(lastMessage));
 		return this;
 	},
-	chatbox: function(e) {
+	chatbox: function() {
 		var view = new Chatbox({model: this.model});
 		return this;
 	}
