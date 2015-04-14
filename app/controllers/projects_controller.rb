@@ -16,6 +16,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @comment = Comment.new
     @project_comment = Comment.where({project_id: params[:id]}).order(:created_at)
+    @user = User.find(params[:id])
   end
 
   def new
