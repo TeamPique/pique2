@@ -1,6 +1,5 @@
 var Chat = Backbone.View.extend({
 	el: '.message-view',
-	sidebarPreviewTpl: _.template($('#sidebar-message-template').html()),
 	chatMessageTpl	 : _.template($('#chat-message-template').html()),
 	headerTpl	 : _.template($('#page-header-template').html()),
 	initialize: function() {
@@ -27,15 +26,11 @@ var Chat = Backbone.View.extend({
 			this.addOne(inbox[i].models);
 		}
 	},
-	chat: function(e) {
+	sender: function(e) {
 		if (e.which === 13) {
-			var	newMessage = new Message({
-					sender: tomJones,
-					recipient: ev,
-					timestamp: new Date(),
-					content: $input.val(),
-				})
-			this.send(newMessage);
+			var content = $input.val();
+			var message = this.model.chat(content);
+			this.send(message);
 		$input.val('');
 		$input.focus();
   	}

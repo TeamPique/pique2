@@ -4,15 +4,23 @@ var User = Backbone.Model.extend({
 		avatar: '',
 	},
 });
-var Message = Backbone.Model.extend({
-	defaults: {
-		content: '',
-		sender: '',
-		recipient: '',
-		timestamp: new Date(),
-	},
-});
 
-var Conversation = Backbone.Collection.extend({
-	model: Message,
+
+
+
+var Conversation = Backbone.Model.extend({
+	defaults: {
+		users: [],
+		messages: [],
+	},
+	chat: function() {
+		var message = new Message: {
+			content: this.content,
+			sender: this.sender,
+			timestamp: new Date(),
+		}
+		this.messages.push(message);
+		return message
+	},
+
 });
