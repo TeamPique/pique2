@@ -96,43 +96,47 @@
   border: 2px solid #ddd;
   padding: 0;
   border-radius: 4px;
+  color: #fff;
 }
 
 
-
 .skills-header {
-  background: green;
-  box-shadow: 0 0 0 2px green;
+  background: #EEA34C;
+  box-shadow: 0 0 0 2px #EEA34C;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   height: 40px;
 }
 
 .interests-header {
-  background: yellow;
+  background: #1C8060;
   height: 40px;
-  box-shadow: 0 0 0 2px yellow;
+  box-shadow: 0 0 0 2px #1C8060;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
 
 .a-header {
-  background: cyan;
+  background: black;
   height: 40px;
-  box-shadow: 0 0 0 2px cyan;
+  box-shadow: 0 0 0 2px black;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
 
 .b-header {
-  background: chartreuse;
+  background: black;
   height: 40px;
-  box-shadow: 0 0 0 2px chartreuse;
+  box-shadow: 0 0 0 2px black;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
 
-.experience-container {
-  
+.experience-header {
+  background: #60ABEC;
+  height: 40px;
+  box-shadow: 0 0 0 2px #60ABEC;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
