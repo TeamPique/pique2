@@ -3,13 +3,14 @@ var Sidebar = Backbone.View.extend({
 	sidebarPreviewTpl: _.template($('#sidebar-message-template').html()),
 	chatMessageTpl	 : _.template($('#chat-message-template').html()),
 	initialize: function() {
-		$chat = $('.message-chats');
-		$chat[0].scrollTop = $chat[0].scrollHeight;
+		$chatbox = $('.message-chats');
+		$input 	 = $('#message-input');
+		$chatbox[0].scrollTop = $chatbox[0].scrollHeight;
 		moment().format();
 		this.render();
 	},
 	events: {
-		'keyup #message-input' : 'chat'
+		'keypress #message-input' : 'chat'
 	},
 	render: function() {
 		var preview = this.collection.preview();
@@ -22,19 +23,23 @@ var Sidebar = Backbone.View.extend({
 		}.bind(this));
 	},
 	chat: function(e) {
-		e.preventDefault();
-		if (e.keyCode == 13) {
-			var $content = $('#message-input').val();
-			console.log($content)
-			var newMessage = new Message({
-				sender: '',
-				recipient: '',
-				timestamp: new Date(),
-				content: $content,
-				avatar: u1.get('avatar')
-			});
-			$chat.append(this.chatMessageTpl(newMessage.toJSON()));
+		if (e.which === 13) {
+			this.send(new Message({
+					sender: '',
+					recipient: '',
+					timestamp: new Date(),
+					content: $input.val(),
+					avatar: 'http://evturn.com/assets/img/ev-winter-yellow.jpg'
+				}));
+		$input.val('');
+		$input.focus();
   	}
-		$chat[0].scrollTop = $chat[0].scrollHeight;
+	},
+	send: function(message) {
+		if (message.get('content') !== '') {
+			$chatbox.append(this.chatMessageTpl(message.toJSON()));
+			$chatbox[0].scrollTop = $chatbox[0].scrollHeight;
+			return this;
+		}
 	},
 });

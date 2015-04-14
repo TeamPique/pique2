@@ -7,7 +7,7 @@
 // ).init();
 
 
-
+var ENTER_KEY = 13;
 var messages1 = [m2, m1];
 var messages2 = [m1, m2];
 var conversation1 = new Conversation(messages1);
