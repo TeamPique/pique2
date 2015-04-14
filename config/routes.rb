@@ -41,6 +41,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get     'search'   =>      'users#index'
+
+
   resources :comments, only: [:create]
 
   get '/questionnaire', to: 'home#questionnaire'

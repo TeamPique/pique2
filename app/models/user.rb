@@ -15,6 +15,14 @@ class User < ActiveRecord::Base
 
   acts_as_messageable
 
+  def self.search(search)
+    if search.present?
+      where('name LIKE ?', "%#{search}%")
+    else
+      where(true)
+    end
+  end
+
   def self.from_omniauth(auth)
     # binding.pry
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
