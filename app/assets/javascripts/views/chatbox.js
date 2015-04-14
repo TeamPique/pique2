@@ -13,7 +13,7 @@ var Chatbox = Backbone.View.extend({
 	},
 	messages: function(messages) {
 		for (var i = 0; i < messages.length; i++) {
-			this.$el.append(this.chatMessageTpl(messages[i]));
+			$('.message-chats').append(this.chatMessageTpl(messages[i]));
 		}
 	},
 });
