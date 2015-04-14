@@ -1,10 +1,16 @@
 <div class="project-form'">
-  <h2><%= current_user.name %>'s New Project</h2>
+  <h2><%= current_user.name %>'s Edit Project</h2>
 
 
   <%= form_for(@project) do |p| %>
     <%= p.label :name, "Project Name" %><br />
     <%= p.text_field :name %><br />
+    <%#= p.label :owner, "Project Owner" %>
+    <%#= p.text_field :owner %><br />
+    <%= p.label :number_of_collaborators, "# of Collaborators" %><br />
+    <%= p.text_field :number_of_collaborators %><br />
+    <%= p.label :collaborators, "Collaborators" %><br />
+    <%= p.text_field :collaborators %><br />
     <%#= p.created_at %>
     <%#= p.updated_at %>
     <%= p.label :about, "About" %><br />
@@ -17,4 +23,5 @@
     <%= p.text_field :case_studies %><br />
     <%= p.submit %>
   <% end %>
+  <%= button_to "Delete Project", project_path(@project), method: :delete %>
 </div>

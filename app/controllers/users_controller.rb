@@ -2,6 +2,24 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+
+# still working on this logic -km
+
+    if params[:industry] != "" || params[:headline] != "" || params[:location] != ""
+      industry = params[:industry]
+      headline = params[:headline]
+      location = params[:location]
+
+      @industry_results = User.where("industry LIKE ?", "%#{industry}")
+      @headline_results = User.where("headline LIKE ?", "%#{headline}")
+      @location_results = User.where("location LIKE ?", "%#{location}")
+    end
+
+    if params[:search]
+      search = params[:search].titleize
+      @search_results = User.where("name LIKE ?", "%#{search}%")
+    end
+    binding.pry
   end
 
   def show
