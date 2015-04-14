@@ -8,14 +8,18 @@ var Inbox = Backbone.View.extend({
 		$sidebar = $('#sidebar-items');
 		$chatbox[0].scrollTop = $chatbox[0].scrollHeight;
 		moment().format();
-		this.addAll();
+		this.addOne();
 	},
 	events: {
 		'keypress #message-input' : 'chat'
 	},
 	addOne: function() {
-		var preview = this.collection.preview();
-		$sidebar.prepend(this.sidebarPreviewTpl(preview.toJSON()));
+		var conversations = this.model.get('conversations');
+		var x = (conversations.length - 1);
+		console.log(conversations[x].models[x].attributes);
+
+		// var preview = conversations.preview();
+		// $sidebar.prepend(this.sidebarPreviewTpl(preview.toJSON()));
 		return this;
 	},
 	addAll: function() {
