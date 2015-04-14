@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
     @user = User.find_by(params[:id])
 
     if params[:search]
-      @search_results = Project.where("about LIKE ?", "%#{params[:search]}%")
+      @search_results = Project.where("about LIKE ?", "%#{params[:search].downcase}%")
     end
   end
 
