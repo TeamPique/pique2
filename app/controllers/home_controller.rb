@@ -9,7 +9,7 @@ class HomeController < ApplicationController
     render :questionnaire
   end
 
-  def questionnaire
+  def dashboard
     render :dashboard
   end
 
