@@ -9,6 +9,29 @@
   <%= @project.active %></br></br>
 
 <%= button_to "Follow Projects", follow_projects_project_path(@project)  %>
+-----------------------------------------------------
+<h1> Edit Project </h1>
+{{!-- if statement needs to be fixed --}}
+<% if @project.id == current_user.id %>
+  <%= button_to "Edit Project", edit_project_path(@project), method: :get %>
+<% end %>
 <% end %></br></br>
-
-<%= link_to 'Back to Index', projects_path, method: 'get' %>
+-----------------------------------------------
+<h1> Go Back to Index </h1>
+<%= link_to 'Back to Index', projects_path, method: 'get' %><br>
+-------------------------------------------------
+<div class="commentsDiv">
+  <h1> Make a Comment </h1>
+  <%= form_for @comment, :url => comments_path(:project_id => @project.id) do |f|  %>
+  <%= f.label "Content" %><br>
+  <%= f.text_area :content %><br>
+  <%= f.submit %>
+  <% end %>
+  --------------------------------------------------------
+    <h1> Project Comments </h1>
+    <% @project_comment.each do |comment| %>
+      <div>
+        <p><%= comment.content %> by <%= User.find(comment.project_id).name %></p>
+      </div>
+    <% end %>
+</div>
