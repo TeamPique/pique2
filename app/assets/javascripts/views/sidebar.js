@@ -11,11 +11,11 @@ var Sidebar = Backbone.View.extend({
 		var messages = this.model.attributes.messages;
 		var x = messages.length - 1;
 		var lastMessage = messages[x];
-		console.log(lastMessage);
 		this.$el.append(this.sidebarPreviewTpl(lastMessage));
 		return this;
 	},
-	chatbox: function() {
+	chatbox: function(e) {
+		console.log(this.model);
 		var view = new Chatbox({model: this.model});
 		return this;
 	}

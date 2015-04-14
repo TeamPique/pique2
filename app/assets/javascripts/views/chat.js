@@ -2,10 +2,8 @@ var Chat = Backbone.View.extend({
 	el: '.message-view',
 	chatMessageTpl	 : _.template($('#chat-message-template').html()),
 	initialize: function() {
-		
 		$input 	 = $('#message-input');
 		$sidebar = $('#sidebar-items');
-		
 		moment().format();
 		this.addSidebar();
 	},
@@ -30,13 +28,6 @@ var Chat = Backbone.View.extend({
 		$input.val('');
 		$input.focus();
   	}
-	},
-	header: function(conversation) {
-		for (var i = 0; i < conversation.length; i++) {
-		 	this.send(conversation[i])
-		 };
-		$('.message-chat').prepend(this.headerTpl(conversation[0].toJSON()));
-		return this;
 	},
 	send: function(message) {
 		if (message.get('content') !== '') {
