@@ -14,12 +14,16 @@ var Inbox = Backbone.View.extend({
 		'keypress #message-input' : 'chat'
 	},
 	addOne: function() {
-		var conversations = this.model.get('conversations');
-		var x = (conversations.length - 1);
-		console.log(conversations[x].models[x].attributes);
+		var inbox = this.model.get('inbox');
+		var x = (inbox.length - 1);
+		var lastConversation = inbox[x];
+		var messages = inbox[x].models;
+		var y = (messages.length - 1);
+		var lastMessage = messages[y].toJSON();
+		console.log(lastMessage.recipient)
 
+		// $sidebar.prepend(this.sidebarPreviewTpl(lastMessage));
 		// var preview = conversations.preview();
-		// $sidebar.prepend(this.sidebarPreviewTpl(preview.toJSON()));
 		return this;
 	},
 	addAll: function() {
