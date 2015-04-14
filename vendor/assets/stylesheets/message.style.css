@@ -1,7 +1,8 @@
 
 .activity-feed {
   background: #fff;
-  height: 87vh;
+  height: 88vh;
+  overflow-y: auto;
 }
 
 #head-font > li > a {

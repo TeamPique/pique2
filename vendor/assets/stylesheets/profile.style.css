@@ -1,3 +1,14 @@
+
+.profile-container {
+	background: #fff;
+	margin-bottom:  0px;
+	padding: 0 0 3.33333333% 0;
+	position: relative;
+	border: 2px solid #ddd;
+	border-radius: 4px;
+	min-width: 710px;
+}
+
 .profile-header {
   border-bottom: 2px solid #ddd;
   padding-bottom: 20px;
@@ -39,7 +50,6 @@
 #profile-content {
 	padding-top: 3.33333333%;
 	padding-bottom: 3.33333333%;
-	min-width: 900px;
 }
 
 .profile-pic {
@@ -72,5 +82,57 @@
   color: #fff;
   border-radius: 4px;
   margin-bottom: -2px;
+}
+
+.profile-body {
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+
+.sm-profile-container {
+  height: 150px;
+  margin-top: 50px;
+  border: 2px solid #ddd;
+  padding: 0;
+  border-radius: 4px;
+}
+
+
+
+.skills-header {
+  background: green;
+  box-shadow: 0 0 0 2px green;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 40px;
+}
+
+.interests-header {
+  background: yellow;
+  height: 40px;
+  box-shadow: 0 0 0 2px yellow;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.a-header {
+  background: cyan;
+  height: 40px;
+  box-shadow: 0 0 0 2px cyan;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.b-header {
+  background: chartreuse;
+  height: 40px;
+  box-shadow: 0 0 0 2px chartreuse;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.experience-container {
+  
 }
 
