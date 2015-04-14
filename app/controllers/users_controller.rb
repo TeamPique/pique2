@@ -2,6 +2,11 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+
+    if params[:search]
+      search = params[:search].titleize
+      @search_results = User.where("name LIKE ?", "%#{search}%")
+    end
   end
 
   def show
