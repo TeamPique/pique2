@@ -1,0 +1,34 @@
+.profile-header {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 135px;
+}
+
+.profile-user-name {
+  padding-left: 200px;
+  padding-top: 23px;
+  font-family: 'Nunito', sans-serif;
+  position: absolute;
+}
+
+#profile-content {
+	padding-top: 3.33333333%;
+	padding-bottom: 3.33333333%;
+	min-width: 900px;
+}
+
+.profile-pic {
+  position: absolute;
+  margin: 40px;
+  box-shadow: 
+    0 0 0 7px #fff, 
+    0 0 0 9px #ddd;
+}
+
+.message-button {
+  float: right;
+  margin: 40px;
+}
+
+.profile-name-place-title {
+
+}
