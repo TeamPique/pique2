@@ -97,9 +97,14 @@
 
   <script type="text/template" id="chat-message-template">
     <div class="col-xs-12 col-sm-12 col-md-12 message-text">
-      <img class="img-responsive message-av sender-img" src="<%= avatar %>">
-      <p class="sender-message"><%= content %></p>
-      <p class="message-time-date" data-livestamp="<%= moment(timestamp).unix() %>"></p>
+        <img class="img-responsive message-av sender-img" src="<%= avatar %>">
+        <div class="message-content">
+          <p class="sender-message"><%= content %></p>
+          <div class="message-time">
+            <p class="message-time-date" data-livestamp="<%= moment(timestamp).unix() %>"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </script>
 
