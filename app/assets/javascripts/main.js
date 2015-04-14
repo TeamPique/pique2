@@ -10,34 +10,75 @@ var ev = {name: 'Evan Turner',
 
 
 
-var convo1 = new Conversation(
-						
-							[new Message({timestamp: new Date(), content: 'Craig, it\'s important. I just spilled salsa all over my filas.', sender: tomJones, recipient: thomJones}), new Message({timestamp: new Date(), content: 'I\m not Craig!', sender: thomJones, recipient: tomJones}), new Message({timestamp: new Date(), content: 'Fuck the hell off!', sender: thomJones, recipient: tomJones})
+var convo1 = new Conversation(				
+					users: [tomJones, thomJones],
+					messages:	[
+							{
+								timestamp: new Date(),
+								content: 'Craig, it\'s important. I just spilled salsa all over my filas.',
+								sender: tomJones
+							},
+							{
+								timestamp: new Date(),
+								content: 'I\m not Craig!',
+								sender: thomJones
+							},
+							{
+								timestamp: new Date(),
+								content: 'Fuck the hell off!',
+								sender: thomJones
+							}
 						]);
 var convo2 = new Conversation(
-						
-							[new Message({timestamp: new Date(), content: 'Craig, it\'s important. I just spilled salsa all over my filas.', sender: tomJones, recipient: thomJones}), new Message({timestamp: new Date(), content: 'I\m not Craig!', sender: thomJones, recipient: tomJones}), new Message({timestamp: new Date(), content: 'Just ate a bisquit', sender: tomJones, recipient: thomJones})
-						])
+				users: [tomJones, thomJones],			
+				messages:	[
+						{
+							timestamp: new Date(),
+							content: 'Craig, it\'s important. I just spilled salsa all over my filas.',
+							sender: tomJones
+						},
+						{
+							timestamp: new Date(),
+							content: 'I\m not Craig!',
+							sender: thomJones
+						},
+						{
+							timestamp: new Date(),
+							content: 'Just ate a bisquit',
+							sender: tomJones
+						}
+					]);
 var convo3 = new Conversation(
-						
-							[new Message({
-								timestamp: new Date(), 
-								content: 'Craig, it\'s important. I just spilled salsa all over my filas.', sender: tomJones, 
-								recipient: thomJones}), 
-							new Message({timestamp: new Date(), content: 'I\m not Craig!', sender: thomJones, recipient: tomJones}), new Message({timestamp: new Date(), content: 'Please leave my wife in this', sender: ev, recipient: thomJones})
-						])
+				users: [ev, thomJones],
+				messages:	[
+						{
+							timestamp: new Date(),
+							content: 'Craig, it\'s important. I just spilled salsa all over my filas.',
+							sender: tomJones
+						},
+						{
+							timestamp: new Date(),
+							content: 'I\m not Craig!',
+							sender: thomJones
+						},
+						{
+							timestamp: new Date(),
+							content: 'Please leave my wife in this',
+							sender: ev
+						}
+					]);
 
 var u2 = new User(thomJones);
 
 var u1 = new User({
-			user: tomJones,
+			name: 'Tom Jones',
+			avatar: 'http://a5.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE1ODA0OTcyMDA1Njg4ODQ1.jpg',
 			inbox: 
 				[
 					convo1,
 					convo2,
 					convo3
-				],
-			
+				],	
 			id: 1
 		});
 
