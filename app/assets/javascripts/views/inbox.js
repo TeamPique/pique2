@@ -17,7 +17,7 @@ var Inbox = Backbone.View.extend({
 	addOne: function(conversation) {
 		var x = conversation.length;
 		var lastMessage = conversation[x - 1].toJSON();
-		$sidebar.prepend(this.sidebarPreviewTpl(lastMessage));
+		$sidebar.append(this.sidebarPreviewTpl(lastMessage));
 		return this;
 	},
 	addAll: function() {
@@ -44,7 +44,7 @@ var Inbox = Backbone.View.extend({
 		for (var i = 0; i < conversation.length; i++) {
 		 	this.send(conversation[i])
 		 };
-		$('.message-chat').prepend(this.headerTpl());
+		$('.message-chat').prepend(this.headerTpl(conversation[0].toJSON()));
 		return this;
 	},
 	send: function(message) {
