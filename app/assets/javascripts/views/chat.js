@@ -1,5 +1,5 @@
 var Chat = Backbone.View.extend({
-	el: '.message-view',
+	el: '#sidebar-items',
 	chatMessageTpl	 : _.template($('#chat-message-template').html()),
 	initialize: function() {
 		$input 	 = $('#message-input');
@@ -12,7 +12,7 @@ var Chat = Backbone.View.extend({
 	},
 	addSidebarItems: function(conversation) {
 		var view = new Sidebar({model: conversation});
-		return this;
+		this.$el.append(view.el)
 	},
 	addSidebar: function() {
 		var inbox = this.model.get('inbox');

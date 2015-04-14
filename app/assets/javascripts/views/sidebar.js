@@ -1,5 +1,4 @@
 var Sidebar = Backbone.View.extend({
-	el: '#sidebar-items',
 	sidebarPreviewTpl: _.template($('#sidebar-message-template').html()),
 	initialize: function() {
 		this.render();
@@ -15,7 +14,6 @@ var Sidebar = Backbone.View.extend({
 		return this;
 	},
 	chatbox: function(e) {
-		console.log(this.model);
 		var view = new Chatbox({model: this.model});
 		return this;
 	}

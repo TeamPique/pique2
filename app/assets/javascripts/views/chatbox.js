@@ -12,6 +12,8 @@ var Chatbox = Backbone.View.extend({
 		return this;
 	},
 	messages: function(messages) {
-		console.log('sup');
+		for (var i = 0; i < messages.length; i++) {
+			console.log(messages[i]);
+		};
 	},
 });
