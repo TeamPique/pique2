@@ -1,7 +1,6 @@
 var Chat = Backbone.View.extend({
 	el: '.message-view',
 	chatMessageTpl	 : _.template($('#chat-message-template').html()),
-	sidebarPreviewTpl: _.template($('#sidebar-message-template').html()),
 	headerTpl	 : _.template($('#page-header-template').html()),
 	initialize: function() {
 		$chatbox = $('.message-chats');
@@ -9,19 +8,19 @@ var Chat = Backbone.View.extend({
 		$sidebar = $('#sidebar-items');
 		$chatbox[0].scrollTop = $chatbox[0].scrollHeight;
 		moment().format();
-		this.addAll();
+		this.addSidebar();
 	},
 	events: {
 		'keypress #message-input' : 'chat'
 	},
-	addOne: function(conversation) {
-		var view = new Sidebar({model: conversation})
+	addSidebarItems: function(conversation) {
+		var view = new Sidebar({model: conversation});
 		return this;
 	},
-	addAll: function() {
+	addSidebar: function() {
 		var inbox = this.model.get('inbox');
 		for (var i = 0; i < inbox.length; i++) {
-			this.addOne(inbox[i])			
+			this.addSidebarItems(inbox[i])			
 		}
 	},
 	sender: function(e) {
