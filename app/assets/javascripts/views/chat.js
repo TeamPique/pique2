@@ -15,11 +15,7 @@ var Chat = Backbone.View.extend({
 		'keypress #message-input' : 'chat'
 	},
 	addOne: function(conversation) {
-		var messages = conversation.attributes.messages;
-		var x = messages.length - 1;
-		var lastMessage = messages[x];
-		console.log(lastMessage);
-		$sidebar.append(this.sidebarPreviewTpl(lastMessage));
+		var view = new Sidebar({model: conversation})
 		return this;
 	},
 	addAll: function() {
