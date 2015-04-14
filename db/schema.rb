@@ -11,14 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150413170757) do
-=======
-ActiveRecord::Schema.define(version: 20150413161512) do
->>>>>>> 06f88737524126d65c3b29e27d45a3396a9364a5
+ActiveRecord::Schema.define(version: 20150413223848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["project_id", "user_id"], name: "index_comments_on_project_id_and_user_id", using: :btree
 
   create_table "friendship_profiles", force: :cascade do |t|
     t.integer  "friendship_id"
