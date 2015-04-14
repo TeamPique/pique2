@@ -1,12 +1,11 @@
 var Chat = Backbone.View.extend({
 	el: '.message-view',
 	chatMessageTpl	 : _.template($('#chat-message-template').html()),
-	headerTpl	 : _.template($('#page-header-template').html()),
 	initialize: function() {
-		$chatbox = $('.message-chats');
+		
 		$input 	 = $('#message-input');
 		$sidebar = $('#sidebar-items');
-		$chatbox[0].scrollTop = $chatbox[0].scrollHeight;
+		
 		moment().format();
 		this.addSidebar();
 	},

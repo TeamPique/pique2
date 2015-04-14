@@ -6,8 +6,8 @@ var Sidebar = Backbone.View.extend({
 	},
 	events: {
 		'click .sidebar-item' : 'chatbox'
-	}
-	render: function(conversation) {
+	},
+	render: function() {
 		var messages = this.model.attributes.messages;
 		var x = messages.length - 1;
 		var lastMessage = messages[x];
