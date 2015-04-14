@@ -17,4 +17,6 @@ var Conversation = Backbone.Collection.extend({
 			});
 		return preview
 	},
+	users: [],
+	messages: [],
 });
