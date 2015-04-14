@@ -4,6 +4,9 @@ var Sidebar = Backbone.View.extend({
 	initialize: function() {
 		this.render();
 	},
+	events: {
+		'click .sidebar-item' : 'chatbox'
+	}
 	render: function(conversation) {
 		var messages = this.model.attributes.messages;
 		var x = messages.length - 1;
@@ -12,4 +15,8 @@ var Sidebar = Backbone.View.extend({
 		this.$el.append(this.sidebarPreviewTpl(lastMessage));
 		return this;
 	},
+	chatbox: function() {
+		var view = new Chatbox({model: this.model});
+		return this;
+	}
 });
