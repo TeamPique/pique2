@@ -28,6 +28,22 @@
 	width: 104.5%;
 }
 
+.sidebar-item {
+	cursor: pointer;
+}
+
+.sidebar-row {
+	background: #fff;
+	padding: 15px 15px 15px 15px;
+	border-bottom: 1px solid #e8e8e8;
+	border-right: 1px solid #e8e8e8;
+	line-height: 1.2em;
+}
+
+.sidebar-item:hover {
+	background: #ccc;
+}
+
 .message-user-av {
 	float: left;
 	padding-right: 0;
