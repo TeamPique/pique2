@@ -13,8 +13,13 @@
  *= require bootstrap
  * require devise_bootstrap_views
  *= require bootstrap-theme
+ *= require extralayers.css
  *= require font-awesome
  *= require animate
+ *= require carousel
+ *= require et-line
+ *= require style
+ *= require message.style
  *= require_tree .
  *= require_self
  */
