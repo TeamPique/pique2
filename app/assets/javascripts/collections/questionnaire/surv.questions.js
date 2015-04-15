@@ -21,7 +21,7 @@ var questionnaire = [
 	{
 		question: 'What members of the Pique community are you interested in collaborating with?',
 		id: 2,
-		header: 'Question 2 of 4',
+		header: 'Question 2 of 5',
 		options: [
 			['Designers'],
 			['Developers'],
@@ -34,7 +34,7 @@ var questionnaire = [
 	{
 		question: 'What type of projects are you interested in?',
 		id: 3,
-		header: 'Question 3 of 4',
+		header: 'Question 3 of 5',
 		options: [
 			['Social Good'],
 			['Social Media'],
@@ -49,6 +49,7 @@ var questionnaire = [
 	{
 		question: 'How many hours are you looking to spend each week on a project?',
 		id: 4,
+		header: 'Question 4 of 5',
 		options: [
 			['1 - 4'],
 			['4 - 8'],
@@ -59,7 +60,7 @@ var questionnaire = [
 	{
 		question: 'What brings you on?',
 		id: 5,
-		header: 'Question 3 of 4',
+		header: 'Question 5 of 5',
 		options: [
 			['Networking'],
 			['Building Portfolio'],
