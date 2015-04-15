@@ -38,6 +38,8 @@
 
 .project-type-container {
   text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .project-type-container table {
@@ -66,7 +68,84 @@
 }
 
 
+.recommended-projects-header {
+  padding: 0 15px;
+}
+
+.recommended-projects-header h2 {
+  margin: 40px 0 0 0;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
+}
+
+hr {
+ border-color: #bbb;
+ color: #bbb;
+ margin: 0;
+}
 
 
+.filter-projects {
+  margin: 50px 0;
+}
 
 
+.recommended-projects-container {
+  padding: 0 0 0 20px;
+}
+
+.recommended-projects-content {
+  margin: 20px;
+  color: #aaa;
+}
+
+.recommended-projects-content h5 {
+  font-family: 'Nunito', sans-serif;
+  color: #aaa;	
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+
+.recommended-projects-content p {
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0;
+  font-size: 10px;
+}
+
+.recommended-project {
+	display: inline-block;
+  height: auto;
+  border: 2px solid #ddd;
+  padding: 0;
+  width: 30%;
+  margin-right: 3.33333%;
+}
+
+.recommended-project img {
+  height: 150px;
+  width: 100%;
+}
+
+.project-popularity-list {
+  display: block;
+  color: #636B75;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.project-tags-list {
+  display: block;
+}
+
+.project-tags-list li {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 2px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.project-tag a {
+  color: #78b7e4;
+}
