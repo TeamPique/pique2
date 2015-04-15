@@ -21,7 +21,7 @@ surv.Survey = Backbone.View.extend({
 		var model = model || this.collection.get(1);
 		var id = model.get('id');
 		$divId = $('#question-' + id);
-		if (id === 5) {
+		if (id === 6) {
 			$divId.append(this.startTemplate(model.toJSON()));	
 		} else {
 			$divId.append(this.surveyTemplate(model.toJSON()));
