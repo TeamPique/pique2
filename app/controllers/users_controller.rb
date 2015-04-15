@@ -23,7 +23,6 @@ class UsersController < ApplicationController
       search = params[:search].titleize
       @user_results = User.where("name LIKE ?", "%#{search}%")
     end
-
   end
 
   def show

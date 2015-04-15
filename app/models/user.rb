@@ -63,9 +63,9 @@ class User < ActiveRecord::Base
 
   def self.search(industry, headline, location)
     # method for non-specific user searches
-    where("industry like ?", "%#{industry}%") unless industry.blank?
-    where("headline like ?", "%#{headline}%") unless headline.blank?
-    where("location like ?", "%#{location}%") unless location.blank?
+    where("industry LIKE ?", "%#{industry}%") unless industry.blank?
+    where("headline LIKE ?", "%#{headline}%") unless headline.blank?
+    where("location LIKE ?", "%#{location}%") unless location.blank?
   end
 
 end

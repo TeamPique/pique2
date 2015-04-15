@@ -19,7 +19,7 @@
 <!-- specific user search results -->
 <% if @users_results != nil %>
   <h2>Search Results</h2>
-<% @users_results.each do |user| %>
+<% @user_results.each do |user| %>
   <div class="list">
     <%= user.name %>
     <img src="<%= user.image %>">
