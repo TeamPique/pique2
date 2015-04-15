@@ -61,4 +61,11 @@ class User < ActiveRecord::Base
   user.name.unfriend user.name #=> "Justin unfriended Jenny"
   end
 
+  def self.search(industry, headline, location)
+    # method for non-specific user searches
+    where("industry LIKE ?", "%#{industry}%") unless industry.blank?
+    where("headline LIKE ?", "%#{headline}%") unless headline.blank?
+    where("location LIKE ?", "%#{location}%") unless location.blank?
+  end
+
 end
