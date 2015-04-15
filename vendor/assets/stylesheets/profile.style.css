@@ -96,7 +96,12 @@
   border: 2px solid #ddd;
   padding: 0;
   border-radius: 4px;
+}
+
+.sm-profile-container h6 {
+  font: bold 14px Nunito, sans-serif;
   color: #fff;
+  padding: 10px;
 }
 
 
@@ -114,6 +119,16 @@
   box-shadow: 0 0 0 2px #1C8060;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+}
+
+.user-trait {
+  background: #eee;
+  display: inline-block;
+  color: #656565;
+  font: 11px Nunito, sans-serif;
+  border-radius: 4px;
+  padding: 3px 5px;
+  margin: 13px 0 0 13px;
 }
 
 .a-header {
