@@ -1,25 +1,28 @@
 class UsersController < ApplicationController
 
   def index
+    # renders all users
     @users = User.all
 
-# still working on this logic -km
-
-    if params[:industry] != "" || params[:headline] != "" || params[:location] != ""
-      industry = params[:industry]
-      headline = params[:headline]
-      location = params[:location]
-
-      @industry_results = User.where("industry LIKE ?", "%#{industry}")
-      @headline_results = User.where("headline LIKE ?", "%#{headline}")
-      @location_results = User.where("location LIKE ?", "%#{location}")
+    # non-specific user search
+    if params[:industry]
+      industry = params[:industry].titleize
+    end
+    if params[:headline]
+      headline = params[:headline].titleize
+    end
+    if params[:location]
+      location = params[:location].titleize
     end
 
+    # .search is defined in the user.rb model file
+    @search_results = User.search(industry, headline, location)
+
+    # specific user search
     if params[:search]
       search = params[:search].titleize
-      @search_results = User.where("name LIKE ?", "%#{search}%")
+      @user_results = User.where("name LIKE ?", "%#{search}%")
     end
-    binding.pry
   end
 
   def show
