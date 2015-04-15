@@ -4,9 +4,9 @@
 	background: #E5EAEB;
 }
 
-
 .profile-container {
-	background: #fff;
+	background: #F9FAFC;
+  margin-top: 30px;
 	margin-bottom:  0px;
 	padding: 0 0 3.33333333% 0;
 	position: relative;
@@ -18,39 +18,44 @@
 .profile-header {
   border-bottom: 2px solid #ddd;
   padding-bottom: 20px;
-  background: #eee;
+  background: #fff;
   height: 182px;
 }
 
 .profile-name-loc-title {
-  padding-left: 230px;
-  padding-top: 23px;
-  font-family: 'Nunito', sans-serif;
+  padding-left: 250px;
+  padding-top: 17px;
   position: absolute;
 }
 
 .profile-user-name {
-	display: inline-block;
   margin: 0;
   font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
 }
 
 .profile-user-loc {
-	display: inline-block;
+  display: block;
   font-size: 14px;
-  padding-left: 8px;
+  margin-top: -10px;
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .profile-user-title {
 	display: block;
   font-size: 14px;
   margin-top: -6px;
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .profile-bio {
   font-weight: normal;
   font-size: 11px;
-  padding: 100px 30px 0 230px;
+  padding: 100px 30px 0 250px;
+  color: #636B75;
 }
 
 #profile-content {
@@ -83,7 +88,7 @@
 
 .send-message-btn:hover {
   border-bottom: 2px solid #f3733c;
-  border-top: 2px solid #eee;
+  border-top: 2px solid #fff;
   background: #f3733c;
   color: #fff;
   border-radius: 4px;
@@ -101,13 +106,27 @@
   padding: 0;
 }
 
+.job-status {
+  margin: -16px 0 0 250px;
+  position: absolute;
+  font-style: italic;
+  font-size: 14px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.job-status a {
+  background: none;
+  color: #2C8F74;
+}
+
 
 .sm-profile-container {
   height: 150px;
   margin-top: 50px;
   border: 2px solid #ddd;
   padding: 0;
-  border-radius: 4px;
+  border-radius: 3px;
+  background: #fff;
 }
 
 .sm-profile-container h6 {
@@ -118,19 +137,19 @@
 
 
 .skills-header {
-  background: #EEA34C;
-  box-shadow: 0 0 0 2px #EEA34C;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  background: #F1B165;
+  box-shadow: 0 0 0 2px #F1B165;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   height: 40px;
 }
 
 .interests-header {
-  background: #1C8060;
+  background: #2C8F74;
   height: 40px;
-  box-shadow: 0 0 0 2px #1C8060;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  box-shadow: 0 0 0 2px #2C8F74;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .user-trait {
@@ -138,7 +157,7 @@
   display: inline-block;
   color: #656565;
   font: 11px Nunito, sans-serif;
-  border-radius: 4px;
+  border-radius: 3px;
   padding: 3px 5px;
   margin: 13px 0 0 13px;
 }
@@ -147,23 +166,23 @@
   background: black;
   height: 40px;
   box-shadow: 0 0 0 2px black;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .b-header {
   background: black;
   height: 40px;
   box-shadow: 0 0 0 2px black;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .experience-header {
-  background: #60ABEC;
+  background: #4792CD;
   height: 40px;
-  box-shadow: 0 0 0 2px #60ABEC;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  box-shadow: 0 0 0 2px #4792CD;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 

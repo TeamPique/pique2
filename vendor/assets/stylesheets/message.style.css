@@ -1,18 +1,23 @@
+.navbar {
+  border-bottom: 2px solid #ddd;
+}
 
 .activity-feed {
   background: #fff;
   height: 88vh;
   overflow-y: auto;
+  border-left: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
 }
 
 #head-font > li > a {
   font-family: 'Nunito', sans-serif;
-  color: #9aa7af !important;
+  color: #8B939A !important;
 }
 
 #page-content {
 	padding-top: 0px;
-	background: #E5EAEB;
+	background: #EBEFF0;
 }
 
 #sidebar {
