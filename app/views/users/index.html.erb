@@ -17,7 +17,7 @@
 <% end %>
 
 <!-- specific user search results -->
-<% if @users_results != nil %>
+<% if @user_results != nil %>
   <h2>Search Results</h2>
 <% @user_results.each do |user| %>
   <div class="list">
@@ -41,7 +41,7 @@
 <% end %>
 
 <!-- rendering all users -->
-<% if @users_results != nil || @search_results != nil %>
+<% if @user_results != nil || @search_results != nil %>
   <h2>All Users</h2>
 <% end %>
 <% @users.each do |user| %>

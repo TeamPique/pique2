@@ -48,6 +48,7 @@ gem 'paperclip'
 gem 'httparty'
 
 gem "font-awesome-rails"
+gem 'public_activity' 
 
 # Use Unicorn as the app server
 # gem 'unicorn'
