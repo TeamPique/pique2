@@ -5,13 +5,18 @@ class UsersController < ApplicationController
 
 # still working on this logic -km
 
-    if params[:industry] != "" || params[:headline] != "" || params[:location] != ""
+    if params[:industry] != nil && params[:industry] != ""
       industry = params[:industry]
-      headline = params[:headline]
-      location = params[:location]
-
       @industry_results = User.where("industry LIKE ?", "%#{industry}")
+    end
+
+    if params[:headline] != nil && params[:headline] != ""
+      headline = params[:headline]
       @headline_results = User.where("headline LIKE ?", "%#{headline}")
+    end
+
+    if params[:location] != nil && params[:location] != ""
+      location = params[:location]
       @location_results = User.where("location LIKE ?", "%#{location}")
     end
 

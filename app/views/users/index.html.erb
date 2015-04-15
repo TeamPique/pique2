@@ -16,7 +16,7 @@
   </div>
 <% end %>
 
-<% if @industry_results != nil %>
+<% if @industry_results != nil && @industry_results != "" %>
   <h2>Industry Search Results</h2>
 <% @industry_results.each do |user| %>
   <div class="list">
@@ -27,7 +27,7 @@
 <% end %>
 <% end %>
 
-<% if @headline_results != nil %>
+<% if @headline_results != nil && @headline_results != "" %>
   <h2>Positions/Interests Search Results</h2>
 <% @headline_results.each do |user| %>
   <div class="list">
@@ -38,7 +38,7 @@
 <% end %>
 <% end %>
 
-<% if @location_results != nil %>
+<% if @location_results != nil && @location_results != "" %>
   <h2>Location Search Results</h2>
 <% @location_results.each do |user| %>
   <div class="list">
