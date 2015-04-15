@@ -11,7 +11,7 @@
 }
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-#questionnaire-container {
+#questionnaire-wrapper {
   background: #4C94C4;
   color: #fff;
   font-weight: 400;
@@ -74,7 +74,7 @@
   color: #fff;
 }
 
-.row.surv {
+.surv.row {
   height: 100vh;
 }
 
@@ -137,7 +137,7 @@ p.title.sub:after {
 .surv-padding {
   width: 200px;
   height: 200px;
-  background: url('white_carbon_@2X.png');
+  background: url('../white_carbon_@2X.png');
 }
 
 
@@ -160,7 +160,7 @@ p.title.sub:after {
   position: relative;
   overflow: hidden;
   margin: 5px;
-  background: url('white_carbon_@2X.png');
+  background: url('../white_carbon_@2X.png');
 }
 
 .grid figure figcaption h2 {

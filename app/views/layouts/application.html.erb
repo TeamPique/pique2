@@ -9,7 +9,6 @@
 
   <%= csrf_meta_tags %>
 
-
 </head>
 <body>
 
@@ -47,7 +46,7 @@
 <%= yield %>
 
 <script type="text/template" id="start-template">    
-  <div class="row surv">
+  <div class="surv row">
     <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-header">
       <p class="title sub"><%%= header %></p>    
     </div>
@@ -58,7 +57,7 @@
         <%% for (var i = 0; i < options.length; i++) { %>
         <%%  var option = options[i]; %>
 
-        <li class="surv-route text-center" data-id="<%%= id %>">
+        <li class="surv-question smoothScroll text-center" data-id="<%%= id %>">
           <section id="grid" class="grid clearfix">
             <a href="<%%= option[1] %>" class="route" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
               <figure>
@@ -81,7 +80,7 @@
 </script>
 
 <script type="text/template" id="question-template">    
-  <div class="row">
+  <div class="surv row">
     <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-header">
       <p class="title sub"><%%= header %></p>
       
@@ -99,7 +98,7 @@
               <figure>
                 <div class="col-xs-3 col-sm-3 col-md-3 surv-padding"></div>
                 <svg viewBox="0 0 180 180" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
-                <figcaption>
+                <figcaption data-id="<%%= option %>">
                   <h2><%%= option %></h2>
                   <button class="surv-btn"><i class="fa fa-check fa-2x"></i></button>
                 </figcaption>
