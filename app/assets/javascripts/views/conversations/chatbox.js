@@ -7,7 +7,7 @@ var Chatbox = Backbone.View.extend({
 		$input = $('#message-input');
 	},
 	events: {
-		'keypress #message-input' : 'send'
+		'keypress #message-input' : 'send',
 	},
 	render: function() {
 		this.$el.html(this.chatboxTpl(this.model.toJSON()));
@@ -39,4 +39,5 @@ var Chatbox = Backbone.View.extend({
 			console.log('messages', messages);
   	}
 	},
+
 });
