@@ -11,7 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap
- * require devise_bootstrap_views
+ *= require devise_bootstrap_views
  *= require bootstrap-theme
  *= require extralayers.css
  *= require font-awesome
@@ -19,7 +19,7 @@
  *= require carousel
  *= require et-line
  *= require style
- *= require message.style
+ *= require_tree ./conversations/
  *= require_tree .
  *= require_self
  */

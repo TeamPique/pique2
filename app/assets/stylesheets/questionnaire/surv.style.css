@@ -11,7 +11,7 @@
 }
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body {
+#questionnaire-container {
   background: #4C94C4;
   color: #fff;
   font-weight: 400;
@@ -68,7 +68,7 @@ a:hover, a:focus {
   font-family: 'Nunito';
 }
 
-.row {
+.row.surv {
   height: 100vh;
 }
 

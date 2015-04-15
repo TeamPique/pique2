@@ -1,3 +1,5 @@
+var surv = surv || {};
+
 var thomJones =
 		{
 			name: 'Thom Jones',
@@ -95,14 +97,8 @@ var u1 = new User({
 new Sidebar({model: u1});
 
 
-
-
-
-
-// var surv = surv || {};
-
 // new surv.Survey({collection: questions});
 
-// new WOW(
-//     { offset: 120 }
-// ).init();
+new WOW(
+    { offset: 120 }
+).init();
