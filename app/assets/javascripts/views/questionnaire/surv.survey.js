@@ -5,6 +5,7 @@ surv.Survey = Backbone.View.extend({
 	surveyTemplate: _.template($('#question-template').html()),
 	startTemplate: _.template($('#start-template').html()),
 	initialize: function() {
+		answers = [];
 		this.question();
 	},
 	events: {
@@ -12,7 +13,11 @@ surv.Survey = Backbone.View.extend({
 	},
   rotate: function(e) {
     e.preventDefault();
+		var answer = $(e.currentTarget).find('figcaption').data('id');
     var id = $(e.currentTarget).data('id');
+    var userInput = {question: id, selection: answer};
+		answers.push(userInput);
+		console.log(answers);
     var next = id += 1;
     var question = this.collection.get(next);
     this.question(question);
