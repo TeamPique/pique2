@@ -62,8 +62,9 @@ Your Conversations
 
 <p><%= link_to 'Start conversation', new_message_path, class: 'btn btn-lg btn-primary' %></p>
 
-<div class="row">
 
+<!-- ignore -->
+<div class="row">
   <div class="col-sm-3">
     <ul class="nav nav-pills nav-stacked">
       <%= mailbox_section 'inbox', @box %>
@@ -72,6 +73,8 @@ Your Conversations
     </ul>
   </div>
 
+
+<!-- ignore -->
   <div class="col-sm-9">
     <% if @box == 'trash' %>
       <p><%= link_to 'Empty trash', empty_trash_conversations_path, class: 'btn btn-danger', method: :delete,
@@ -89,13 +92,13 @@ Your Conversations
 <script type="text/template" id="compose-template">
   
 
-  
+
 </script>
 
 
   <script type="text/template" id="chatbox-template">
     <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 message-chat">
-      <h3 class="page-header"><small><em>To:  </em></small>  Tom Jones</h3>
+      <h3 class="page-header"><small><em>To:  </em></small>  <%= render 'conversations/participants', conversation: @conversation %></h3>
       <div class="message-chats">
 
       </div>
