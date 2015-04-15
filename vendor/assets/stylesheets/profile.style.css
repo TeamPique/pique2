@@ -1,34 +1,188 @@
+
+#profile-page-content {
+  padding-top: 0px;
+	background: #E5EAEB;
+}
+
+.profile-container {
+	background: #F9FAFC;
+  margin-top: 30px;
+	margin-bottom:  0px;
+	padding: 0 0 3.33333333% 0;
+	position: relative;
+	border: 2px solid #ddd;
+	border-radius: 4px;
+	min-width: 710px;
+}
+
 .profile-header {
   border-bottom: 2px solid #ddd;
-  padding-bottom: 135px;
+  padding-bottom: 20px;
+  background: #fff;
+  height: 182px;
+}
+
+.profile-name-loc-title {
+  padding-left: 250px;
+  padding-top: 17px;
+  position: absolute;
 }
 
 .profile-user-name {
-  padding-left: 200px;
-  padding-top: 23px;
+  margin: 0;
+  font-weight: bold;
   font-family: 'Nunito', sans-serif;
-  position: absolute;
+  color: #636B75;
+}
+
+.profile-user-loc {
+  display: block;
+  font-size: 14px;
+  margin-top: -10px;
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.profile-user-title {
+	display: block;
+  font-size: 14px;
+  margin-top: -6px;
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.profile-bio {
+  font-weight: normal;
+  font-size: 11px;
+  padding: 100px 30px 0 250px;
+  color: #636B75;
 }
 
 #profile-content {
 	padding-top: 3.33333333%;
 	padding-bottom: 3.33333333%;
-	min-width: 900px;
 }
 
 .profile-pic {
   position: absolute;
-  margin: 40px;
+  margin: 30px 0 0 30px;
+  height: 175px;
   box-shadow: 
     0 0 0 7px #fff, 
     0 0 0 9px #ddd;
 }
 
-.message-button {
+.send-message-btn-container {
   float: right;
-  margin: 40px;
+  margin: 30px 30px 0 0;
 }
 
-.profile-name-place-title {
-
+.send-message-btn {
+  background: #f3733c;
+  border: none;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+  border-radius: 2px;
+  outline: 0;
 }
+
+.send-message-btn:hover {
+  border-bottom: 2px solid #f3733c;
+  border-top: 2px solid #fff;
+  background: #f3733c;
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: -2px;
+}
+
+.send-message-btn:focus {
+	background: #f3733c;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+}
+
+.profile-body {
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.job-status {
+  margin: -16px 0 0 250px;
+  position: absolute;
+  font-style: italic;
+  font-size: 14px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.job-status a {
+  background: none;
+  color: #2C8F74;
+}
+
+
+.sm-profile-container {
+  height: 150px;
+  margin-top: 50px;
+  border: 2px solid #ddd;
+  padding: 0;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.sm-profile-container h6 {
+  font: bold 14px Nunito, sans-serif;
+  color: #fff;
+  padding: 10px;
+}
+
+
+.skills-header {
+  background: #F1B165;
+  box-shadow: 0 0 0 2px #F1B165;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  height: 40px;
+}
+
+.interests-header {
+  background: #2C8F74;
+  height: 40px;
+  box-shadow: 0 0 0 2px #2C8F74;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.user-trait {
+  background: #eee;
+  display: inline-block;
+  color: #656565;
+  font: 11px Nunito, sans-serif;
+  border-radius: 3px;
+  padding: 3px 5px;
+  margin: 13px 0 0 13px;
+}
+
+.a-header {
+  background: black;
+  height: 40px;
+  box-shadow: 0 0 0 2px black;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.b-header {
+  background: black;
+  height: 40px;
+  box-shadow: 0 0 0 2px black;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.experience-header {
+  background: #4792CD;
+  height: 40px;
+  box-shadow: 0 0 0 2px #4792CD;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+

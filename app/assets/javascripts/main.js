@@ -92,7 +92,7 @@ var u1 = new User({
 		});
 
 
-new Chat({model: u1});
+new Sidebar({model: u1});
 
 
 

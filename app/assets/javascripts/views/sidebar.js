@@ -1,20 +1,19 @@
 var Sidebar = Backbone.View.extend({
-	sidebarPreviewTpl: _.template($('#sidebar-message-template').html()),
+	el: '#sidebar-items',
+	chatMessageTpl	 : _.template($('#chat-message-template').html()),
 	initialize: function() {
-		this.render();
+		$sidebar = $('#sidebar-items');
+		moment().format();
+		this.addSidebar();
 	},
-	events: {
-		'click .sidebar-item' : 'chatbox'
+	addSidebarItem: function(conversation) {
+		var view = new SidebarItem({model: conversation});
+		this.$el.append(view.el)
 	},
-	render: function() {
-		var messages = this.model.attributes.messages;
-		var x = messages.length - 1;
-		var lastMessage = messages[x];
-		this.$el.append(this.sidebarPreviewTpl(lastMessage));
-		return this;
+	addSidebar: function() {
+		var inbox = this.model.get('inbox');
+		for (var i = 0; i < inbox.length; i++) {
+			this.addSidebarItem(inbox[i])			
+		}
 	},
-	chatbox: function() {
-		var view = new Chatbox({model: this.model});
-		return this;
-	}
 });
