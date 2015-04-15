@@ -1,4 +1,10 @@
 
+#profile-page-content {
+  padding-top: 0px;
+	background: #E5EAEB;
+}
+
+
 .profile-container {
 	background: #fff;
 	margin-bottom:  0px;
@@ -82,6 +88,12 @@
   color: #fff;
   border-radius: 4px;
   margin-bottom: -2px;
+}
+
+.send-message-btn:focus {
+	background: #f3733c;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
 }
 
 .profile-body {
