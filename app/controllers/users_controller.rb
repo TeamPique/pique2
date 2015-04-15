@@ -5,20 +5,21 @@ class UsersController < ApplicationController
 
 # still working on this logic -km
 
-    if params[:industry] != nil && params[:industry] != ""
-      industry = params[:industry]
-      @industry_results = User.where("industry LIKE ?", "%#{industry}")
-    end
+    # if params[:industry] != nil && params[:industry] != "" && params[:headline] != nil && params[:headline] != "" &&
+    #   industry = params[:industry].titleize
+    #   @industry_results = User.where("industry LIKE ?", "%#{industry}%")
+    # elsif params[:headline] != nil && params[:headline] != ""
+    #   headline = params[:headline].titleize
+    #   @headline_results = User.where("headline LIKE ?", "%#{headline}%")
+    # elsif params[:location] != nil && params[:location] != ""
+    #   location = params[:location].titleize
+    #   @location_results = User.where("location LIKE ?", "%#{location}%")
+    # end
 
-    if params[:headline] != nil && params[:headline] != ""
-      headline = params[:headline]
-      @headline_results = User.where("headline LIKE ?", "%#{headline}")
-    end
-
-    if params[:location] != nil && params[:location] != ""
-      location = params[:location]
-      @location_results = User.where("location LIKE ?", "%#{location}")
-    end
+    industry = params[:industry]
+    headline = params[:headline]
+    location = params[:location]
+    @searching = User.search(industry, headline, location)
 
     if params[:search]
       search = params[:search].titleize

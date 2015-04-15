@@ -60,7 +60,7 @@
 <% end %>
 <% end %>
 
-<% if @search_results != nil %>
+<% if @search_results != nil || @industry_results != nil || @location_results != nil || @headline_results != nil%>
   <h2>All Users</h2>
 <% end %>
 <% @users.each do |user| %>
