@@ -16,9 +16,16 @@ class UsersController < ApplicationController
     #   @location_results = User.where("location LIKE ?", "%#{location}%")
     # end
 
-    industry = params[:industry]
-    headline = params[:headline]
-    location = params[:location]
+    if params[:industry]
+      industry = params[:industry].titleize
+    end
+    if params[:headline]
+      headline = params[:headline].titleize
+    end
+    if params[:location]
+      location = params[:location].titleize
+    end
+
     @searching = User.search(industry, headline, location)
 
     if params[:search]

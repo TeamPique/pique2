@@ -60,7 +60,18 @@
 <% end %>
 <% end %>
 
-<% if @search_results != nil || @industry_results != nil || @location_results != nil || @headline_results != nil%>
+<% if @searching != nil %>
+  <h2>Searching Results</h2>
+<% @searching.each do |user| %>
+  <div class="list">
+    <%= user.name %>
+    <img src="<%= user.image %>">
+    <%= link_to 'Show', user %>
+  </div>
+<% end %>
+<% end %>
+
+<% if @search_results != nil || @searching != nil %>
   <h2>All Users</h2>
 <% end %>
 <% @users.each do |user| %>
