@@ -23,16 +23,16 @@
   height: 100vh;
 }
 
-a, button {
+.surv a, .surv button {
   outline: none;
 }
 
-a {
+.surv a {
   color: #f0f0f0;
   text-decoration: none;
 }
 
-a:hover, a:focus {
+.surv a:hover,.surv a:focus {
   color: #333;
 }
 
@@ -95,7 +95,7 @@ li.surv-question, li.surv-route {
   width: 200px;
 }
 
-#footer {
+#surv-footer {
   margin-top: 100px;
   padding: 50px 0;
   font-size: 16px;
@@ -104,9 +104,6 @@ li.surv-question, li.surv-route {
   text-align: center;
   position: relative;
   display: block;
-}
-
-#footer {
   z-index: 5;
 }
 
