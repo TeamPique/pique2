@@ -46,6 +46,115 @@
 
 <%= yield %>
 
+<script type="text/template" id="start-template">    
+  <div class="row surv">
+    <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-header">
+      <p class="title sub"><%%= header %></p>    
+    </div>
+    <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-options">
+      <h2><%%= question %></h2>
+      <ul id="questions-list">
+
+        <%% for (var i = 0; i < options.length; i++) { %>
+        <%%  var option = options[i]; %>
+
+        <li class="surv-route text-center" data-id="<%%= id %>">
+          <section id="grid" class="grid clearfix">
+            <a href="<%%= option[1] %>" class="route" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <div class="col-xs-3 col-sm-3 col-md-3 surv-padding"></div>
+                <svg viewBox="0 0 180 180" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2><%%= option[0] %></h2>
+                  <button><i class="fa fa-check fa-2x"></i></button>
+                </figcaption>
+              </figure>
+            </a>
+          </section>
+        </li>
+
+        <%% }; %>
+
+      </ul>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="question-template">    
+  <div class="row">
+    <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-header">
+      <p class="title sub"><%%= header %></p>
+      
+    </div>
+    <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-options">
+      <h2><%%= question %></h2>
+      <ul id="questions-list">
+
+        <%% for (var i = 0; i < options.length; i++) { %>
+        <%%  var option = options[i]; %>
+
+        <li class="surv-question smoothScroll text-center" data-id="<%%= id %>">
+          <section id="grid" class="grid clearfix">
+            <a data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <div class="col-xs-3 col-sm-3 col-md-3 surv-padding"></div>
+                <svg viewBox="0 0 180 180" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2><%%= option %></h2>
+                  <button><i class="fa fa-check fa-2x"></i></button>
+                </figcaption>
+              </figure>
+            </a>
+          </section>
+        </li>
+
+        <%% }; %>
+
+      </ul>
+    </div>
+  </div>
+</script>  
+
+
+  <script type="text/template" id="chatbox-template">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 message-chat">
+      <h3 class="page-header"><small><em>To:  </em></small>  <%= render 'conversations/participants', conversation: @conversation %></h3>
+      <div class="message-chats">
+
+      </div>
+      <div class="message-textbox col-xs-12 col-sm-12 col-md-12 form-group">
+        <input id="message-input" placeholder="Type something here..." type="text">
+      </div>
+    </div>
+  </script> 
+
+
+  <script type="text/template" id="chat-message-template">
+    <div class="col-xs-12 col-sm-12 col-md-12 message-text">
+        <img class="img-responsive message-av sender-img" src="<%%= sender.avatar %>">
+        <div class="message-content">
+          <p class="sender-message"><%%= content %></p>
+          <div class="message-time">
+            <p class="message-time-date" data-livestamp="<%%= moment(timestamp).unix() %>"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+
+  <script type="text/template" id="sidebar-message-template">
+    <div class="row sidebar-item">
+      <div class="col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 message-user-av">
+        <img class="img-responsive message-av" src="<%%= sender.avatar %>">
+      </div>
+      <div class="col-xs-7 col-sm-7 col-md-6 message-info-preview">
+        <p><strong class="preview-username"><%%= sender.name %></strong></p>
+        <p class="preview-message"><%%= content %></p>
+      </div>
+    </div>
+  </script>
+
 
 
   <%= javascript_include_tag 'application' %>

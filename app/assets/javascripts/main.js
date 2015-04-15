@@ -97,7 +97,7 @@ var u1 = new User({
 new Sidebar({model: u1});
 
 
-// new surv.Survey({collection: questions});
+new surv.Survey({collection: questions});
 
 new WOW(
     { offset: 120 }
