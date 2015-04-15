@@ -1,9 +1,70 @@
+  <div class="wrapper message-view">
+
+    <header class="message-header">
+      <div id="multimenu" class="menu-wrapper">
+        <nav class="navbar yamm navbar-default" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img class="img-responsive nav-logo" src="http://piqueapp.github.io/assets/img/av.png"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul id="head-font" class="nav navbar-nav navbar-left">
+                <li><a href="#">People</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>                      
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a><img src="assets/circle-plus.png"></a></li>
+                <li><a><img src="assets/speech.png"></a></li>
+                <li><a><img src="assets/check.png"></a></li>
+                <li><a><img src="assets/settings.png"></a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!--/.container-fluid -->
+        </nav>
+      </div><!-- end menu-wrapper -->
+    </header><!-- end header -->
+
+    <section id="page-content" class="clearfix">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="sidebar" class="col-md-3 col-sm-3 col-xs-3 pull-left">
+            <form>
+              <input type="text" placeholder="Search" class="form-control" autocomplete="off">
+            </form>
+            <div class="row sidebar-row compose-message">
+              <button class="btn-default btn-lg compose-message-btn">COMPOSE MESSAGE</button>
+            </div>
+            <div id="sidebar-items">
+<!-- sidebar-items -->
+            </div>
+          </div>
+
+          <div class="col-md-2 pull-right activity-feed">
+<!-- activity feed -->
+          </div>
+
+          <div id="post-content" class="col-md-7 col-sm-7 col-xs-7 chatbox">
+<!-- chatbox -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
 Your Conversations
 
 <p><%= link_to 'Start conversation', new_message_path, class: 'btn btn-lg btn-primary' %></p>
 
-<div class="row">
 
+<!-- ignore -->
+<div class="row">
   <div class="col-sm-3">
     <ul class="nav nav-pills nav-stacked">
       <%= mailbox_section 'inbox', @box %>
@@ -12,6 +73,8 @@ Your Conversations
     </ul>
   </div>
 
+
+<!-- ignore -->
   <div class="col-sm-9">
     <% if @box == 'trash' %>
       <p><%= link_to 'Empty trash', empty_trash_conversations_path, class: 'btn btn-danger', method: :delete,
@@ -25,3 +88,8 @@ Your Conversations
   </div>
 
 </div>
+
+
+
+
+

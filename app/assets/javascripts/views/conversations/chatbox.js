@@ -35,6 +35,8 @@ var Chatbox = Backbone.View.extend({
 			$('.message-chats')[0].scrollTop = $('.message-chats')[0].scrollHeight;
 	  	$input.val('');
 			$input.focus();
+			console.log('message', message);
+			console.log('messages', messages);
   	}
 	},
 });
