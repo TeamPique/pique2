@@ -1,0 +1,72 @@
+#discover-projects-page-content {
+  padding-top: 0px;
+	background: #F9FAFC;
+}
+
+.discover-projects-container {
+	background: #FEFEFE;
+  margin: 30px 0 0 70px;
+	margin-bottom:  0px;
+	padding: 0 30px 3.33333333% 30px;
+	position: relative;
+	border: 2px solid #ddd;
+	border-radius: 4px;
+  min-width: 705px;
+  max-width: 900px;
+}
+
+
+.discover-projects-header {
+  height: 100px;
+  margin: 30px;
+  text-align: center;
+}
+
+.discover-projects-header h1 {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
+}
+
+.discover-projects-header h3 {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
+  line-height: 20px;
+}
+
+
+.project-type-container {
+  text-align: center;
+}
+
+.project-type-container table {
+	height: 400px;
+  width: 100%;
+  border: 2px solid #ddd;
+  margin: 50px 0 0 0;
+}
+
+.project-type-container td, tr {
+  
+}
+
+.project-type-container td {
+  width: 200px;
+  background-image: url("http://piqueapp.github.io/assets/img/av.png");
+}
+
+.project-type-container td a {
+	display: inline-block;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 150px;
+  padding: 10px;
+}
+
+
+
+
+
+
