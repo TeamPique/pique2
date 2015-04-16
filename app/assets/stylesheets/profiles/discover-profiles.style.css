@@ -3,18 +3,22 @@
 	background: #F9FAFC;
 }
 
-.discover-profiles-container {
-	background: #FEFEFE;
-  margin: 30px 0 0 70px;
-	margin-bottom:  0px;
-	padding: 0 30px 3.33333333% 30px;
-	position: relative;
-	border: 2px solid #ddd;
-	border-radius: 4px;
-  min-width: 705px;
-  max-width: 900px;
+.row.discover-profiles-container {
 }
 
+.discover-profiles-container {
+	background: #FEFEFE;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom:  0px;
+  position: relative;
+  border: 1.5px solid #C7CAD0;
+  border-radius: 4px;
+  /*padding: 0 30px 3.33333333% 30px;*/
+  /*margin: 30px 0 0 70px;*/
+/*  min-width: 705px;
+  max-width: 900px;*/
+}
 
 .discover-profiles-header {
   height: 100px;
@@ -84,11 +88,19 @@ hr {
  margin: 0;
 }
 
-
-.filter-profiles {
+.filter-profiles-row {
   margin: 50px 0;
 }
 
+.filter-profiles-input {
+  width: 22%;
+}
+
+select.form-control {
+  background: #4EBBCF;
+  color: #fff;
+  border-radius: 6%;
+}
 
 .recommended-profiles-container {
   padding: 0 0 0 20px;
@@ -101,7 +113,7 @@ hr {
 
 .recommended-profiles-content h5 {
   font-family: 'Nunito', sans-serif;
-  color: #858585;	
+  color: #979797;	
   line-height: 20px;
   font-size: 21px;
   margin-bottom: 5px;
@@ -124,23 +136,34 @@ hr {
   padding-left: 5%;
 }
 
-.recommended-profile {
-	display: inline-block;
+.recommended-profile-right {
+  display: inline-block;
   height: auto;
-  border: 1.5px solid #BCC2C4;
+  border: 1.5px solid #C7CAD0;
   padding: 0;
-  width: 46.6%;
-  margin-right: 3.33333%;
+  margin-right: 30px;
+  margin-left: 30px;
+  /*width: 46.6%;*/
+  /*margin-right: 3.33333%;*/
 }
 
-.recommended-profile img {
-  max-width: 150px;
+.recommended-profile-left {
+  display: inline-block;
+  height: auto;
+  border: 1.5px solid #C7CAD0;
+  padding: 0;
+  /*width: 46.6%;*/
+  /*margin-right: 3.33333%;*/
+}
+
+.profile-img-container img {
+  max-width: 120px;
+  border: 1px solid #ccc;
+  margin: 15%;
+  padding: 3%;
 }
 
 .profile-img-container {
-  padding-left: 8%;
-  padding-top: 5%
-  
 }
 
 .profile-popularity-list {
@@ -153,7 +176,6 @@ hr {
 .profile-tags-list {
   display: block;
   padding-left: 5%;
-  padding-top: 5%;
 }
 
 .profile-tags-list li {
@@ -165,8 +187,8 @@ hr {
 }
 
 .profile-tag a {
-  color: #8F9689;
-  background: #98CCDA;
+  color: #9C9D9B;
+  background: #9DD7E3;
   font-size: 11px;
   font-weight: 300;
   padding: 2px 5px 2px 5px;
