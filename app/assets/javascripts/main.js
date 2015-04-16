@@ -94,7 +94,7 @@ var u1 = new User({
 		});
 
 
-new Sidebar({model: u1});
+// new Sidebar({model: u1});
 
 
 new surv.Survey({collection: questions});
