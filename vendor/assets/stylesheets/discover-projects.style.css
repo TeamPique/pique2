@@ -25,6 +25,7 @@
   margin: 0;
   font-family: 'Nunito', sans-serif;
   color: #636B75;
+  line-height: 45px;
 }
 
 .discover-projects-header h3 {
@@ -35,6 +36,46 @@
 }
 
 
+/*dashboard button*/
+
+.dashboard-btn-container {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  position: absolute;
+  top: 383px;
+  left: -44px;
+}
+
+.dashboard-btn {
+  background: #f3733c;
+  border: none;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+  border-radius: 2px;
+  outline: 0;
+  padding-left: 62px;
+  padding-right: 62px;
+}
+
+.dashboard-btn:hover {
+  border-bottom: 2px solid #f3733c;
+  background: #f3733c;
+  color: #fff;
+  border-radius: 2px;
+  margin-bottom: -2px;
+  margin-top: 2px;
+}
+
+.dashboard-btn:focus {
+  background: #f3733c;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+}
+
+
+
+
+/*project-types*/
 .project-type-container {
   text-align: center;
   padding-right: 15px;
@@ -49,7 +90,7 @@
 }
 
 .project-type-container td, tr {
-  
+
 }
 
 .project-type-container td {
@@ -64,6 +105,13 @@
   border: 2px solid #fff;
   width: 150px;
   padding: 10px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.project-type-container td a:hover {
+  color: #A0A6AC;
+  border-color: #bbb;
+  opacity: .85;
 }
 
 .recommended-projects-header {
@@ -119,19 +167,15 @@
   padding-right: 0;
 }
 
-#dropdown-hover:hover {
-  background: #ddd;
-}
-
-#dropdown-hover button:hover {
-  background: #ddd;
+#dropdown-hover button:focus:hover:active {
+  background: #e0e0e0;
 }
 
 .project-filter:hover {
   border: none;
-  background: #ddd;
-  color: #fff;
+  background: #e0e0e0;
 }
+
 
 
 
