@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Inbox</title>
+	<title>Discover Projects</title>
 	<link rel="stylesheet" href="../../../vendor/assets/stylesheets/bootstrap.css">
 	<link rel="stylesheet" href="../../../vendor/assets/stylesheets/bootstrap-theme.css">
 	<link rel="stylesheet" href="../../../vendor/assets/stylesheets/extralayers.css">
@@ -90,7 +90,26 @@
           <hr>
         </div>
 
-        <div class="filter-projects"></div>
+        <div class="filter-projects-container">
+          <ul class="list-unstyled list-inline">
+            <li class="dropdown project-filter" id="dropdown-hover">
+              <button class="project-filter-drop-btn btn btn-default dropdown-toggle" data-toggle="dropdown">
+                Browse: All
+                <span class="caret"></span>
+              </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Test</a></li>
+                  <li><a href="#">Test</a></li>
+                  <li><a href="#">Test</a></li>
+                  <li><a href="#">Test</a></li>
+                </ul>
+            </li>
+            <li class="btn btn-default project-filter filter-tags"><a href="#">Tags</a></li>
+            <li class="btn btn-default project-filter filter-location"><a href="#">Location</a></li>
+            <li class="btn btn-default project-filter filter-status"><a href="#">Status</a></li>
+          </ul>
+
+        </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 recommended-projects-container">
           
