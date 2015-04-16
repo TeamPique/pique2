@@ -96,6 +96,16 @@ hr {
   width: 22%;
 }
 
+.filter-profiles-input input {
+  border: 1px solid #979797;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #007799;  
+}
+
+
+
 select.form-control {
   background: #4EBBCF;
   color: #fff;
