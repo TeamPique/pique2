@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Inbox</title>
+	<title>Discover Projects</title>
 	<link rel="stylesheet" href="../../../vendor/assets/stylesheets/bootstrap.css">
 	<link rel="stylesheet" href="../../../vendor/assets/stylesheets/bootstrap-theme.css">
 	<link rel="stylesheet" href="../../../vendor/assets/stylesheets/extralayers.css">
@@ -87,10 +87,29 @@
 
         <div class="recommended-projects-header">
           <h2>Recommended for you</h2>
-          <hr>
+          <hr class="header-hr">
         </div>
 
-        <div class="filter-projects"></div>
+        <div class="filter-projects-container">
+          <ul class="list-unstyled list-inline">
+            <li class="dropdown project-filter" id="dropdown-hover">
+              <button class="project-filter-drop-btn btn btn-default dropdown-toggle" data-toggle="dropdown">
+                Browse: All
+                <span class="caret"></span>
+              </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Test</a></li>
+                  <li><a href="#">Test</a></li>
+                  <li><a href="#">Test</a></li>
+                  <li><a href="#">Test</a></li>
+                </ul>
+            </li>
+            <li class="btn btn-default project-filter filter-tags"><a href="#">Tags</a></li>
+            <li class="btn btn-default project-filter filter-location"><a href="#">Location</a></li>
+            <li class="btn btn-default project-filter filter-status"><a href="#">Status</a></li>
+          </ul>
+
+        </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 recommended-projects-container">
           
@@ -150,9 +169,73 @@
               </ul>
             </div>
           </div>
-
-        
       </div>
+    </div>
+
+  </section>
+
+  
+
+
+  <section id="footer" class="col-xs-12 col-sm-12 col-md-12">
+    
+    <div class="footer-lists">
+      <div class="col-xs-2 col-xs-offset-1 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1">
+        <h6 class="footer-list">ABOUT US</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">What is Pique?</a></li>
+          <li><a href="#">The Team</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-xs-2 col-sm-2 col-md-2">
+        <h6 class="footer-list">HELP</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Our Rules</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-xs-4 col-sm-4 col-md-4">
+        <h6 class="footer-list">DISCOVER</h6>
+        <ul class="col-xs-2 col-sm-2 col-md-2 discover-left list-unstyled">
+          <li><a href="#">Art</a></li>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Fashion</a></li>
+        </ul>
+        <ul class="col-xs-2 col-sm-2 col-md-2 discover-right list-unstyled">
+          <li><a href="#">Lifestyle</a></li>
+          <li><a href="#">Photography</a></li>
+          <li><a href="#">Publishing</a></li>
+          <li><a href="#">Technology</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-xs-2 col-xs-offset-1 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1">
+        <h6 class="footer-list">CONNECT</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-12 col-md-12 footer-icon">
+      <hr>
+      <h6>PIQUE</h6>
+      <p>&copy; 2015 Pique Inc.</p>
+    </div>
+
+    
 
 
   </section>
