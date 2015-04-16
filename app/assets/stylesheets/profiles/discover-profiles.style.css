@@ -116,14 +116,14 @@ hr {
 .recommended-profile {
 	display: inline-block;
   height: auto;
-  border: 2px solid #ddd;
+  border: 1.5px solid #BCC2C4;
   padding: 0;
   width: 46.6%;
   margin-right: 3.33333%;
 }
 
 .recommended-profile img {
-  
+  max-width: 150px;
 }
 
 .profile-popularity-list {
