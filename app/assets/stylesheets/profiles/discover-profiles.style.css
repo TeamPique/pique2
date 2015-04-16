@@ -1,0 +1,209 @@
+#discover-profiles-page-content {
+  padding-top: 0px;
+	background: #F9FAFC;
+}
+
+.row.discover-profiles-container {
+}
+
+.discover-profiles-container {
+	background: #FEFEFE;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 5%;
+  padding-bottom: 25px;
+  position: relative;
+  border: 1.5px solid #C7CAD0;
+  border-radius: 4px;
+}
+
+.discover-profiles-header {
+  height: 100px;
+  margin: 30px;
+  text-align: center;
+}
+
+.discover-profiles-header h1 {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
+}
+
+.discover-profiles-header h3 {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
+  line-height: 20px;
+}
+
+
+.profile-type-container {
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.profile-type-container table {
+	height: 400px;
+  width: 100%;
+  border: 2px solid #ddd;
+  margin: 50px 0 0 0;
+}
+
+.profile-type-container td, tr {
+  
+}
+
+.profile-type-container td {
+  width: 200px;
+  background-image: url("http://piqueapp.github.io/assets/img/av.png");
+}
+
+.profile-type-container td a {
+	display: inline-block;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 150px;
+  padding: 10px;
+}
+
+
+.recommended-profiles-header {
+  padding: 0 15px;
+}
+
+.recommended-profiles-header h2 {
+  margin: 40px 0 0 0;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
+}
+
+hr {
+ border-color: #bbb;
+ color: #bbb;
+ margin: 0;
+}
+
+.filter-profiles-row {
+  margin: 25px 0 45px;
+}
+
+.filter-profiles-input {
+  width: 23%;
+}
+
+.filter-profiles-input input {
+  border: 1px solid #979797;
+  height: 24px;
+}
+
+
+.filter-profiles-input select {
+  height: 24px;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #007799;  
+}
+
+.row.profiles-row {
+  padding-top: 35px;
+}
+
+
+select.form-control {
+  background: #4EBBCF;
+  color: #fff;
+  border-radius: 6%;
+}
+
+.recommended-profiles-container {
+  padding: 0 0 0 20px;
+}
+
+.recommended-profiles-content {
+  margin: 20px;
+  color: #aaa;
+}
+
+.recommended-profiles-content h5 {
+  font-family: 'Nunito', sans-serif;
+  color: #979797;	
+  line-height: 20px;
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.recommended-profiles-content p {
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0;
+  font-size: 11px;
+  margin-bottom: 0;
+}
+
+.recommended-profiles-content span p {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.recommended-profiles-content-bottom p {
+  padding-left: 5%;
+}
+
+.recommended-profile-right {
+  display: inline-block;
+  height: auto;
+  border: 1.5px solid #C7CAD0;
+  padding: 0;
+  margin-right: 30px;
+  margin-left: 30px;
+  width: 45.3%;
+}
+
+.recommended-profile-left {
+  display: inline-block;
+  height: auto;
+  border: 1.5px solid #C7CAD0;
+  padding: 0;
+  width: 45.3%;
+}
+
+.profile-img-container img {
+  max-width: 120px;
+  border: 1px solid #ccc;
+  margin: 15%;
+  padding: 4%;
+}
+
+.profile-img-container {
+}
+
+.profile-popularity-list {
+  display: block;
+  color: #636B75;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.profile-tags-list {
+  display: block;
+  padding-left: 5%;
+}
+
+.profile-tags-list li {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 2px;
+  font-weight: bold;
+  
+}
+
+.profile-tag a {
+  color: #9C9D9B;
+  background: #9DD7E3;
+  font-size: 11px;
+  font-weight: 300;
+  padding: 2px 5px 2px 5px;
+}
