@@ -10,14 +10,11 @@
 	background: #FEFEFE;
   margin-top: 25px;
   margin-left: 25px;
-  margin-bottom:  0px;
+  margin-bottom: 5%;
+  padding-bottom: 25px;
   position: relative;
   border: 1.5px solid #C7CAD0;
   border-radius: 4px;
-  /*padding: 0 30px 3.33333333% 30px;*/
-  /*margin: 30px 0 0 70px;*/
-/*  min-width: 705px;
-  max-width: 900px;*/
 }
 
 .discover-profiles-header {
@@ -159,7 +156,6 @@ select.form-control {
   margin-right: 30px;
   margin-left: 30px;
   width: 45.3%;
-  /*margin-right: 3.33333%;*/
 }
 
 .recommended-profile-left {
@@ -168,10 +164,7 @@ select.form-control {
   border: 1.5px solid #C7CAD0;
   padding: 0;
   width: 45.3%;
-  /*margin-right: 3.33333%;*/
 }
-
-
 
 .profile-img-container img {
   max-width: 120px;
