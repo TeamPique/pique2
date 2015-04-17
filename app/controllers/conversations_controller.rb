@@ -4,7 +4,6 @@ class ConversationsController < ApplicationController
   before_action :get_box, only: [:index]
 
   def index
-    binding.pry
     @current_user = current_user
     if @box.eql? "inbox"
       @conversations = @mailbox.inbox
