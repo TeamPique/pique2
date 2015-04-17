@@ -4,6 +4,7 @@ class ConversationsController < ApplicationController
   before_action :get_box, only: [:index]
 
   def index
+    @current_user = current_user
     if @box.eql? "inbox"
       @conversations = @mailbox.inbox
     elsif @box.eql? "sent"
@@ -26,7 +27,7 @@ class ConversationsController < ApplicationController
   end
 
   def dashboard
-    
+
 
   end
 
