@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
   end
 
   def create
+    binding.pry
     recipients = User.where(id: params['recipients'])
     conversation = current_user.send_message(recipients, params[:message][:body], params[:message][:subject]).conversation
     flash[:success] = "Message has been sent!"
