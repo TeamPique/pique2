@@ -10,5 +10,6 @@ var Conversation = Backbone.Model.extend({
 	defaults: {
 		users: [],
 		messages: [],
+		url: '/messages'
 	},
 });
