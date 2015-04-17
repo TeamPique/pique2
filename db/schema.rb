@@ -159,8 +159,11 @@ ActiveRecord::Schema.define(version: 20150415170943) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "uid"
+    t.string   "projects"
+    t.string   "about"
+    t.string   "experience"
+    t.string   "skills"
+    t.string   "portfolio"
     t.string   "portfolio_file_name"
     t.string   "portfolio_content_type"
     t.integer  "portfolio_file_size"
@@ -182,4 +185,3 @@ ActiveRecord::Schema.define(version: 20150415170943) do
     t.datetime "updated_at", null: false
   end
 
-end

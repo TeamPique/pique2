@@ -21,7 +21,8 @@
  *= require style
  *= require_tree ./conversations/
  *= require_tree ./profiles/
- *= require_tree .
+ *= require_tree ./projects/
+ *= require_tree ./activity-feed/
  *= require_self
  */
 
