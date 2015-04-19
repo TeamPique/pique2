@@ -1,0 +1,310 @@
+#discover-projects-page-content {
+  padding-top: 0px;
+	background: #F9FAFC;
+}
+
+.discover-projects-container {
+	background: #FEFEFE;
+  margin: 30px 0 0 70px;
+	margin-bottom:  0px;
+	padding: 0 30px 3.33333333% 30px;
+	position: relative;
+	border: 2px solid #ddd;
+	border-radius: 4px;
+  min-width: 705px;
+  max-width: 900px;
+}
+
+.discover-projects-header {
+  height: 100px;
+  margin: 30px 30px -15px 30px;
+  text-align: center;
+}
+
+.discover-projects-header h1 {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
+  line-height: 45px;
+}
+
+.discover-projects-header h3 {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
+  line-height: 20px;
+}
+
+
+/*dashboard button*/
+
+.dashboard-btn-container {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  position: absolute;
+  top: 383px;
+  left: -44px;
+}
+
+.dashboard-btn {
+  background: #f3733c;
+  border: none;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+  border-radius: 2px;
+  outline: 0;
+  padding-left: 62px;
+  padding-right: 62px;
+}
+
+.dashboard-btn:hover {
+  border-bottom: 2px solid #f3733c;
+  background: #f3733c;
+  color: #fff;
+  border-radius: 2px;
+  margin-bottom: -2px;
+  margin-top: 2px;
+}
+
+.dashboard-btn:focus {
+  background: #f3733c;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+}
+
+
+
+
+/*project-types*/
+.project-type-container {
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.project-type-container table {
+	height: 400px;
+  width: 100%;
+  border: 2px solid #ddd;
+  margin: 50px 0 0 0;
+}
+
+.project-type-container td, tr {
+
+}
+
+.project-type-container td {
+  width: 200px;
+  background-image: url("http://piqueapp.github.io/assets/img/av.png");
+}
+
+.project-type-container td a {
+	display: inline-block;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 150px;
+  padding: 10px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.project-type-container td a:hover {
+  color: #A0A6AC;
+  border-color: #bbb;
+  opacity: .85;
+}
+
+.recommended-projects-header {
+  padding: 0 15px;
+}
+
+.recommended-projects-header h2 {
+  margin: 40px 0 0 0;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
+}
+
+.recommended-projects-header .header-hr {
+ border-color: #bbb;
+ color: #bbb;
+ margin: 0;
+}
+
+
+
+/*filter*/
+
+.filter-projects-container {
+  text-align: center;
+  margin: 30px 10px;
+}
+
+.filter-projects-container .dropdown {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.project-filter {
+  border: 2px solid #ddd;
+  background: none;
+  margin: 0 10px;
+  width: 20%;
+}
+
+.project-filter a {
+  background: none;
+}
+
+.project-filter .dropdown {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.project-filter-drop-btn {
+  background: none;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+#dropdown-hover button:focus:hover:active {
+  background: #e0e0e0;
+}
+
+.project-filter:hover {
+  border: none;
+  background: #e0e0e0;
+}
+
+
+
+
+
+/*recommended projects*/
+
+.recommended-projects-container {
+  padding: 0 0 0 20px;
+}
+
+.recommended-projects-content {
+  margin: 20px;
+  color: #aaa;
+}
+
+.recommended-projects-content h5 {
+  font-family: 'Nunito', sans-serif;
+  color: #aaa;	
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+
+.recommended-projects-content p {
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0;
+  font-size: 10px;
+}
+
+.recommended-project {
+	display: inline-block;
+  height: auto;
+  border: 2px solid #ddd;
+  padding: 0;
+  width: 30%;
+  margin-right: 3.33333%;
+}
+
+.recommended-project img {
+  height: 150px;
+  width: 100%;
+}
+
+.project-popularity-list {
+  display: block;
+  color: #636B75;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.project-tags-list {
+  display: block;
+}
+
+.project-tags-list li {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 2px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.project-tag a {
+  color: #78b7e4;
+}
+
+#end-hr {
+ border-color: #bbb;
+ color: #bbb;
+ position: absolute;
+ margin: 0;
+ bottom: 10px;
+}
+
+
+
+
+/*footer*/
+
+#footer {
+  padding: 40px 40px 40px 40px;
+  height: 300px;
+  background: #ddd;
+  min-width: 820px;
+}
+
+#footer a {
+  background: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #A0A6AC;
+}
+
+#footer li {
+  min-width: 120px;
+}
+
+#footer h6 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #6AB8CC;
+}
+
+#footer hr {
+  border-color: #bbb;
+}
+
+.footer-lists {
+  margin: 0 100px 0 20px;
+}
+
+.discover-left {
+  padding-left: 0;
+}
+
+.footer-icon {
+  display: block;
+}
+
+.footer-icon p {
+  font-weight: bold;
+  font-size: 12px;
+  color: #A0A6AC;
+}
+
+.discover-right {
+  padding-left: 50px;
+  padding-right: 0;
+s}

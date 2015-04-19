@@ -13,6 +13,7 @@
   overflow-y: auto;
   border-left: 2px solid #ddd;
   border-bottom: 2px solid #ddd;
+  padding: 0;
 }
 
 #head-font > li > a {
