@@ -10,6 +10,12 @@
   max-width: 900px;
 }
 
+.project-container h4 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #636B75;
+}
+
 .project-header {
   border-bottom: 2px solid #ddd;
   padding-bottom: 20px;
@@ -117,9 +123,6 @@
 /*meet team*/
 
 .meet-team-header {
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
-  color: #636B75;
   margin: 80px 0 0 40px;
   position: absolute;
 }
@@ -272,6 +275,8 @@ p.team-member-name {
 
 
 
+/*project paragraphs*/
+
 .project-paragraph-container {
   background: #fff;
 }
@@ -287,6 +292,65 @@ p.team-member-name {
   width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+
+
+/*recent activity*/
+
+.recent-project-activity-container {
+  height: 400px;
+  padding: 0 30px;
+}
+
+.recent-activity-header {
+  padding-left: 10px;
+}
+
+.recent-activity-item {
+  padding: 0;
+  height: 150px;
+  border: 2px solid #ddd;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+.recent-activity-item-tab {
+  border: 5px solid #F9B166;
+  box-shadow: 0 0 0 2px #F9B166;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.recent-activity-green {
+  border: 5px solid #129075;
+  box-shadow: 0 0 0 2px #129075;
+}
+
+.recent-activity-blue {
+  border: 5px solid #2C93CD;
+  box-shadow: 0 0 0 2px #2C93CD;
+}
+
+.recent-activity-red {
+  border: 5px solid #FF6940;
+  box-shadow: 0 0 0 2px #FF6940;
+}
+
+.recent-activity-item h6 {
+  margin: 20px 0 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  color: #636B75;
+}
+
+.recent-activity-item p {
+  margin: 0 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 16px;
+}
+
+
 
 
 
