@@ -317,11 +317,7 @@ DEPENDENCIES
   pry-doc
   pry-rails
   pry-stack_explorer
-<<<<<<< HEAD
   public_activity (~> 1.4.2)
-=======
-  public_activity
->>>>>>> ecc0dc2a146a2ddc7fd16695a411f8b018c6f2f2
   rails (= 4.2.0)
   rails_12factor
   sass-rails (~> 5.0)
