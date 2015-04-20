@@ -1,0 +1,8 @@
+<% form_for(@questionnaire) do |q| %>
+	<%= q.label_tag(:Question_1, "What is your current position?") %>
+	<%#= select_tag :Question_1 %>
+	<%= q.select_tag :Question_1, options_for_select([["A",1],["B",2]])%> 
+	<%= q.submit_tag("/projects", "Find A Cool Project", method: "get") %>
+<% end %>
+
+<!-- , :onchange => "$.post('#{model_singular_path(id)}', {'_method':'put', 'model_name[model_field]':this.value} );" --> 
