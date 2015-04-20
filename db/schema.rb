@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420194710) do
+ActiveRecord::Schema.define(version: 20150415170943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -144,15 +144,6 @@ ActiveRecord::Schema.define(version: 20150420194710) do
 
   add_index "projects_users", ["project_id", "user_id"], name: "index_projects_users_on_project_id_and_user_id", unique: true, using: :btree
 
-  create_table "questionnaires", force: :cascade do |t|
-    t.string "Question_1"
-    t.string "Question_2"
-    t.string "Question_3"
-    t.string "Question_4"
-    t.string "Question_5"
-    t.string "Question_6"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "name",                   default: "", null: false
     t.string   "image",                  default: "", null: false
@@ -168,11 +159,8 @@ ActiveRecord::Schema.define(version: 20150420194710) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "projects"
-    t.string   "about"
-    t.string   "experience"
-    t.string   "skills"
-    t.string   "portfolio"
+    t.string   "provider"
+    t.string   "uid"
     t.string   "portfolio_file_name"
     t.string   "portfolio_content_type"
     t.integer  "portfolio_file_size"
@@ -181,8 +169,6 @@ ActiveRecord::Schema.define(version: 20150420194710) do
     t.string   "headline"
     t.string   "industry"
     t.string   "public_profile_url"
-    t.string   "provider"
-    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -196,8 +182,4 @@ ActiveRecord::Schema.define(version: 20150420194710) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "friendship_profiles", "friendships", name: "friendship_profiles_friendship_id_fk"
-  add_foreign_key "mailboxer_conversation_opt_outs", "mailboxer_conversations", column: "conversation_id", name: "mb_opt_outs_on_conversations_id"
-  add_foreign_key "mailboxer_notifications", "mailboxer_conversations", column: "conversation_id", name: "notifications_on_conversation_id"
-  add_foreign_key "mailboxer_receipts", "mailboxer_notifications", column: "notification_id", name: "receipts_on_notification_id"
 end
