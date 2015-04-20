@@ -18,10 +18,21 @@
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">About</a></li>                      
               </ul>
-              <ul class="nav navbar-nav navbar-right">
+              <ul id="nav" class="nav navbar-nav navbar-right">
                 <li><a><img src="../assets/circle-plus.png"></a></li>
                 <li><a><img src="../assets/speech.png"></a></li>
-                <li><a><img src="../assets/check.png"></a></li>
+                <li id="notification_li">
+                  <a href="#" id="notificationLink">
+                    <img src="../assets/check.png">
+                  </a>
+                  <div id="notificationContainer" class="clearfix">
+                    <div id="notificationTitle">Notifications</div>
+                      <div id="notificationsBody" class="notifications">
+                        
+                      </div>
+                      <div id="notificationFooter"><a href="#">See All</a></div>
+                  </div>
+                </li>
                 <li><a><img src="../assets/settings.png"></a></li>
               </ul>
             </div><!--/.nav-collapse -->
@@ -30,7 +41,7 @@
       </div><!-- end menu-wrapper -->
     </header><!-- end header -->
 
-    <section id="profile-page-content" class="clearfix">
+    <section id="profile-page-content">
 
 
       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right activity-feed">
@@ -162,6 +173,9 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<div class"container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
 
 
 <h1> <%= current_user.name %> </h1>
@@ -209,4 +223,8 @@ function paperclipAjax(e){
       <li><%= project.name %> + <%= project.collaborators %></li>
     </ul>
   <% end %>
+</div>
+
+    </div>
+  </div>
 </div>
