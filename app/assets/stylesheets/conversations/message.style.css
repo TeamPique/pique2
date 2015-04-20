@@ -3,6 +3,10 @@
 	border-bottom: 2px solid #ddd;
 }
 
+.row.conversation.first {
+	border-top: 2px solid #ddd;
+}
+
 .navbar-left.conversations-filters li {
   padding-right: 30px;
 	background: #fff;
@@ -12,10 +16,6 @@
 
 ul.nav.navbar-nav.navbar-right li {
   margin-top: -6px;
-}
-
-.conversations-nav {
-	border-bottom: 1px solid #ddd;
 }
 
 .conversation-text {
