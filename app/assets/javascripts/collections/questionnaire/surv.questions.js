@@ -9,7 +9,7 @@ var questionnaire = [
 
 		question: 'What is your current position',
 		id: 1,
-		header: 'Question 1 of 4',
+		header: 'Question 1 of 5',
 		options: [
 			['Designers'],
 			['Developers'],
