@@ -81,4 +81,4 @@ var questionnaire = [
 ];
 
 
-var questions = new surv.Questions(questionnaire);
+// var questions = new surv.Questions(questionnaire);
