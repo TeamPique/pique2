@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :friendships
   has_many :projects
   has_many :comments
+  has_one  :questionnaire
   has_and_belongs_to_many :projects_followed, class_name: "Project", join_table: "projects_users",association_foreign_key: "project_id"
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
