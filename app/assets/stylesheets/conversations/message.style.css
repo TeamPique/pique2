@@ -3,6 +3,17 @@
 	border-bottom: 2px solid #ddd;
 }
 
+.navbar-left.conversations-filters li {
+  padding-right: 30px;
+	background: #fff;
+  margin-top: 10px !important;
+  display: inline-block;
+}
+
+.conversations-nav {
+	border-bottom: 1px solid #ddd;
+}
+
 .conversation-text {
 	margin-top: 50px;
 }
