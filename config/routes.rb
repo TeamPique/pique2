@@ -48,5 +48,7 @@ Rails.application.routes.draw do
 
   get '/questionnaire', to: 'home#questionnaire'
   post '/questionnaire', to: 'users#show'
+
+  get '/notifications', to: 'home#notifications'
   # get '/dashboard',     to: 'home#dashboard'
 end
