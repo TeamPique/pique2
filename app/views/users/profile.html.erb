@@ -45,7 +45,7 @@
           <img class="img-responsive profile-pic" src="http://piqueapp.github.io/assets/img/av.png">
 
           <div class="send-message-btn-container">
-            <button class="btn-default btn-lg send-message-btn">SEND MESSAGE</button>
+            <button class="btn-default btn-lg send-message-btn" data-toggle="modal" data-target="#modal">SEND MESSAGE</button>
           </div>
 
           <div class="profile-name-loc-title">
@@ -128,8 +128,32 @@
 
     </section>
 
+    <div id="modal-message"></div>
+
 </div>
        
+<div class="modal fade model-container" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn btn-default modal-btn" data-dismiss="modal"><i class="fa fa-times fa-2x"></i></button>
+        <a class="modal-title text-center"><img src="assets/img/logo2.png"></a>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 text-center">
+              <input type="text" class="form-control input-lg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>© Pique 2015 | All Rights Reserved</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
 
