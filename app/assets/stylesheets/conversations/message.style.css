@@ -1,14 +1,25 @@
+.row.conversation {
+	height: 200px;
+	border-bottom: 2px solid #ddd;
+}
 
+.conversation-text {
+	margin-top: 50px;
+}
 
 .conversations-list {
 	background: #fff;
+	border: 2px solid #ddd;
 }
 
+.conversations-list img {
+	max-height: 80px;
+	margin-top: 50px;
+}
 
 .message-header {
 	background: #fff;
 }
-
 
 .navbar {
   border-bottom: 2px solid #ddd;
