@@ -1,5 +1,29 @@
 var surv = surv || {};
 
+$(document).ready(function()
+{
+$("#notificationLink").click(function()
+{
+$("#notificationContainer").fadeToggle(300);
+$("#notification_count").fadeOut("slow");
+return false;
+});
+
+//Document Click
+$(document).click(function()
+{
+$("#notificationContainer").hide();
+});
+//Popup Click
+$("#notificationContainer").click(function()
+{
+return false
+});
+
+});
+
+
+
 var thomJones =
 		{
 			name: 'Thom Jones',
@@ -94,7 +118,7 @@ var u1 = new User({
 		});
 
 
-new Sidebar({model: u1});
+new Sidebar();
 
 
 new surv.Survey({collection: questions});

@@ -8,14 +8,14 @@ var Sidebar = Backbone.View.extend({
 	initialize: function() {
 		$sidebar = $('#sidebar-items');
 		moment().format();
-		this.addSidebar();
+		// this.addSidebar();
 	},
 	addSidebarItem: function(conversation) {
 		var view = new SidebarItem({model: conversation});
 		$sidebar.append(view.el)
 	},
 	addSidebar: function() {
-		var inbox = this.model.get('inbox');
+		// var inbox = this.model.get('inbox');
 		for (var i = 0; i < inbox.length; i++) {
 			this.addSidebarItem(inbox[i])			
 		}
