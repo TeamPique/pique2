@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def index
     # renders all users
     @users = User.all
+    @questionnaires = Questionnaire.all
 
     # non-specific user search
     if params[:industry]
@@ -40,9 +41,12 @@ class UsersController < ApplicationController
     end
       # visitor = params[:visitor]
       # cur_user = @current_user.id
+      # @questionnaire = Questionnaire.find(params[:id])
+      # binding.pry
   end
 
   def new
+    @questionnaire = Questionnaire.new
     @user = User.new
   end
 
