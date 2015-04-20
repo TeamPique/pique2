@@ -196,7 +196,8 @@ p.team-member-name {
 /*nav*/
 
 .project-navigation {
-  height: 40px;
+  height: 77px;
+  border-bottom: 2px solid #ddd;
 }
 
 .project-navigation ul{
@@ -224,6 +225,39 @@ p.team-member-name {
 }
 
 
+
+/*project info bar*/
+
+.project-info {
+  background: #fff;
+  height: 200px;
+  padding-top: 40px;
+  border-bottom: 2px solid #ddd;
+  padding-left: 45px;
+  font-size: 60px;
+  color: #ddd;
+}
+
+.project-info-divider {
+  display: inline-block;
+}
+
+.project-info-item {
+  display: inline-block;
+}
+
+.project-info-title {
+  font-size: 11px;
+  font-style: italic;
+  color: #bbb;
+}
+
+.project-info-count {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  color: #2C93CD;
+}
 
 
 
