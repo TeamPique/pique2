@@ -13,7 +13,7 @@ surv.Survey = Backbone.View.extend({
 	},
   rotate: function(e) {
     e.preventDefault();
-		var answer = $(e.currentTarget).find('figcaption').data('id');
+	var answer = $(e.currentTarget).find('figcaption').data('id');
     var id = $(e.currentTarget).data('id');
     var userInput = {question: id, selection: answer};
 		answers.push(userInput);
@@ -30,10 +30,10 @@ surv.Survey = Backbone.View.extend({
 			$divId.append(this.startTemplate(model.toJSON()));	
 		} else {
 			$divId.append(this.surveyTemplate(model.toJSON()));
+			setTimeout(function() {
+				this.pan(id);
+			}.bind(this), 500);
 		}
-		setTimeout(function() {
-			this.pan(id);
-		}.bind(this), 500);
 		return false;
 	},
 	pan: function(id) {
