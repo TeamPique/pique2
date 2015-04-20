@@ -7,6 +7,13 @@
 	margin-top: 50px;
 }
 
+.conversation-timestamp {
+	float: right;
+	margin-top: 10px;
+	margin-right: 50px;
+	font-style: italic;
+}
+
 .conversations-list {
 	background: #fff;
 	border: 2px solid #ddd;
