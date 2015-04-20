@@ -4,6 +4,8 @@ Friendship.destroy_all
 # Friendship_Profile.destroy_all
 Project.destroy_all
 
+Questionnaire.destroy_all
+
 
  # id: 1,
  # name: "",
