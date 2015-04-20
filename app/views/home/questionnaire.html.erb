@@ -9,12 +9,94 @@
   </div>
 
   <div id="questionnaire">
-    <div class="container" id="question-1"></div>
+    <div class="container" id="question-1">
+      <div class="surv row">
+
+<!-- Header -->
+        <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-header">
+          <p class="title sub">Question 1 of 5</p>
+        </div>
+
+<!-- Question -->
+        <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-options">
+          <h2>What is your current position?</h2>
+          <ul id="questions-list">
+
+<!-- One Answer Option -->
+            <li class="surv-question smoothScroll text-center">
+              <section id="grid" class="grid clearfix">
+                <a class="surv-a" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+                  <figure>
+                    <div class="col-xs-3 col-sm-3 col-md-3 surv-padding"></div>
+                    <svg viewBox="0 0 180 180" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                    <figcaption data-id="<%%= option %>">
+                      <h2>Designers</h2>
+                      <button class="surv-btn"><i class="fa fa-check fa-2x"></i></button>
+                    </figcaption>
+                  </figure>
+                </a>
+              </section>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+
     <div class="container" id="question-2"></div>
     <div class="container" id="question-3"></div>
     <div class="container" id="question-4"></div>
     <div class="container" id="question-5"></div>
-    <div class="container" id="question-6"></div>
+    
+
+<!-- Link to Users or Projects -->
+    <div class="container" id="question-6">
+      <div class="surv row">
+    <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-header">
+      <p class="title sub">All Done</p>    
+    </div>
+    <div class="col-12-xs col-sm-12 col-md-12 text-center" id="surv-question-options">
+      <h2>Are you ready to get started?</h2>
+      <ul id="questions-list">
+
+
+        <li class="surv-question smoothScroll text-center" data-id="<%%= id %>">
+          <section id="grid" class="grid clearfix">
+            <a href="/projects" class="route" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <div class="col-xs-3 col-sm-3 col-md-3 surv-padding"></div>
+                <svg viewBox="0 0 180 180" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2>Yeah, I want to find a project to work on</h2>
+                  <button><i class="fa fa-check fa-2x"></i></button>
+                </figcaption>
+              </figure>
+            </a>
+          </section>
+        </li>
+        <li class="surv-question smoothScroll text-center" data-id="<%%= id %>">
+          <section id="grid" class="grid clearfix">
+            <a href="/users" class="route" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+              <figure>
+                <div class="col-xs-3 col-sm-3 col-md-3 surv-padding"></div>
+                <svg viewBox="0 0 180 180" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+                <figcaption>
+                  <h2>Yeah, I want to find people to build a project with</h2>
+                  <button><i class="fa fa-check fa-2x"></i></button>
+                </figcaption>
+              </figure>
+            </a>
+          </section>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+
+
+    </div>
   </div>
 
 </div>

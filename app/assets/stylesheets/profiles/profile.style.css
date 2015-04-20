@@ -24,7 +24,8 @@ display: none;
   max-width: 362px;
   margin-left: 0px;
   margin-right: 0px;
-  height: 70px
+  height: 70px;
+  border-top: 1px solid #ddd;
 }
 
 .notifications .row:hover {
