@@ -3,6 +3,11 @@
 	border-bottom: 2px solid #ddd;
 }
 
+.row.conversation:hover {
+	background: #60B1E6;
+	color: #fff;
+}
+
 .row.conversation.first {
 	border-top: 2px solid #ddd;
 }
@@ -70,9 +75,21 @@ ul.nav.navbar-nav.navbar-right li {
 	background: #EBEFF0;
 }
 
+
+
 #sidebar-items p {
   padding-left: 94px;
   font-weight: bold;
+  margin-top: 15px;
+}
+
+.row.conversation-inbox-item:hover {
+	background: #60B1E6;
+	color: #fff;
+}
+
+.row.conversation-inbox-item {
+	height: 50px;
 }
 
 #sidebar {
