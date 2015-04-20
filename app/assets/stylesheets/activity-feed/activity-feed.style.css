@@ -1,0 +1,37 @@
+.activity-item-container {
+  font: 12px 'Source Sans Pro', sans-serif;
+  color: #636B75;
+  border-bottom: 2px solid #ddd;
+}
+
+.activity-element {
+  padding: 0;
+  margin-top: 10px;
+}
+
+.activity-element div {
+	padding-right: 0;
+}
+
+.activity-element p {
+	font-size: 13px;
+  padding-right: 0;
+  margin: 0;
+  line-height: 12px;
+}
+
+.activity-element img {
+  padding-right: 0;
+  width: 75px;
+}
+
+.activity-element a {
+  color: #6AB8CC
+}
+
+.activity-element .goto-project {
+  text-align: center;
+
+}
+
+

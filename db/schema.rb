@@ -163,8 +163,11 @@ ActiveRecord::Schema.define(version: 20150415170943) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "uid"
+    t.string   "projects"
+    t.string   "about"
+    t.string   "experience"
+    t.string   "skills"
+    t.string   "portfolio"
     t.string   "portfolio_file_name"
     t.string   "portfolio_content_type"
     t.integer  "portfolio_file_size"
@@ -186,4 +189,8 @@ ActiveRecord::Schema.define(version: 20150415170943) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "friendship_profiles", "friendships", name: "friendship_profiles_friendship_id_fk"
+  add_foreign_key "mailboxer_conversation_opt_outs", "mailboxer_conversations", column: "conversation_id", name: "mb_opt_outs_on_conversations_id"
+  add_foreign_key "mailboxer_notifications", "mailboxer_conversations", column: "conversation_id", name: "notifications_on_conversation_id"
+  add_foreign_key "mailboxer_receipts", "mailboxer_notifications", column: "notification_id", name: "receipts_on_notification_id"
 end

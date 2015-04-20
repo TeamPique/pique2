@@ -1,0 +1,15 @@
+.activity-item-container {
+  padding: 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.activity-item-description {
+  font-size: 11px;
+  padding-right: 0;
+}
+
+.activity-element {
+  padding: 0;
+}

@@ -4,6 +4,7 @@
 }
 
 .row.discover-profiles-container {
+
 }
 
 .discover-profiles-container {
@@ -15,6 +16,10 @@
   position: relative;
   border: 1.5px solid #C7CAD0;
   border-radius: 4px;
+}
+
+.header.profiles {
+  background: #fff;
 }
 
 .discover-profiles-header {

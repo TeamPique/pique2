@@ -9,13 +9,13 @@
                 <span class="sr-only">Toggle navigation</span>
                 <span class="fa fa-bars"></span>
               </button>
-              <a class="navbar-brand" href="#"><img class="img-responsive nav-logo" src="http://piqueapp.github.io/assets/img/av.png"></a>
+              <a class="navbar-brand" href="/"><img class="img-responsive nav-logo" src="http://piqueapp.github.io/assets/img/av.png"></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="head-font" class="nav navbar-nav navbar-left">
-                <li><a href="#">People</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>                      
+                <li><a href="/users">People</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="#">About</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li><a><img src="assets/circle-plus.png"></a></li>
@@ -42,24 +42,34 @@
             <div id="sidebar-items">
 
 <!-- sidebar-items -->
+        <% @current_user.messages.each do |message|%>
               <div class="row sidebar-item">
-                
                 <div class="col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 message-user-av">
-                  <img class="img-responsive message-av" src="http://a5.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE1ODA0OTcyMDA1Njg4ODQ1.jpg">
+                  <img class="img-responsive message-av" src="<%= message.sender.image %>">
                 </div>
-                <div class="col-xs-7 col-sm-7 col-md-6 message-info-preview">
-                  <p><strong class="preview-username">Username</strong></p>
-                  <p class="preview-message">Recent message</p>
-                </div>
-              </div>
+<!-- this is kristen -->
 
+                <div class="col-xs-7 col-sm-7 col-md-6 message-info-preview">
+                  <p><strong class="preview-username"><%= message.sender.name %></strong></p>
+                  <p class="preview-message"><%= message.body %></p>
+                </div>
+
+
+                <!-- <div class="col-xs-7 col-sm-7 col-md-6 message-info-preview">
+                <p><strong class="preview-username">Username</strong></p>
+                <p class="preview-message">Recent message</p>
+                </div> -->
+              </div>
+        <% end %>
             </div>
           </div>
 
           <div class="col-md-2 pull-right activity-feed">
 <!-- activity feed -->
+
+
           </div>
-          
+
           <%= form_tag messages_path, method: :post do %>
           <div id="post-content" class="col-md-7 col-sm-7 col-xs-7 chatbox">
 <!-- chatbox -->

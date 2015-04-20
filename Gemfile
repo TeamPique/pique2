@@ -36,7 +36,7 @@ gem 'popular'
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
 
-gem 'mailboxer'
+gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails42-foreigner'
 gem 'chosen-rails'
 gem 'gravatar_image_tag'
 
