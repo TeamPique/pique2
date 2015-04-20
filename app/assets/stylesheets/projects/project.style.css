@@ -352,6 +352,25 @@ p.team-member-name {
 
 
 
+/*project footer*/
+
+.project-footer {
+ margin-top: 20px;
+ margin-left: 40px;
+}
+
+.footer-item-title {
+  font-size: 11px;
+  font-style: italic;
+  color: #636B75;
+}
+
+.project-footer a {
+  color: #2C93CD;
+}
+
+
+
 
 
 
