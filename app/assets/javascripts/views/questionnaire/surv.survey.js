@@ -5,7 +5,7 @@ surv.Survey = Backbone.View.extend({
 	surveyTemplate: _.template($('#question-template').html()),
 	startTemplate: _.template($('#start-template').html()),
 	initialize: function() {
-		userAnswers = new surv.Questions({});
+		userAnswers = new surv.Questions();
 		this.question();
 	},
 	events: {
