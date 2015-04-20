@@ -1,4 +1,14 @@
-
+.project-container {
+  background: #fff;
+  margin: 30px 0 0 70px;
+  margin-bottom:  0px;
+  padding: 0 0 3.33333333% 0;
+  position: relative;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  min-width: 705px;
+  max-width: 900px;
+}
 
 .project-header {
   border-bottom: 2px solid #ddd;
@@ -198,6 +208,7 @@ p.team-member-name {
 .project-navigation {
   height: 77px;
   border-bottom: 2px solid #ddd;
+  background: #F9FAFC;
 }
 
 .project-navigation ul{
@@ -258,6 +269,25 @@ p.team-member-name {
   font-family: 'Nunito', sans-serif;
   color: #2C93CD;
 }
+
+
+
+.project-paragraph-container {
+  background: #fff;
+}
+
+.project-paragraphs {
+  padding: 50px 40px;
+  -moz-column-count: 2;
+  -moz-column-gap: 30px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 30px;
+  column-count: 2;
+  column-gap: 30px;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 
 
 
