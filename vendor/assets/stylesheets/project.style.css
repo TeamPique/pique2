@@ -1,0 +1,95 @@
+
+
+.project-header {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 20px;
+  background: #fff;
+  height: 182px;
+  background-image: url("http://piqueapp.github.io/assets/img/av.png");
+}
+
+.project-site-loc-pitch {
+  position: absolute;
+  padding: 80px 0 0 30px;
+  color: #fff;
+  max-width: 60%;
+}
+
+.project-name {
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+}
+
+.project-site-loc {
+  display: block;
+  font-size: 14px;
+  margin-top: -5px;
+  font-style: italic;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.project-pitch {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 10px;
+  margin: 10px 0 0 0;
+}
+
+
+/*button*/
+
+.follow-btn-container {
+  padding: 115px 30px 0 0;
+}
+
+.follow-btn {
+  background: #f3733c;
+  border: none;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+  border-radius: 2px;
+  outline: 0;
+}
+
+.follow-btn:hover {
+  border-bottom: 2px solid #f3733c;
+  background: #f3733c;
+  color: #fff;
+  border-radius: 2px;
+  margin-bottom: -2px;
+  margin-top: 2px;
+}
+
+.follow-btn:focus {
+	background: #f3733c;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+}
+
+
+
+
+.project-navigation {
+  height: 15px;
+  padding: 30px 0 0 90px;
+}
+
+.project-navigation li {
+  width: 24.5%;
+}
+
+.project-navigation li a {
+  background: none;
+  font-weight: bold;
+  color: #636B75;
+}
+
+
+
+
+
+
+
+

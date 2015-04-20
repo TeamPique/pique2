@@ -27,6 +27,22 @@ class User < ActiveRecord::Base
       user.industry           = auth.info.industry
       user.public_profile_url = auth.info.urls.public_profile
     end
+
+    # @user = User.where(provider: auth.provider, uid: auth.uid,email: auth.email).first
+    # if @user != nil
+    #   # returns @user back to Oauth Controller
+    #   return @user
+    # else
+    #   User.create do |user|
+    #   user.email              = auth.info.email
+    #   user.password           = Devise.friendly_token[0,20]
+    #   user.name               = auth.info.name   # assuming the user model has a name
+    #   user.image              = auth.info.image # assuming the user model has an image
+    #   user.location           = auth.info.location
+    #   user.headline           = auth.info.description
+    #   user.industry           = auth.info.industry
+    #   user.public_profile_url = auth.info.urls.public_profile
+    # end
   end
 
   def self.new_with_session(params, session)
@@ -59,6 +75,13 @@ class User < ActiveRecord::Base
 
   user.name.befriend user.name #=> "Justin friended Jenny"
   user.name.unfriend user.name #=> "Justin unfriended Jenny"
+  end
+
+  def self.search(industry, headline, location)
+    # method for non-specific user searches
+    where("industry LIKE ?", "%#{industry}%") unless industry.blank?
+    where("headline LIKE ?", "%#{headline}%") unless headline.blank?
+    where("location LIKE ?", "%#{location}%") unless location.blank?
   end
 
 end
