@@ -47,7 +47,8 @@ p.notification {
 }
 
 .message-info-preview.notification {
-  margin-top: 6%;
+  margin-top: 3%;
+  max-height: 70px;
 }
 
 #notificationContainer:before {
