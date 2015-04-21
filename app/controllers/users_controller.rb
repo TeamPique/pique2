@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   def index
     # renders all users
     @users = User.all
-    @questionnaires = Questionnaire.all
 
     # non-specific user search
     if params[:industry]
@@ -24,7 +23,6 @@ class UsersController < ApplicationController
       search = params[:search].titleize
       @user_results = User.where("name LIKE ?", "%#{search}%")
     end
-    # binding.pry
   end
 
   def show
@@ -42,7 +40,6 @@ class UsersController < ApplicationController
     end
       # visitor = params[:visitor]
       # cur_user = @current_user.id
-      # binding.pry
   end
 
   def new
