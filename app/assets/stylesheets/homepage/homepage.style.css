@@ -1,0 +1,125 @@
+
+.homepage-container {
+  background: #E3E7E8;
+  min-width: 850px;
+}
+
+.homepage-content {
+  margin: 0 10px;
+  background: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+}
+
+
+
+
+
+
+/*homepage header*/
+
+.homepage-header-container {
+  background-image: url("http://i.dailymail.co.uk/i/pix/2014/04/14/article-2604176-18BF181F00000578-279_634x341.jpg");
+}
+
+.homepage-logo {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #2C93CD;
+  font-size: 30px;
+  margin: 20px 0 0 40px;  
+}
+
+
+/*sign in up buttons*/
+
+.sign-in-up-btn-container {
+  margin: 30px 40px 0 0;
+}
+
+.sign-in-btn {
+  display: inline-block;
+  padding: 5px 20px;
+  margin-left: 100px;
+  background: #2C8F74;
+  border: none;
+  border-bottom: 2px solid #1C5344;;
+  border-radius: 2px;
+  outline: 0;
+}
+
+.sign-up-btn {
+  position: absolute; 
+  display: inline-block;
+  padding: 5px 20px;
+  background: #f3733c;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #b94721;
+  border-radius: 2px;
+  outline: 0;
+}
+
+.sign-in-up-btn-container a  {
+  color: #fff;
+}
+
+.sign-in-btn:hover {
+  border-bottom: 2px solid #2C8F74;
+  color: #fff;
+  border-radius: 2px;
+  margin-bottom: -2px;
+  margin-top: 2px;
+}
+
+.sign-up-btn:hover {
+  border-bottom: 2px solid #f3733c;
+  color: #fff;
+  border-radius: 2px;
+  margin-bottom: -2px;
+  margin-top: 2px;
+}
+
+.sign-in-btn:focus {
+	background: #f3733c;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+}
+
+.sign-up-btn:focus {
+  background: #f3733c;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+}
+
+
+/*header title*/
+
+.homepage-header-title-container {
+  text-align: center;
+  padding: 175px 120px 60px 120px;
+}
+
+.homepage-header {
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+}
+
+.homepage-subheader {
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
+}
+
+.header-green {
+  color: #2C8F74;
+}
+
+.header-blue {
+  color: #2C93CD;
+}
+
+.header-orange {
+  color: #f3733c;
+}
