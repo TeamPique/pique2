@@ -38,7 +38,6 @@ class UsersController < ApplicationController
         Visitor.create({user_id: visitor_id, visitor_id: current_user.id, date: Date.today})
       end
       @user = User.find(params[:id])
-      @questionnaire = Questionnaire.find(params[:id])
       render "show"
     end
       # visitor = params[:visitor]
@@ -47,7 +46,6 @@ class UsersController < ApplicationController
   end
 
   def new
-    @questionnaire = Questionnaire.new
     @user = User.new
   end
 
