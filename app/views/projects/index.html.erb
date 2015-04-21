@@ -26,7 +26,7 @@
                   </a>
                   <div id="notificationContainer" class="clearfix">
                     <div id="notificationTitle">Notifications</div>
-                      <div id="notificationsBody" class="notifications"> 
+                      <div id="notificationsBody" class="notifications">
                         <div class="row">
                           <div class="col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 message-user-av notification">
                             <img class="img-responsive message-av notification" src="http://pique.nyc/assets/img/av.png">
@@ -132,7 +132,10 @@
                   <button onclick="javascript:resetPage()" class="form-control">Browse All!</button>
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
-                  <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search Projects" %>
+                  <%= text_field_tag :name, params[:name], class: "form-control", placeholder: "Project Name" %>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
+                  <%= text_field_tag :about, params[:about], class: "form-control", placeholder: "Description" %>
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
                   <%= text_field_tag :location, params[:location], class: "form-control", placeholder: "Location" %>
@@ -163,9 +166,9 @@
               <h5><%= project.name %></h5>
               <p><%= project.about %></p>
               <ul class="project-popularity-list list-unstyled ">
-                <li>112 applicants</li>
-                <li>567 views</li>
-                <li>32 followers</li>
+                <li><%= project.location %></li>
+                <li><%= project.length %></li>
+                <li>Created by: <%= project.owner %></li>
               </ul>
               <ul class="project-tags-list list-unstyled">
                 <li class="project-tag"><a href="#">#WEeee</a></li>
@@ -190,9 +193,9 @@
               <h5><%= project.name %></h5>
               <p><%= project.about %></p>
               <ul class="project-popularity-list list-unstyled ">
-                <li>112 applicants</li>
-                <li>567 views</li>
-                <li>32 followers</li>
+                <li><%= project.location %></li>
+                <li><%= project.length %></li>
+                <li>Created by: <%= project.owner %></li>
               </ul>
               <ul class="project-tags-list list-unstyled">
                 <li class="project-tag"><a href="#">#WEeee</a></li>

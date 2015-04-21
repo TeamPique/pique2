@@ -3,6 +3,7 @@
 
 
   <%= form_for(@project) do |p| %>
+    <%= p.hidden_field :owner, value: current_user.name %>
     <%= p.label :name, "Project Name" %><br />
     <%= p.text_field :name %><br />
     <%#= p.created_at %>
