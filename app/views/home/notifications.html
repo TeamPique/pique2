@@ -48,7 +48,14 @@
                     <div id="notificationFooter"><a href="#">See All</a></div>
                   </div>
                 </li>
-                <li><a><img src="../assets/settings.png"></a></li>
+                <li><a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                      <img src="../assets/settings.png">
+                    </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Profile</a></li>
+                    <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+                  </ul>
+                </li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!--/.container-fluid -->
