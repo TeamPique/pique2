@@ -18,6 +18,31 @@ display: none;
   background: none;
 }
 
+#nav li a {
+  color: #a3a3a3;
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+#multimenu .navbar-nav > li > .dropdown-menu {
+  background: #fff;
+  border: 2px solid rgba(100, 100, 100, .4);
+  margin-top: -9px;
+
+}
+
+.settings-dropdown {
+  background: #fff;
+  color: #000;
+}
+.navbar-nav .dropdown-menu {
+  border: none;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .active > a {
+  box-shadow: none;
+}
+
 .notifications .row {
   max-width: 362px;
   margin-left: 0px;
