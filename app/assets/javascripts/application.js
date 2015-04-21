@@ -30,10 +30,10 @@
 //= require progressbar
 //= require onepage-scripts
 //= require_tree ./models/conversations/
-//= require_tree ./models/questionnaire/
+// require_tree ./models/questionnaire/
 //= require_tree ./collections/conversations/
-//= require_tree ./collections/questionnaire/
+// require_tree ./collections/questionnaire/
 //= require_tree ./views/conversations/
-//= require_tree ./views/questionnaire/
+// require_tree ./views/questionnaire/
 //= require messages
 //= require_tree .
