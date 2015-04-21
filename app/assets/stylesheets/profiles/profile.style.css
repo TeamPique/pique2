@@ -18,6 +18,22 @@ display: none;
   background: none;
 }
 
+#multimenu .navbar-nav > li > .dropdown-menu {
+  background: #fff;
+}
+
+.settings-dropdown {
+  background: #fff;
+  color: #000;
+}
+.navbar-nav .dropdown-menu {
+  border: none;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .active > a {
+  box-shadow: none;
+}
+
 .notifications .row {
   max-width: 362px;
   margin-left: 0px;
