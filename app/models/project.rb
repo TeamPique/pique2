@@ -5,4 +5,10 @@ class Project < ActiveRecord::Base
 
   include PublicActivity::Model
   tracked
+
+  def self.search(search)
+    # method for non-specific user searches
+    where("about LIKE ?", "%#{search}%")
+  end
+
 end

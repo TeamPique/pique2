@@ -1,6 +1,7 @@
 <h1><%= @user.name %></h1>
 <img src="<%= @user.image %>">
 <div class='projects'>Projects:
+
   <li><% @projects.each do |project| %>
   <a href="<%= project_path(project) %>" alt=""><%= @project.id %></a><br></li>
 

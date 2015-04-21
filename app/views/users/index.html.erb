@@ -98,6 +98,14 @@
                 <hr>
               </div>
 
+<!-- specific user search -->
+<%= form_tag(users_path, :method => "get", class: "navbar-form", id: "search-form") do %>
+  <div class="input-append">
+    <%= text_field_tag :search, params[:search], class: "span2", placeholder: "Search People" %>
+    <button class="btn" type="submit"><i class="icon-search"></i></button>
+  </div>
+<% end %>
+
               <div class="row filter-profiles-row">
                 <%= form_tag(users_path, :method => "get", id: "search-form") do %>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
@@ -125,7 +133,10 @@
 
               </div>
 
-            <% @users.each_slice(2) do |user_batch| %>
+<!-- non-specific user search results -->
+<% if @search_results != nil %>
+  <h2>Search Results</h2>
+<% @search_results.each_slice(2) do |user_batch| %>
              <!-- row of two profiles-->
               <div class="row profiles-row">
                 <% user_batch.each do |user| %>
@@ -135,7 +146,7 @@
                       <img class="img-responsive" src="<%= user.image %>" alt="recommended profile">
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-5 recommended-profiles-content">
-                      <h5><%= user.name %></h5>
+                      <h5><%= link_to user.name, user %></h5>
                       <p><%= user.headline %></p>
                       <p><%= user.location %></p>
                       <span>
@@ -159,6 +170,84 @@
                 <% end %>
               </div><!-- row of two -->
               <% end %>
+<% end %>
+
+
+<!-- specific user search results -->
+<% if @user_results != nil %>
+  <h2>Search Results</h2>
+<% @user_results.each_slice(2) do |user_batch| %>
+             <!-- row of two profiles-->
+              <div class="row profiles-row">
+                <% user_batch.each do |user| %>
+                <div class="col-xs-6 col-sm-6 col-md-5 recommended-profile-<%= cycle("left", "right") %>">
+                  <div class="row profile-top">
+                    <div class="col-xs-4 col-sm-4 col-md-4 text-center profile-img-container">
+                      <img class="img-responsive" src="<%= user.image %>" alt="recommended profile">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-5 recommended-profiles-content">
+                      <h5><%= link_to user.name, user %></h5>
+                      <p><%= user.headline %></p>
+                      <p><%= user.location %></p>
+                      <span>
+                        <p>University of Cambridge</p>
+                        <p>Currently works at Facebook</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="row profile-bottom">
+                    <div class="col-xs-12 col-sm-12 col-md-12 recommended-profiles-content-bottom">
+                      <ul class="profile-tags-list list-unstyled">
+                        <li class="profile-tag"><a href="#">Objective-C</a></li>
+                        <li class="profile-tag"><a href="#">C</a></li>
+                        <li class="profile-tag"><a href="#">C++</a></li>
+                        <li class="profile-tag"><a href="#">C#</a></li>
+                      </ul>
+                      <p><%= user.industry %></p>
+                    </div>
+                  </div>
+                </div><!-- profile-right -->
+                <% end %>
+              </div><!-- row of two -->
+              <% end %>
+<% end %>
+
+<% if @user_results == nil && @search_results == nil %>
+            <% @users.each_slice(2) do |user_batch| %>
+             <!-- row of two profiles-->
+              <div class="row profiles-row">
+                <% user_batch.each do |user| %>
+                <div class="col-xs-6 col-sm-6 col-md-5 recommended-profile-<%= cycle("left", "right") %>">
+                  <div class="row profile-top">
+                    <div class="col-xs-4 col-sm-4 col-md-4 text-center profile-img-container">
+                      <img class="img-responsive" src="<%= user.image %>" alt="recommended profile">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-5 recommended-profiles-content">
+                      <h5><%= link_to user.name, user %></h5>
+                      <p><%= user.headline %></p>
+                      <p><%= user.location %></p>
+                      <span>
+                        <p>University of Cambridge</p>
+                        <p>Currently works at Facebook</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="row profile-bottom">
+                    <div class="col-xs-12 col-sm-12 col-md-12 recommended-profiles-content-bottom">
+                      <ul class="profile-tags-list list-unstyled">
+                        <li class="profile-tag"><a href="#">Objective-C</a></li>
+                        <li class="profile-tag"><a href="#">C</a></li>
+                        <li class="profile-tag"><a href="#">C++</a></li>
+                        <li class="profile-tag"><a href="#">C#</a></li>
+                      </ul>
+                      <p><%= user.industry %></p>
+                    </div>
+                  </div>
+                </div><!-- profile-right -->
+                <% end %>
+              </div><!-- row of two -->
+              <% end %>
+<% end %>
             </div><!-- profiles-container -->
           </div><!-- profiles-content -->
         </div><!-- container-fluid -->
@@ -168,50 +257,3 @@
       </div>
 
 
-
-
-
-
-<!-- specific user search -->
-<%= form_tag(users_path, :method => "get", class: "navbar-form", id: "search-form") do %>
-  <div class="input-append">
-    <%= text_field_tag :search, params[:search], class: "span2", placeholder: "Search People" %>
-    <button class="btn" type="submit"><i class="icon-search"></i></button>
-  </div>
-<% end %>
-
-<!-- specific user search results -->
-<% if @user_results != nil %>
-  <h2>Search Results</h2>
-<% @user_results.each do |user| %>
-  <div class="list">
-    <%= user.name %>
-    <img src="<%= user.image %>">
-    <%= link_to 'Show', user %>
-  </div>
-<% end %>
-<% end %>
-
-<!-- non-specific user search results -->
-<% if @search_results != nil %>
-  <h2>Search Results</h2>
-<% @search_results.each do |user| %>
-  <div class="list">
-    <%= user.name %>
-    <img src="<%= user.image %>">
-    <%= link_to 'Show', user %>
-  </div>
-<% end %>
-<% end %>
-
-<!-- rendering all users -->
-<% if @user_results != nil || @search_results != nil %>
-  <h2>All Users</h2>
-<% end %>
-<% @users.each do |user| %>
-  <div class="list">
-    <%= user.name %>
-    <img src="<%= user.image %>">
-    <%= link_to 'Show', user %>
-  </div>
-<% end %>
