@@ -6,15 +6,18 @@ class ProjectsController < ApplicationController
     @users = User.all
     @user = User.find_by(params[:id])
 
-    if params[:search]
-      search = params[:search].downcase
+    if params[:name]
+      name = params[:name].titleize
+    end
+    if params[:about]
+      about = params[:about]
     end
     if params[:location]
       location = params[:location].titleize
     end
 
     # .search is defined in the project.rb model file
-    @search_results = Project.search(search)
+    @search_results = Project.search(name, about, location)
   end
 
   def show
@@ -63,6 +66,6 @@ class ProjectsController < ApplicationController
 
 
   def project_params
-    params.require(:project).permit(:name, :owner, :collaborators, :number_of_collaborators, :about, :team, :openings, :case_studies)
+    params.require(:project).permit(:owner, :name, :about, :team, :openings, :location, :length)
   end
 end

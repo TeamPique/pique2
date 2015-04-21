@@ -3,6 +3,7 @@
 
 
   <%= form_for(@project) do |p| %>
+    <%= p.hidden_field :owner, value: current_user.name %>
     <%= p.label :name, "Project Name" %><br />
     <%= p.text_field :name %><br />
     <%#= p.created_at %>
@@ -13,8 +14,10 @@
     <%= p.text_field :team %><br />
     <%= p.label :openings, "Team Openings" %><br />
     <%= p.text_field :openings %><br />
-    <%= p.label :case_studies, "Case Studies" %><br />
-    <%= p.text_field :case_studies %><br />
+    <%= p.label :location, "Project Location" %><br />
+    <%= p.text_field :location %><br />
+    <%= p.label :length, "Duration of Project" %><br />
+    <%= p.text_field :length %><br />
     <%= p.submit %>
   <% end %>
 </div>
