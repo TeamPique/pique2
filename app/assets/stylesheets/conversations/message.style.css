@@ -1,5 +1,5 @@
 .row.conversation {
-	height: 200px;
+	height: 150px;
 	border-bottom: 2px solid #ddd;
 }
 
@@ -24,7 +24,7 @@ ul.nav.navbar-nav.navbar-right li {
 }
 
 .conversation-text {
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 .conversation-text p {
@@ -45,7 +45,7 @@ ul.nav.navbar-nav.navbar-right li {
 
 .conversations-list img {
 	max-height: 80px;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 .message-header {
@@ -269,7 +269,7 @@ input#message-input {
 
 #post-content {
 	background: #E5EAEB;
-	padding-top: 3.33333333%;
+	padding-top: 1.333333%;
 	padding-bottom: 3.33333333%;
 	margin-bottom: 0px;
 }
