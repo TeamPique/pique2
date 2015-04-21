@@ -18,17 +18,43 @@
 	              <li><a href="#">Projects</a></li>
                 <li><a href="#">About</a></li>                      
 	            </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a><img src="../../../app/assets/images/circle-plus.png"></a></li>
-                <li><a><img src="../../../app/assets/images/speech.png"></a></li>
-                <li><a><img src="../../../app/assets/images/check.png"></a></li>
-                <li><a><img src="../../../app/assets/images/settings.png"></a></li>
+              <ul id="nav" class="nav navbar-nav navbar-right">
+                <li><a><img src="../assets/circle-plus.png"></a></li>
+                <li><a><img src="../assets/speech.png"></a></li>
+                <li id="notification_li">
+                  <a href="#" id="notificationLink">
+                    <img src="../assets/check.png">
+                  </a>
+                  <div id="notificationContainer" class="clearfix">
+                    <div id="notificationTitle">Notifications</div>
+                      <div id="notificationsBody" class="notifications"> 
+                        <div class="row">
+                          <div class="col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 message-user-av notification">
+                            <img class="img-responsive message-av notification" src="http://pique.nyc/assets/img/av.png">
+                          </div>
+                          <div class="col-xs-7 col-sm-7 col-md-7 message-info-preview notification">
+                            <p><strong class="preview-username notification">Tom Jones</strong> We need to talk about bagels.</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 message-user-av notification">
+                            <img class="img-responsive message-av notification" src="http://pique.nyc/assets/img/av.png">
+                          </div>
+                          <div class="col-sm-7 col-md-7 message-info-preview notification">
+                            <p><strong class="preview-username notification">Nick Nolte</strong> I think I killed someone last night.</p>
+                          </div>
+                        </div>
+                      </div>
+                    <div id="notificationFooter"><a href="#">See All</a></div>
+                  </div>
+                </li>
+                <li><a><img src="../assets/settings.png"></a></li>
               </ul>
-		        </div><!--/.nav-collapse -->
-		      </div><!--/.container-fluid -->
-	      </nav>
-	    </div><!-- end menu-wrapper -->
-	  </header><!-- end header -->
+            </div><!--/.nav-collapse -->
+          </div><!--/.container-fluid -->
+        </nav>
+      </div><!-- end menu-wrapper -->
+    </header><!-- end header -->
 
     <section id="discover-profiles-page-content" class="clearfix">
 

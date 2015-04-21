@@ -55,7 +55,7 @@
       </div><!-- end menu-wrapper -->
     </header><!-- end header -->
 
-    <section id="page-content" class="conversations-page-content clearfix">
+    <section id="page-content" class="clearfix">
       <div class="container-fluid">
         <div class="row">
           <div id="sidebar" class="col-md-3 col-sm-3 col-xs-3 pull-left">
@@ -66,15 +66,27 @@
               <button class="btn-default btn-lg compose-message-btn">COMPOSE MESSAGE</button>
             </div>
             <div id="sidebar-items">
-              <div class="row conversation-inbox-item">
-                <p>Messages (3)</p>
+
+<!-- sidebar-items -->
+        <% @current_user.messages.each do |message|%>
+              <div class="row sidebar-item">
+                <div class="col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 message-user-av">
+                  <img class="img-responsive message-av" src="<%= message.sender.image %>">
+                </div>
+<!-- this is kristen -->
+
+                <div class="col-xs-7 col-sm-7 col-md-6 message-info-preview">
+                  <p><strong class="preview-username"><%= message.sender.name %></strong></p>
+                  <p class="preview-message"><%= message.body %></p>
+                </div>
+
+
+                <!-- <div class="col-xs-7 col-sm-7 col-md-6 message-info-preview">
+                <p><strong class="preview-username">Username</strong></p>
+                <p class="preview-message">Recent message</p>
+                </div> -->
               </div>
-              <div class="row conversation-inbox-item">
-                <p>Sent</p>
-              </div>
-              <div class="row conversation-inbox-item">
-                <p>Trash</p>
-              </div>  
+        <% end %>
             </div>
           </div>
 
@@ -84,93 +96,36 @@
 
           </div>
 
-          <div id="post-content" class="col-md-7 col-sm-7">   
-            <div class="row">
-              <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 conversations-list">
-                <div class="navbar-collapse collapse conversations-nav">
-                  <ul class="nav navbar-left conversations-filters">
-                    <li>Mark Read</li>
-                    <li>Mark Unread</li>
-                    <li><i class="fa fa-trash"></i> Delete</li>
-                  </ul>
-                  <ul class="nav navbar-nav navbar-right">
-                    <li>All</li>
-                  </ul>
-                </div>
-                <div class="row conversation first"> 
-                  <p class="conversation-timestamp">7:50pm</p>
-                  <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
-                    <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
-                  </div>
-                  <div class="col-sm-7 col-md-7 conversation-text">
-                    <p><strong>Steve Martin</strong></p>
-                    <p>I'm choking on a bag of cheerios but can still type. Hit me up when you're back.</p>    
+          <%= form_tag messages_path, method: :post do %>
+          <div id="post-content" class="col-md-7 col-sm-7 col-xs-7 chatbox">
+<!-- chatbox -->
+             <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 message-chat">
+                <h3 class="page-header"><small><em>To: <%= options_for_select([recipients_options]) %></em></small>  </h3>
+                <div class="message-chats">
+                  <div class="col-xs-12 col-sm-12 col-md-12 message-text">
+                    <img class="img-responsive message-av sender-img" src="http://a5.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE1ODA0OTcyMDA1Njg4ODQ1.jpg">
+                    <div class="message-content">
+                      <p class="sender-message">Message goes here</p>
+                      <div class="message-time">
+                        <p class="message-time-date" data-livestamp="<%%= moment(timestamp).unix() %>"></p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                <div class="row conversation"> 
-                  <p class="conversation-timestamp">5:30am</p>
-                  <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
-                    <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
-                  </div>
-                  <div class="col-sm-7 col-md-7 conversation-text">
-                    <p><strong>Phyllis Diller</strong></p>
-                    <p>I've been shot and I need money to pay for my hospital bills</p>    
-                  </div>
-                </div>
-              
-                <div class="row conversation"> 
-                  <p class="conversation-timestamp">7:50pm</p>
-                  <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
-                    <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
-                  </div>
-                  <div class="col-sm-7 col-md-7 conversation-text">
-                    <p><strong>Steve Martin</strong></p>
-                    <p>I'm choking on a bag of cheerios but can still type. Hit me up when you're back.</p>    
-                  </div>
-                </div>
-
-                <div class="row conversation"> 
-                  <p class="conversation-timestamp">5:30am</p>
-                  <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
-                    <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
-                  </div>
-                  <div class="col-sm-7 col-md-7 conversation-text">
-                    <p><strong>Phyllis Diller</strong></p>
-                    <p>I've been shot and I need money to pay for my hospital bills</p>    
-                  </div>
-                </div>                
-
-                <div class="row conversation"> 
-                  <p class="conversation-timestamp">7:50pm</p>
-                  <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
-                    <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
-                  </div>
-                  <div class="col-sm-7 col-md-7 conversation-text">
-                    <p><strong>Steve Martin</strong></p>
-                    <p>I'm choking on a bag of cheerios but can still type. Hit me up when you're back.</p>    
-                  </div>
-                </div>
-
-                <div class="row conversation"> 
-                  <p class="conversation-timestamp">5:30am</p>
-                  <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
-                    <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
-                  </div>
-                  <div class="col-sm-7 col-md-7 conversation-text">
-                    <p><strong>Phyllis Diller</strong></p>
-                    <p>I've been shot and I need money to pay for my hospital bills</p>    
-                  </div>
-                </div>
-
+              <div class="message-textbox col-xs-12 col-sm-12 col-md-12 form-group">
+                <input id="message-input" placeholder="Type something here..." type="text">
               </div>
             </div>
           </div>
-      
-    
-  </section>
 
-</div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    </section>
+
+  </div>
+
 
 
 Your Conversations
