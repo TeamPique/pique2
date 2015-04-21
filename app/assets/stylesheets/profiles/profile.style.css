@@ -18,8 +18,15 @@ display: none;
   background: none;
 }
 
+#nav li a {
+  color: #a3a3a3;
+  font-size: 15px;
+  padding-top: 10px;
+}
+
 #multimenu .navbar-nav > li > .dropdown-menu {
   background: #fff;
+  border-top: 3px solid #ddd;
 }
 
 .settings-dropdown {
