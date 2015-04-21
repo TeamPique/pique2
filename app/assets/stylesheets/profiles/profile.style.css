@@ -26,7 +26,9 @@ display: none;
 
 #multimenu .navbar-nav > li > .dropdown-menu {
   background: #fff;
-  border-top: 3px solid #ddd;
+  border: 2px solid rgba(100, 100, 100, .4);
+  margin-top: -9px;
+
 }
 
 .settings-dropdown {
