@@ -13,7 +13,7 @@
 <%= button_to "Follow Projects", follow_projects_project_path(@project)  %>
 -----------------------------------------------------
 <h1> Edit Project </h1>
-{{!-- if statement needs to be fixed --}}
+<!-- {{!if statement needs to be fixed }} -->
 <% if @project.id == current_user.id %>
   <%= button_to "Edit Project", edit_project_path(@project), method: :get %>
 <% end %>
