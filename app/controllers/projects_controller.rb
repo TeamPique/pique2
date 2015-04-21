@@ -7,8 +7,14 @@ class ProjectsController < ApplicationController
     @user = User.find_by(params[:id])
 
     if params[:search]
-      @search_results = Project.where("about LIKE ?", "%#{params[:search].downcase}%")
+      search = params[:search].downcase
     end
+    if params[:location]
+      location = params[:location].titleize
+    end
+
+    # .search is defined in the project.rb model file
+    @search_results = Project.search(search)
   end
 
   def show
