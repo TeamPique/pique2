@@ -9,7 +9,9 @@
   background: #fff;
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
+  border: 2px solid #ddd;
 }
+
 
 
 
@@ -19,7 +21,7 @@
 /*homepage header*/
 
 .homepage-header-container {
-  background-image: url("http://i.dailymail.co.uk/i/pix/2014/04/14/article-2604176-18BF181F00000578-279_634x341.jpg");
+  background: #000;
 }
 
 .homepage-logo {
@@ -43,7 +45,7 @@
   margin-left: 100px;
   background: #2C8F74;
   border: none;
-  border-bottom: 2px solid #1C5344;;
+  border-bottom: 2px solid #1C5344;
   border-radius: 2px;
   outline: 0;
 }
@@ -60,7 +62,13 @@
   outline: 0;
 }
 
-.sign-in-up-btn-container a  {
+.sign-in-btn a  {
+  background: none;
+  color: #fff;
+}
+
+.sign-up-btn a  {
+  background: none;
   color: #fff;
 }
 
@@ -123,3 +131,91 @@
 .header-orange {
   color: #f3733c;
 }
+
+
+
+.homepage-footer {
+  margin: 0 10px;
+}
+
+
+.homepage-image {
+  width: 100%;
+}
+
+.homepage-footer-text {
+  padding-top: 30px;
+  font-style: italic;
+}
+
+
+
+.get-started-btn-container {
+  padding-top: 10px;
+
+}
+
+.get-started-btn {
+  background: #2C8F74;
+  border: none;
+  border-bottom: 2px solid #1C5344;
+  color: #fff;
+  border-radius: 2px;
+  outline: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.get-started-btn a {
+  padding: 10px 20px;
+  background: none;
+  color: #fff;
+}
+
+.get-started-btn:hover {
+  border-bottom: 2px solid #2C8F74;
+  background: #2C8F74;
+  color: #fff;
+  border-radius: 2px;
+  margin-bottom: -2px;
+  margin-top: 2px;
+}
+
+.get-started-btn:focus {
+  background: #2C8F74;
+  border-bottom: 2px solid #1C5344;
+  color: #fff;
+}
+
+
+.project-get-started {
+  height: 150px;
+  border-left: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  background: #fff;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-pique-logo-container {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.footer-pique-logo {
+  position: relative;
+  height: 150px;
+  border-left: 2px solid #ddd;
+  border-right: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  margin: 0;
+  padding: 0;
+  background: #F9FAFC;
+  line-height: 150px;
+}
+
+.footer-border-right {
+  border-right: 2px solid #ddd;
+}
+
+
