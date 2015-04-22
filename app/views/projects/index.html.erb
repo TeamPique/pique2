@@ -13,13 +13,13 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="head-font" class="nav navbar-nav navbar-left">
-                <li><a href="#">People</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="/users">People</a></li>
+                <li><a href="/projects">Projects</a></li>
                 <li><a href="#">About</a></li>
               </ul>
               <ul id="nav" class="nav navbar-nav navbar-right">
-                <li><a><img src="../assets/circle-plus.png"></a></li>
-                <li><a><img src="../assets/speech.png"></a></li>
+                <li><a href="/projects/new"><img src="../assets/circle-plus.png"></a></li>
+                <li><a href="/conversations"><img src="../assets/speech.png"></a></li>
                 <li id="notification_li">
                   <a href="#" id="notificationLink">
                     <img src="../assets/check.png">
@@ -114,8 +114,6 @@
               <% end %>
 
               </div>
-<%= button_to 'Add another project', new_project_path, method: 'get' %><br>
-
 
 <% if @search_results != nil %>
   <h2>Search Results</h2>
