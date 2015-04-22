@@ -5,7 +5,7 @@ class QuestionnairesController < ApplicationController
 			redirect_to users_path
 		end
 		@questionnaire = Questionnaire.new
-		@user = User.find_by(params[:id]).name
+		@user = current_user.name
 	end
 
 	def create
