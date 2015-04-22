@@ -10,6 +10,9 @@
     <%#= p.updated_at %>
     <%= p.label :about, "About" %><br />
     <%= p.text_field :about %><br />
+    <%= p.label(:category, "Category") %>
+    <%#= select_tag :category %>
+    <%#= p.select :category, options_for_select([["Designers", "Des"], ["Developers","Dev"], ["Project Managers","PM"], ["Marketers","Mark"], ["Biz Devs","BD"], ["Anyone with Strong Work Ethic", "Anyone"]]) %> </br>
     <%= p.label :team, "Team Members" %><br />
     <%= p.text_field :team %><br />
     <%= p.label :openings, "Team Openings" %><br />
