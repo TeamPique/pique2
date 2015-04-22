@@ -53,7 +53,7 @@ hr.hr-style {
     border-left: 6px solid;
     display: inline-block;
     height: 0;
-    opacity: 0.3;
+    opacity: 0.4;
     vertical-align: middle;
     width: 0;
     margin: 0 10px;
@@ -69,38 +69,45 @@ hr.hr-style {
   color: #fff;
 }
 
-.gold-step {
-
-}
-
 .form-container {
   margin: 30px;
-          width: 1000px;
-        clear: both;
+  width: 1000px;
+  clear: both;
 }
 
 
-#create-project-form {
-
+#create-project-form p {
+  vertical-align: top;
+  margin-bottom: 20px;
 }
 
 #create-project-form label {
   width: 147px;
+  margin: 0;
 
 }
 
-#create-project-form p {
+.create-project-form-item {
+  margin-top: 20px;
 }
 
-#create-project-form input, select, textarea {
+#create-project-form input, select, textarea, .add-project-logo-container-form {
   width: 400px;
   border: 2px solid #ddd;
   outline: none;
   border-radius: 2px;
   clear: both;
+  background: #fff;
+  vertical-align: top;
 }
 
+#create-project-form select {
+  height: 50px;
+}
 
+#create-project-form textarea {
+  height: 74px;
+}
 
 
 #create-project-form .create-project-btn-container {
@@ -134,6 +141,39 @@ hr.hr-style {
 }
 
 #create-project-form input[type="submit"] {
+}
 
+
+.mandatory-fields {
+  color: #2C93CD;
+  font-size: 12px;
+  margin: 15px 0 0 150px;
+}
+
+
+
+
+/*p2*/
+
+.add-project-logo-container-form {
+  display: inline-block;
+}
+
+.add-project-logo-box-form {
+  height: 120px;
+  width: 120px;
+  margin: 5px auto 5px auto;
+  background: #F9FAFC;
+  border: 2px solid #ddd;
+  border-radius: 2px;
+  font: italic 14px 'Source Sans Pro', sans-serif;
+  color: #ddd;
+  text-align: center;
+  border: none
+}
+
+.add-project-logo-box-form img {
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
 

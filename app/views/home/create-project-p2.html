@@ -24,7 +24,7 @@
 <body class="create-project-page">
 
 
-	<div class="wrapper">
+  <div class="wrapper">
 
    <header class="header">
      <div id="multimenu" class="menu-wrapper">
@@ -49,8 +49,8 @@
               <li><a><img src="../../../app/assets/images/check.png"></a></li>
               <li><a><img src="../../../app/assets/images/settings.png"></a></li>
             </ul>
-		        </div><!--/.nav-collapse
-		      </div><!--/.container-fluid -->
+            </div><!--/.nav-collapse
+          </div><!--/.container-fluid -->
        </nav>
      </div><!-- end menu-wrapper -->
    </header><!-- end header -->
@@ -70,9 +70,9 @@
     
     <div class="create-project-steps-container">
       <ul class="list-unstyled list-inline">
-        <li class="blue-step">1. Basic Info</li>
+        <li class="green-step">1. Basic Info</li>
         <b class="caret-right"></b>
-        <li>2. Project Details</li>
+        <li class="blue-step">2. Project Details</li>
         <b class="caret-right"></b>
         <li>3. Collaborators and Openings</li>
       </ul>
@@ -81,24 +81,21 @@
     <div class="form-container">
     <form action="" method="post" id="create-project-form">
       <fieldset>
-        <p>
-          <label for="name">Project name*</label>
-          <input type="text">
-        </p>
-        <p>
-          <label for="description">One sentence description of your project*</label>
-          <textarea form="create-project-form"></textarea>
-        </p>
-        <p>
-          <label for="category">Select project category*</label>
-          <select form="create-project-form">
-            <option value="Wickiup">Wickiup</option>
-          </select>
-        </p>
-        <p>
-          <label for="link">Add a link</label>
-          <input type="text">
-        </p>
+        <div class="create-project-form-item">
+          <label for="details">Provide details about the project: its story, goal, what makes it different etc.*</label>
+          <textarea rows="2" cols="40" form="create-project-form"></textarea>
+        </div>
+        <div class="create-project-form-item">
+          <label for="logo">Add a project logo (if there is one already)*</label>
+          <div class="add-project-logo-container-form">
+            <a href="#">   
+            <div class="add-project-logo-box-form">           
+                <img src="../../../app/assets/images/circle-plus.png">
+                <p>ADD LOGO</p>
+            </div>
+            </a>
+          </div>
+        </div>
         <div class="mandatory-fields">*Fields are mandatory</div>
         <div class="create-project-btn-container">
           <input class="create-project-btn" type="submit" value="Continue">
