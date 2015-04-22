@@ -1,5 +1,6 @@
 <%= @user %>
 <%= form_for(@questionnaire) do |q| %>
+	<%= q.hidden_field :user_id, value: current_user.id %>
 	<%= q.label(:Question_1, "What is your current position?") %>
 	<%#= select_tag :Question_1 %>
 	<%= q.select :Question_1, options_for_select([["Designer", "Des"], ["Developer","Dev"], ["Project Manager","PM"], ["Marketer","Mark"], ["Biz Dev","BD"]]) %> </br>
@@ -25,4 +26,4 @@
 	<%= q.submit %>
 <% end %>
 
-<!-- , :onchange => "$.post('#{model_singular_path(id)}', {'_method':'put', 'model_name[model_field]':this.value} );" --> 
+<!-- , :onchange => "$.post('#{model_singular_path(id)}', {'_method':'put', 'model_name[model_field]':this.value} );" -->

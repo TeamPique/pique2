@@ -1,6 +1,6 @@
 class QuestionnairesController < ApplicationController
 	def index
-		@questionnaires = Questionnaire.all	
+		@questionnaires = Questionnaire.all
 	end
 
 	def show
@@ -20,22 +20,23 @@ class QuestionnairesController < ApplicationController
 
 	def edit
 		@questionnaire = Questionnaire.find(params[:id])
-		
+
 	end
 
 	def update
-		questionnaire = Questionnaire.find(params[:id])	
+		questionnaire = Questionnaire.find(params[:id])
 		questionnaire.update(questionnaire_params)
-		redirect_to questionnaire	
+		redirect_to questionnaire
 	end
 
-	def questionnaire 
-		@questionnaire = Questionnaire.find(params[:id])		
+	def questionnaire
+		@questionnaire = Questionnaire.find(params[:id])
 	end
 
 
 	def questionnaire_params
 		params.require(:questionnaire).permit(
+			:user_id,
 			:Question_1,
 			:Question_2,
 			:Question_3,
