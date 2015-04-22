@@ -6,9 +6,11 @@ class Project < ActiveRecord::Base
   include PublicActivity::Model
   tracked
 
-  def self.search(search)
+  def self.search(name, about, location)
     # method for non-specific user searches
-    where("about LIKE ?", "%#{search}%")
+    where("name LIKE ?", "%#{name}%") unless name.blank?
+    where("about LIKE ?", "%#{about}%") unless about.blank?
+    where("location LIKE ?", "%#{location}%") unless location.blank?
   end
 
 end
