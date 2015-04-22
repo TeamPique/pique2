@@ -99,6 +99,7 @@ hr.hr-style {
   clear: both;
   background: #fff;
   vertical-align: top;
+  padding: 5px 10px 5px 10px;
 }
 
 #create-project-form select {
@@ -107,6 +108,27 @@ hr.hr-style {
 
 #create-project-form textarea {
   height: 74px;
+}
+
+#create-project-form ul {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+}
+
+#create-project-form .skill-item-link {
+  padding: 3px 5px;
+  border-radius: 2px;
+  background: #EBEFF3;
+  color: #9B9B9F;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+#create-project-form .skill-item-link.active-skill {
+  background: #129075;
+  color: #fff;
 }
 
 
@@ -138,9 +160,6 @@ hr.hr-style {
 	background: #f3733c;
   border-bottom: 2px solid #b94721;
   color: #fff;
-}
-
-#create-project-form input[type="submit"] {
 }
 
 
@@ -177,3 +196,12 @@ hr.hr-style {
   margin-bottom: 10px;
 }
 
+
+/*p3*/
+
+.add-new-position-to-project {
+  margin: 20px 0 0 150px;
+}
+.add-new-position-to-project a {
+  color: #2C93CD;
+}
