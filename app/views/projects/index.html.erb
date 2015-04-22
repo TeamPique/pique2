@@ -97,10 +97,11 @@
         </div>
 
               <div class="row filter-profiles-row">
-                <%= form_tag(projects_path, :method => "get", id: "search-form") do %>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
-                  <button onclick="javascript:resetPage()" class="form-control">Browse All!</button>
+                  <button onclick="window.location='/projects';">Browse All.</button>
+                  <!-- <button onclick="javascript:resetPage()" class="form-control">Browse All!</button> -->
                 </div>
+                <%= form_tag(projects_path, :method => "get", id: "search-form") do %>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
                   <%= text_field_tag :name, params[:name], class: "form-control", placeholder: "Project Name" %>
                 </div>
