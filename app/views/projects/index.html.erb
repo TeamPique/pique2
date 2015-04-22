@@ -98,8 +98,7 @@
 
               <div class="row filter-profiles-row">
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
-                  <button onclick="window.location='/projects';">Browse All.</button>
-                  <!-- <button onclick="javascript:resetPage()" class="form-control">Browse All!</button> -->
+                  <button onclick="window.location='/projects';">Browse All</button>
                 </div>
                 <%= form_tag(projects_path, :method => "get", id: "search-form") do %>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
@@ -113,14 +112,6 @@
                 </div>
                 <button class="btn" type="submit"><i class="icon-search"></i></button>
               <% end %>
-
-<!--               evan, can you help with this script? need it to clear the search form and refresh the page with no query params -->
-              <script type="text/javascript">
-                function resetPage(){
-                  $("#search-form").trigger('reset')
-                  window.location.reload();
-                };
-              </script>
 
               </div>
 <%= button_to 'Add another project', new_project_path, method: 'get' %><br>

@@ -107,10 +107,10 @@
 <% end %>
 
               <div class="row filter-profiles-row">
-                <%= form_tag(users_path, :method => "get", id: "search-form") do %>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
-                  <button onclick="javascript:resetPage()" class="form-control">Browse All!</button>
+                  <button onclick="window.location='/users';">Browse All</button>
                 </div>
+                <%= form_tag(users_path, :method => "get", id: "search-form") do %>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
                   <%= text_field_tag :industry, params[:industry], class: "form-control", placeholder: "Industry" %>
                 </div>
@@ -122,15 +122,6 @@
                 </div>
                 <button class="btn" type="submit"><i class="icon-search"></i></button>
               <% end %>
-
-<!--               evan, can you help with this script? need it to clear the search form and refresh the page with no query params -->
-              <script type="text/javascript">
-                function resetPage(){
-                  $("#search-form").trigger('reset')
-                  window.location.reload();
-                };
-              </script>
-
               </div>
 
 <!-- non-specific user search results -->
