@@ -1,0 +1,29 @@
+<%= @user %>
+<%= form_for(@questionnaire) do |q| %>
+	<%= q.hidden_field :user_id, value: current_user.id %>
+	<%= q.label(:Question_1, "What is your current position?") %>
+	<%#= select_tag :Question_1 %>
+	<%= q.select :Question_1, options_for_select([["Designer", "Des"], ["Developer","Dev"], ["Project Manager","PM"], ["Marketer","Mark"], ["Biz Dev","BD"]]) %> </br>
+
+	<%= q.label(:Question_2, "With what members of the Pique community are you interested in collaborating?") %>
+	<%#= select_tag :Question_2 %>
+	<%= q.select :Question_2, options_for_select([["Designers", "Des"], ["Developers","Dev"], ["Project Managers","PM"], ["Marketers","Mark"], ["Biz Devs","BD"], ["Anyone with Strong Work Ethic", "Anyone"]]) %> </br>
+
+	<%= q.label(:Question_3, "In what type of projects are you interested?") %>
+	<%#= select_tag :Question_3 %>
+	<%= q.select :Question_3, options_for_select([["Social Good", "SG"], ["Social Media","SM"], ["Ed Tech","ET"], ["Fin Tech","FT"], ["Fashion","Fas"], ["Food","F"], ["Travel","T"], ["Any Project","AP"]]) %> </br>
+
+	<%= q.label(:Question_4, "How many hours are you looking to spend each week on a project?") %>
+	<%#= select_tag :Question_4 %>
+	<%= q.select :Question_4, options_for_select([["1-4", 1], ["4-8",2], ["8-12",3], ["+12",4]]) %> </br>
+
+	<%= q.label(:Question_5, "What brings you to Pique?") %>
+	<%#= select_tag :Question_5 %>
+	<%= q.select :Question_5, options_for_select([["Networking", "Net"], ["Building Portfolio","BP"], ["Building MVP","BM"], ["Love Building Cool Things","LB"]]) %> </br>
+
+</br>
+	<%#= button_to ("Yeah, I want to find a project to work on!"), "/users", method: "get" %> <%#= button_to ("Yeah, I want to find people to build a project with!"), "/projects", method: "get" %>
+	<%= q.submit %>
+<% end %>
+
+<!-- , :onchange => "$.post('#{model_singular_path(id)}', {'_method':'put', 'model_name[model_field]':this.value} );" -->

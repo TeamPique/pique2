@@ -45,9 +45,16 @@ Rails.application.routes.draw do
 
 
   resources :comments, only: [:create]
+  resources :questionnaires do
+    member do
+      post :questionnaires
+    end
+  end
+
 
   get '/questionnaire', to: 'home#questionnaire'
   post '/questionnaire', to: 'users#show'
+  # post '/questionnaire', to: 'projects#index'
 
   get '/notifications', to: 'home#notifications'
   # get '/dashboard',     to: 'home#dashboard'
