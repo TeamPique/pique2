@@ -15,9 +15,10 @@ class UsersController < ApplicationController
       location = params[:location].titleize
     end
 
-    # if params[:role]
-    #   User.where("name LIKE ?", "%#{search}%")
-    # end
+    if params[:role]
+      role = params[:role]
+      @role_results = User.where(id: Questionnaire.where(Question_1: role))
+    end
 
     # .search is defined in the user.rb model file
     @search_results = User.search(industry, headline, location)

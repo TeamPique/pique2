@@ -81,14 +81,14 @@
               <div class="profile-type-container">
                 <table>
                   <tr>
-                    <td><a href="#">DESIGNERS</a></td>
-                    <td><a href="#">DEVELOPERS</a></td>
-                    <td><a href="#">PROJECT MANAGERS</a></td>
+                    <td><a href="/users?utf8=✓&role=Des">DESIGNERS</a></td>
+                    <td><a href="/users?utf8=✓&role=Dev">DEVELOPERS</a></td>
+                    <td><a href="/users?utf8=✓&role=PM">PROJECT MANAGERS</a></td>
                   </tr>
                   <tr>
-                    <td><a href="#">MARKETERS</a></td>
-                    <td><a href="#">BIZ DEV</a></td>
-                    <td><a href="#">EVERYONE</a></td>
+                    <td><a href="/users?utf8=✓&role=Mark">MARKETERS</a></td>
+                    <td><a href="/users?utf8=✓&role=BD">BIZ DEV</a></td>
+                    <td><a href="/users">EVERYONE</a></td>
                   </tr>
                 </table>
               </div>
@@ -107,10 +107,10 @@
 <% end %>
 
               <div class="row filter-profiles-row">
-                <%= form_tag(users_path, :method => "get", id: "search-form") do %>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
-                  <button onclick="javascript:resetPage()" class="form-control">Browse All!</button>
+                  <button onclick="window.location='/users';">Browse All</button>
                 </div>
+                <%= form_tag(users_path, :method => "get", id: "search-form") do %>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
                   <%= text_field_tag :industry, params[:industry], class: "form-control", placeholder: "Industry" %>
                 </div>
@@ -122,15 +122,6 @@
                 </div>
                 <button class="btn" type="submit"><i class="icon-search"></i></button>
               <% end %>
-
-<!--               evan, can you help with this script? need it to clear the search form and refresh the page with no query params -->
-              <script type="text/javascript">
-                function resetPage(){
-                  $("#search-form").trigger('reset')
-                  window.location.reload();
-                };
-              </script>
-
               </div>
 
 <!-- non-specific user search results -->
@@ -212,7 +203,46 @@
               <% end %>
 <% end %>
 
-<% if @user_results == nil && @search_results == nil %>
+<!-- role search results -->
+<% if @role_results != nil %>
+  <h2>Search Results</h2>
+<% @role_results.each_slice(2) do |user_batch| %>
+             <!-- row of two profiles-->
+              <div class="row profiles-row">
+                <% user_batch.each do |user| %>
+                <div class="col-xs-6 col-sm-6 col-md-5 recommended-profile-<%= cycle("left", "right") %>">
+                  <div class="row profile-top">
+                    <div class="col-xs-4 col-sm-4 col-md-4 text-center profile-img-container">
+                      <img class="img-responsive" src="<%= user.image %>" alt="recommended profile">
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-5 recommended-profiles-content">
+                      <h5><%= link_to user.name, user %></h5>
+                      <p><%= user.headline %></p>
+                      <p><%= user.location %></p>
+                      <span>
+                        <p>University of Cambridge</p>
+                        <p>Currently works at Facebook</p>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="row profile-bottom">
+                    <div class="col-xs-12 col-sm-12 col-md-12 recommended-profiles-content-bottom">
+                      <ul class="profile-tags-list list-unstyled">
+                        <li class="profile-tag"><a href="#">Objective-C</a></li>
+                        <li class="profile-tag"><a href="#">C</a></li>
+                        <li class="profile-tag"><a href="#">C++</a></li>
+                        <li class="profile-tag"><a href="#">C#</a></li>
+                      </ul>
+                      <p><%= user.industry %></p>
+                    </div>
+                  </div>
+                </div><!-- profile-right -->
+                <% end %>
+              </div><!-- row of two -->
+              <% end %>
+<% end %>
+
+<% if @user_results == nil && @search_results == nil && @role_results == nil%>
             <% @users.each_slice(2) do |user_batch| %>
              <!-- row of two profiles-->
               <div class="row profiles-row">
