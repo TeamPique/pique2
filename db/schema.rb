@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421201544) do
+ActiveRecord::Schema.define(version: 20150422153525) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -145,13 +145,16 @@ ActiveRecord::Schema.define(version: 20150421201544) do
   add_index "projects_users", ["project_id", "user_id"], name: "index_projects_users_on_project_id_and_user_id", unique: true, using: :btree
 
   create_table "questionnaires", force: :cascade do |t|
-    t.string "Question_1"
-    t.string "Question_2"
-    t.string "Question_3"
-    t.string "Question_4"
-    t.string "Question_5"
-    t.string "Question_6"
+    t.string  "Question_1"
+    t.string  "Question_2"
+    t.string  "Question_3"
+    t.string  "Question_4"
+    t.string  "Question_5"
+    t.string  "Question_6"
+    t.integer "user_id"
   end
+
+  add_index "questionnaires", ["user_id"], name: "index_questionnaires_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                   default: "", null: false
@@ -200,4 +203,5 @@ ActiveRecord::Schema.define(version: 20150421201544) do
   add_foreign_key "mailboxer_conversation_opt_outs", "mailboxer_conversations", column: "conversation_id", name: "mb_opt_outs_on_conversations_id"
   add_foreign_key "mailboxer_notifications", "mailboxer_conversations", column: "conversation_id", name: "notifications_on_conversation_id"
   add_foreign_key "mailboxer_receipts", "mailboxer_notifications", column: "notification_id", name: "receipts_on_notification_id"
+  add_foreign_key "questionnaires", "users"
 end
