@@ -1,3 +1,4 @@
+<%= @user %>
 <%= form_for(@questionnaire) do |q| %>
 	<%= q.label(:Question_1, "What is your current position?") %>
 	<%#= select_tag :Question_1 %>
@@ -20,7 +21,8 @@
 	<%= q.select :Question_5, options_for_select([["Networking", "Net"], ["Building Portfolio","BP"], ["Building MVP","BM"], ["Love Building Cool Things","LB"]]) %> </br>
 
 </br>
-	<%= button_to ("Yeah, I want to find a project to work on!"), "/users", method: "get" %> <%= button_to ("Yeah, I want to find people to build a project with!"), "/projects", method: "get" %>
+	<%#= button_to ("Yeah, I want to find a project to work on!"), "/users", method: "get" %> <%#= button_to ("Yeah, I want to find people to build a project with!"), "/projects", method: "get" %>
+	<%= q.submit %>
 <% end %>
 
 <!-- , :onchange => "$.post('#{model_singular_path(id)}', {'_method':'put', 'model_name[model_field]':this.value} );" --> 
