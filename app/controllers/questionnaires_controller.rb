@@ -1,15 +1,11 @@
 class QuestionnairesController < ApplicationController
-	def index
-		@questionnaires = Questionnaire.all
-	end
-
-	def show
-		@questionnaire = Questionnaire.find(params[:id])
-	end
 
 	def new
+		if Questionnaire.find_by(user_id: current_user.id) != nil
+			redirect_to users_path
+		end
 		@questionnaire = Questionnaire.new
-		@user = User.find_by(params[:id]).name
+		@user = current_user.name
 	end
 
 	def create
@@ -18,21 +14,7 @@ class QuestionnairesController < ApplicationController
 		redirect_to questionnaires_path
 	end
 
-	def edit
-		@questionnaire = Questionnaire.find(params[:id])
-
-	end
-
-	def update
-		questionnaire = Questionnaire.find(params[:id])
-		questionnaire.update(questionnaire_params)
-		redirect_to questionnaire
-	end
-
-	def questionnaire
-		@questionnaire = Questionnaire.find(params[:id])
-	end
-
+	private
 
 	def questionnaire_params
 		params.require(:questionnaire).permit(
