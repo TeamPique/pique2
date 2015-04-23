@@ -260,3 +260,8 @@ label#cant-see {
 form#create-project-form fieldset p input.half-input {
   width: 200px;
 }
+
+#create-project-form .create-project-btn.delete-btn {
+  background: #C4C5C5;
+  border: none;
+}
