@@ -256,3 +256,7 @@ hr.hr-style {
 label#cant-see {
   visibility: hidden;
 }
+
+form#create-project-form fieldset p input.half-input {
+  width: 200px;
+}
