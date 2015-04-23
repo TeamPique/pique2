@@ -67,6 +67,7 @@
     <div class="form-container">
     <form action="" method="post" id="create-project-form">
       <fieldset>
+        <p class="project-project">Project Information</p>
         <p>
           <label for="name">Project name</label>
           <input type="text">
@@ -110,16 +111,52 @@
           <label for="link">Project links</label>
           <input class="half-input" type="text" placeholder="Survey">
           <input class="half-input" type="text" placeholder="http://pique.nyc">
+          <div class="add-new-position-to-project"><a href="#">+ Add another link</a></div>
         </p>
-        <div class="mandatory-fields">*Fields are mandatory</div>
-        <div class="create-project-btn-container">
+      </fieldset>
+    </form>
+    </div>
+
+    <div class="create-project-header">
+      <hr class="hr-style">
+    </div>
+
+    <div class="form-container">
+    <form action="" method="post" id="create-project-form">
+      <fieldset>
+        <p class="project-project">Project Openings</p>
+        <div class="create-project-form-item">
+          <label for="position-name">Position name</label>
+          <input type="text">
+        </div>
+        <div class="create-project-form-item">
+          <label for="position-description">Description</label>
+          <textarea form="create-project-form"></textarea>
+        </div>
+        <div class="create-project-form-item">
+          <label for="key-skills">Pick key skills (up to 5)</label>
+          <ul class="key-skills-list-form list-unstyled list-inline">
+            <li class="skill-item"><a class="skill-item-link" href="#">CSS</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">Ruby on Rails</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">Javascript</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">HMTL5</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">Adobe Illustrator</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">Adobe After Effects</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">Adobe Photoshop</a></li>
+          </ul>
+        </div>
+        <div class="create-project-form-item">
+          <label for="link">Hours per week</label>
+          <input type="text">
+        </div>
+        <div class="add-new-position-to-project"><a href="#">+ Add another position</a></div>
+       <div class="create-project-btn-container">
           <input class="create-project-btn" type="submit" value="Save">
           <input class="create-project-btn delete-btn" type="submit" value="Delete">
         </div>
       </fieldset>
     </form>
     </div>
-
 
 
   </div>

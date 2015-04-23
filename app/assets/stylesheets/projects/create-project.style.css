@@ -265,3 +265,9 @@ form#create-project-form fieldset p input.half-input {
   background: #C4C5C5;
   border: none;
 }
+
+.project-project {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2C93CD;
+}
