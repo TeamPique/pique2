@@ -52,7 +52,9 @@
                     </a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                     <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Profile</a></li>
-                    <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+                    <li class="settings-dropdown" role="presentation">
+                      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+                    </li>
                   </ul>
                 </li>
               </ul>
