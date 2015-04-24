@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   def show
     if params[:id].to_i == current_user.id
       @followed_projects = current_user.projects_followed
-      @project = Project.find(params[:id])
+      @projects = Project.where(owner: current_user.name)
       interests = current_user.questionnaire.Question_3
 
       if interests == "SG"

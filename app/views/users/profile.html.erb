@@ -80,7 +80,7 @@
           <img class="img-responsive profile-pic" src="<%= current_user.image %>">
 
           <div class="send-message-btn-container">
-            <a href="/message/new"><button class="btn-default btn-lg send-message-btn" data-toggle="modal" data-target="#profile-modal">SEND MESSAGE</button></a>
+            <a href="/messages/new"><button class="btn-default btn-lg send-message-btn" data-toggle="modal" data-target="#profile-modal">SEND MESSAGE</button></a>
           </div>
 
           <div class="profile-name-loc-title">
@@ -107,9 +107,9 @@
           <div class="row center-me">
 
             <div class="col-sm-4 col-md-4 col-lg-4 skills-container sm-profile-container separation-right">
-              <div class="skills-header"><h6>Skills</h6></div>
+              <div class="skills-header"><h6>Skills (coming soon!)</h6></div>
               <div class="trait-content">
-                <div class="user-trait">Test Item</div>
+                <div class="user-trait">Your skills here.</div>
               </div>
             </div>
 
@@ -145,12 +145,23 @@
           <div class="row center-me">
             <div class="col-sm-8 col-md-8 col-lg-8 experience-container">
               <div class="experience-header"><h6>Past Projects</h6></div>
-              <div class="experience-content"></div>
-
+              <div class="experience-content">
+                <% @projects.each do |project| %>
+                <a href="/projects/<%= project.id %>"><div class="user-trait"><%= project.name %></div></a>
+                <% end %>
+              </div>
             </div>
           </div>
 
+          <div class="row center-me">
+            <div class="col-sm-8 col-md-8 col-lg-8 experience-container">
+              <div class="experience-header"><h6>Coming soon!</h6></div>
+              <div class="experience-content">
+                <div class="user-trait">You will soon be able to add information from your Github, Dribbble, and Meetup accounts!</div>
+              </div>
 
+            </div>
+          </div>
 
 
           <!-- </div> -->
@@ -161,7 +172,7 @@
 
 </div>
 
-<div class="modal fade model-container" id="profile-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<!-- <div class="modal fade model-container" id="profile-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -189,9 +200,9 @@
       <div class="modal-footer">
 
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div> --><!-- /.modal-content -->
+  <!-- </div> --><!-- /.modal-dialog -->
+<!-- </div> --><!-- /.modal -->
 
 <div class"container">
     <div class="row">
@@ -231,11 +242,13 @@ function paperclipAjax(e){
 };
 </script>
 
-<%= link_to "Meetup Import", user_omniauth_authorize_path(:meetup), method: :get %>
+
+
+<%#= link_to "Meetup Import", user_omniauth_authorize_path(:meetup), method: :get %>
 <br>
-<%= link_to "Dribble Import", user_omniauth_authorize_path(:dribbble), method: :get %>
+<%#= link_to "Dribble Import", user_omniauth_authorize_path(:dribbble), method: :get %>
 <br>
-<%= link_to "Github Import", user_omniauth_authorize_path(:github), method: :get %>
+<%#= link_to "Github Import", user_omniauth_authorize_path(:github), method: :get %>
 
 <div class='followedProjects'>Followed Projects:
   <%# @followed_projects.each do |project| %>
