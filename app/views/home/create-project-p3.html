@@ -83,11 +83,11 @@
       <fieldset>
         <div class="create-project-form-item">
           <label for="position-name">Position name</label>
-          <input type="text">
+          <input id='position-name' type="text">
         </div>
         <div class="create-project-form-item">
           <label for="position-description">Description</label>
-          <textarea form="create-project-form"></textarea>
+          <textarea id='position-description' form="create-project-form"></textarea>
         </div>
         <div class="create-project-form-item">
           <label for="key-skills">Pick key skills (up to 5)</label>
@@ -103,7 +103,7 @@
         </div>
         <div class="create-project-form-item">
           <label for="link">Hours per week</label>
-          <input type="text">
+          <input id='position-hours' type="text">
         </div>
         <div class="add-new-position-to-project"><a href="#">+ Add another position</a></div>
         <div class="create-project-btn-container">
@@ -139,10 +139,32 @@
       $(this).closest('.form-container').remove();
   });
 
+
+
   $(document).delegate('.add-new-position-to-project', 'click', function(e) {
     e.preventDefault();
-    $('.formlist').append("<div class='form-container'><form method='post' id='add-position-form'class='add-position-form'><fieldset><div class='create-project-form-item'><label for='position-name'>Position name</label><input type='text'></div><div class='create-project-form-item'><label for='position-description'>Description</label><textarea form='add-position-form'></textarea></div><div class='create-project-form-item'><label for='key-skills'>Pick key skills (up to 5)</label><ul class='key-skills-list-form list-unstyled list-inline'><li class='skill-item'><a class='skill-item-link' href='#'>CSS</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Ruby on Rails</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Javascript</a></li><li class='skill-item'><a class='skill-item-link' href='#'>HMTL5</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Adobe Illustrator</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Adobe After Effects</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Adobe Photoshop</a></li></ul></div><div class='create-project-form-item'><label for='link'>Hours per week</label><input type='text'></div><div class='add-new-position-to-project'><a href='#'>+ Add another position</a></div><div class='remove-position'><a href='#'>+ Remove this position</a></div><div class='create-project-btn-container'><input class='create-project-btn' type='submit' value='Submit'></div></fieldset></form></div>");
+    $('.formlist').append("<div class='form-container'><form method='post' id='add-position-form'class='add-position-form'><fieldset><div class='create-project-form-item'><label for='position-name'>Position name</label><input id='position-name' type='text'></div><div class='create-project-form-item'><label for='position-description'>Description</label><textarea id='position-description' form='add-position-form'></textarea></div><div class='create-project-form-item'><label for='key-skills'>Pick key skills (up to 5)</label><ul class='key-skills-list-form list-unstyled list-inline'><li class='skill-item'><a class='skill-item-link' href='#'>CSS</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Ruby on Rails</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Javascript</a></li><li class='skill-item'><a class='skill-item-link' href='#'>HMTL5</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Adobe Illustrator</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Adobe After Effects</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Adobe Photoshop</a></li></ul></div><div class='create-project-form-item'><label for='link'>Hours per week</label><input id='position-hours' type='text'></div><div class='add-new-position-to-project'><a href='#'>+ Add another position</a></div><div class='remove-position'><a href='#'>+ Remove this position</a></div><div class='create-project-btn-container'><input class='create-project-btn' type='submit' value='Submit'></div></fieldset></form></div>");
   });
+
+
+  var lengthValidation = function(charLength) {
+    $(this).on('keyup', function(e) {
+    $(this).next('.form-glyphicon').remove();
+      if ($(this).val().length > charLength) {
+        $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-remove form-glyphicon form-glyphicon-no'>Maximum " + charLength + " characters</div>");
+      } else {
+        $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-ok form-glyphicon'></div>");
+      }
+      if( !$(this).val() ) {
+        $(this).next('.form-glyphicon').remove();
+      }
+    });
+  };
+
+
+    lengthValidation.call($('#position-name'), 50);
+    lengthValidation.call($('#position-description'), 144);
+    lengthValidation.call($('#position-hours'), 50);
         
 
 

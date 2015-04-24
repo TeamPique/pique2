@@ -83,7 +83,7 @@
       <fieldset>
         <div class="create-project-form-item">
           <label for="details">Provide details about the project: its story, goal, what makes it different etc.*</label>
-          <textarea rows="2" cols="40" form="create-project-form"></textarea>
+          <textarea id="project-details" rows="2" cols="40" form="create-project-form"></textarea>
         </div>
         <div class="create-project-form-item">
           <label for="logo">Add a project logo (if there is one already)*</label>
@@ -108,8 +108,30 @@
 
   </div>
 
+ <script src="../../../vendor/assets/javascripts/jquery.js"></script>
+
+  <script>
 
 
+
+  var lengthValidation = function(charLength) {
+    $(this).on('keyup', function(e) {
+    $(this).next('.form-glyphicon').remove();
+      if ($(this).val().length > charLength) {
+        $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-remove form-glyphicon form-glyphicon-no'>Maximum " + charLength + " characters</div>");
+      } else {
+        $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-ok form-glyphicon'></div>");
+      }
+      if( !$(this).val() ) {
+        $(this).next('.form-glyphicon').remove();
+      }
+    });
+  };
+
+    lengthValidation.call($('#project-details'), 144);
+
+    
+  </script>
 
 </body>
 </html>
