@@ -20,7 +20,8 @@
   <p><%#= conversation.last_message.body %>
     <small>(<span class="text-muted"><%#= conversation.last_message.created_at.strftime("%-d %B %Y, %H:%M:%S") %></span>)</small></p>
 </li> -->
-
+    <div class="panel-body">
+    <div class="messages">
       <% @conversations.each do |convo| %>
         <% convo.messages.each do |message| %>
       <div class="row conversation first">
@@ -30,8 +31,13 @@
         </div>
         <div class="col-sm-7 col-md-7 conversation-text">
           <p><strong><%= message.sender.name %></strong></p>
-          <p><%= message.subject %></p>
+          <%= link_to message.subject, conversation_path(conversation) %>
         </div>
+        <%#= link_to 'Move to trash', conversation_path(conversation), class: 'btn btn-xs btn-danger', method: :delete,
+                  data: {confirm: 'Are you sure?'} %>
       </div>
         <% end %>
       <% end %>
+    </div>
+  </div>
+      <%#= will_paginate %>
