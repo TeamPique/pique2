@@ -33,7 +33,6 @@ class UsersController < ApplicationController
   def show
     if params[:id].to_i == current_user.id
       @followed_projects = current_user.projects_followed
-      @projects = Project.all
       @project = Project.find(params[:id])
       interests = current_user.questionnaire.Question_3
 
@@ -76,7 +75,6 @@ class UsersController < ApplicationController
       else
         @available_for = "BUILDING COOL THINGS"
       end
-
       render "profile"
     else
       visitor_id = User.find(params[:id]).id

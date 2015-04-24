@@ -19,12 +19,13 @@
  *= require carousel
  *= require et-line
  *= require style
+ *= require_tree ./activity-feed/
  *= require_tree ./conversations/
+ *= require_tree ./homepage/
+ *= require_tree ./notifications/
  *= require_tree ./profiles/
  *= require_tree ./projects/
- *= require_tree ./activity-feed/
  *= require_tree ./questionnaire/
- *= require_tree ./notifications/
  *= require_self
  */
 

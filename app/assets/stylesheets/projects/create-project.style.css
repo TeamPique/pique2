@@ -206,6 +206,104 @@ hr.hr-style {
   color: #2C93CD;
 }
 
+.remove-position {
+  margin: 0 0 0 150px;
+}
+.remove-position a {
+  color: #2C93CD;
+}
+
+
+.add-position-form p {
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+
+.add-position-form label {
+  width: 147px;
+  margin: 0;
+
+}
+
+.create-project-form-item {
+  margin-top: 20px;
+}
+
+.add-position-form input, select, textarea, .add-project-logo-container-form {
+  width: 400px;
+  border: 2px solid #ddd;
+  outline: none;
+  border-radius: 2px;
+  clear: both;
+  background: #fff;
+  vertical-align: top;
+  padding: 5px 10px 5px 10px;
+}
+
+.add-position-form select {
+  height: 50px;
+}
+
+.add-position-form textarea {
+  height: 74px;
+}
+
+.add-position-form ul {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+}
+
+.add-position-form .skill-item-link {
+  padding: 3px 5px;
+  border-radius: 2px;
+  background: #EBEFF3;
+  color: #9B9B9F;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.add-position-form .skill-item{
+  margin-bottom: 7px;
+}
+
+.add-position-form .skill-item-link.active-skill {
+  background: #129075;
+  color: #fff;
+}
+
+
+.add-position-form .create-project-btn-container {
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.add-position-form .create-project-btn {
+  padding: 5px 20px;
+  background: #f3733c;
+  border: none;
+  border-bottom: 2px solid #b94721;
+  border-radius: 2px;
+  outline: 0;
+  width: 100px;
+}
+
+.add-position-form .create-project-btn:hover {
+  border-bottom: 2px solid #f3733c;
+  color: #fff;
+  border-radius: 2px;
+  margin-bottom: -2px;
+  margin-top: 2px;
+}
+
+.add-position-form .create-project-btn:focus {
+  background: #f3733c;
+  border-bottom: 2px solid #b94721;
+  color: #fff;
+}
+
 
 /*edit project*/
 

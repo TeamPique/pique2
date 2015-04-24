@@ -107,26 +107,43 @@
         </div>
         <div class="add-new-position-to-project"><a href="#">+ Add another position</a></div>
         <div class="create-project-btn-container">
-          <input class="create-project-btn" type="submit" value="FINISH">
+          <input class="create-project-btn" type="submit" value="Submit">
         </div>
       </fieldset>
     </form>
     </div>
 
-
-
+  <div class="formlist"></div>
   </div>
 
  <script src="../../../vendor/assets/javascripts/jquery.js"></script>
 
   <script>
-    $('.skill-item a').on('click', function(e) {
+  
+  $(function() {
+    var formNumber = 0;
+  });
+  
+
+  $(document).delegate('.skill-item a', 'click', function(e) {
+      e.preventDefault();
       if ($(this).hasClass("active-skill")) {
         $(this).removeClass('active-skill');
       } else {
         $(this).addClass('active-skill');
       }
-    });
+  });
+
+  $(document).delegate('.remove-position', 'click', function(e) {
+      e.preventDefault();
+      $(this).closest('.form-container').remove();
+  });
+
+  $(document).delegate('.add-new-position-to-project', 'click', function(e) {
+    e.preventDefault();
+    $('.formlist').append("<div class='form-container'><form method='post' id='add-position-form'class='add-position-form'><fieldset><div class='create-project-form-item'><label for='position-name'>Position name</label><input type='text'></div><div class='create-project-form-item'><label for='position-description'>Description</label><textarea form='add-position-form'></textarea></div><div class='create-project-form-item'><label for='key-skills'>Pick key skills (up to 5)</label><ul class='key-skills-list-form list-unstyled list-inline'><li class='skill-item'><a class='skill-item-link' href='#'>CSS</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Ruby on Rails</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Javascript</a></li><li class='skill-item'><a class='skill-item-link' href='#'>HMTL5</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Adobe Illustrator</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Adobe After Effects</a></li><li class='skill-item'><a class='skill-item-link' href='#'>Adobe Photoshop</a></li></ul></div><div class='create-project-form-item'><label for='link'>Hours per week</label><input type='text'></div><div class='add-new-position-to-project'><a href='#'>+ Add another position</a></div><div class='remove-position'><a href='#'>+ Remove this position</a></div><div class='create-project-btn-container'><input class='create-project-btn' type='submit' value='Submit'></div></fieldset></form></div>");
+  });
+        
 
 
   </script>
