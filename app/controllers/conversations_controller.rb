@@ -14,6 +14,7 @@ class ConversationsController < ApplicationController
     end
 
     @conversations = @conversations.paginate(page: params[:page], per_page: 10)
+    # binding.pry
   end
 
   def show

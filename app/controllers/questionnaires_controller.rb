@@ -1,5 +1,7 @@
 class QuestionnairesController < ApplicationController
 
+
+
 	def new
 		if Questionnaire.find_by(user_id: current_user.id) != nil
 			redirect_to users_path
@@ -11,7 +13,7 @@ class QuestionnairesController < ApplicationController
 	def create
 		questionnaire = Questionnaire.create(questionnaire_params)
 		questionnaire.save!
-		redirect_to questionnaires_path
+		redirect_to users_path
 	end
 
 	private
