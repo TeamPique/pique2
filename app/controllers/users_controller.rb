@@ -45,8 +45,8 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       render "show"
     end
-      # visitor = params[:visitor]
-      # cur_user = @current_user.id
+      visitor = params[:visitor]
+      cur_user = @current_user.id
   end
   def new
     @user = User.new
@@ -74,8 +74,10 @@ class UsersController < ApplicationController
 # current_user -- accesses signed-in user's info
 # user_session -- accesses the scope for the session
 
+
 # def portfolio_params
 #   params.permit(:portfolio,:id)
 
 # end
+
 end

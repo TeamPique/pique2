@@ -23,7 +23,10 @@
 
 </br>
 	<%#= button_to ("Yeah, I want to find a project to work on!"), "/users", method: "get" %> <%#= button_to ("Yeah, I want to find people to build a project with!"), "/projects", method: "get" %>
-	<%= q.submit %>
+	<%#= q.submit "Yeah, I want to find a project to work on!", users_path %>
+	<%= q.submit "Submit" %>
 <% end %>
+
+
 
 <!-- , :onchange => "$.post('#{model_singular_path(id)}', {'_method':'put', 'model_name[model_field]':this.value} );" -->
