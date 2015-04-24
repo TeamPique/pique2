@@ -81,24 +81,24 @@
     <div class="form-container">
     <form action="" method="post" id="create-project-form">
       <fieldset>
-        <p>
+        <div class="create-project-form-item">
           <label for="name">Project name*</label>
-          <input type="text">
-        </p>
-        <p>
+          <input id='project-name' type="text">
+        </div>
+        <div class="create-project-form-item">
           <label for="description">One sentence description of your project*</label>
-          <textarea form="create-project-form"></textarea>
-        </p>
-        <p>
+          <textarea id="project-sentence" form="create-project-form"></textarea>
+        </div>
+        <div class="create-project-form-item">
           <label for="category">Select project category*</label>
           <select form="create-project-form">
             <option value="Wickiup">Wickiup</option>
           </select>
-        </p>
-        <p>
+        </div>
+        <div class="create-project-form-item">
           <label for="link">Add a link</label>
-          <input type="text">
-        </p>
+          <input id="project-link"type="text">
+        </div>
         <div class="mandatory-fields">*Fields are mandatory</div>
         <div class="create-project-btn-container">
           <input class="create-project-btn" type="submit" value="Continue">
@@ -111,6 +111,70 @@
 
   </div>
 
+ <script src="../../../vendor/assets/javascripts/jquery.js"></script>
+
+  <script>
+
+
+
+  var lengthValidation = function(charLength) {
+    $(this).on('keyup', function(e) {
+    $(this).next('.form-glyphicon').remove();
+      if ($(this).val().length > charLength) {
+        $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-remove form-glyphicon form-glyphicon-no'>Maximum " + charLength + " characters</div>");
+      } else {
+        $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-ok form-glyphicon'></div>");
+      }
+      if( !$(this).val() ) {
+        $(this).next('.form-glyphicon').remove();
+      }
+    })
+  };
+
+    lengthValidation.call($('#project-name'), 50);
+    lengthValidation.call($('#project-sentence'), 144)
+    lengthValidation.call($('#project-link'), 144)
+    
+    // $('#project-name').on('keyup', function(e) {
+    //   $('.form-glyphicon').remove();
+    //   if ($(this).val().length > 50) {
+    //     $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-remove form-glyphicon'></div>");
+    //   } else {
+    //     $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-ok form-glyphicon'></div>");
+    //   }
+    //   if( !$(this).val() ) {
+    //     $('.form-glyphicon').remove();
+    //   }
+    // });
+
+    // $('#project-sentence').on('keyup', function(e) {
+    //   $('.form-glyphicon').remove();
+    //   if ($(this).val().length > 50) {
+    //     $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-remove form-glyphicon'></div>");
+    //   } else {
+    //     $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-ok form-glyphicon'></div>");
+    //   }
+    //   if( !$(this).val() ) {
+    //     $('.form-glyphicon').remove();
+    //   }
+    // });
+
+    // $('#project-link').on('keyup', function(e) {
+    //   $('.form-glyphicon').remove();
+    //   if ($(this).val().length > 50) {
+    //     $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-remove form-glyphicon'></div>");
+    //   } else {
+    //     $(this).closest('.create-project-form-item').append("<div class='glyphicon glyphicon-ok form-glyphicon'></div>");
+    //   }
+    //   if( !$(this).val() ) {
+    //     $('.form-glyphicon').remove();
+    //   }
+    // });
+
+
+      // <div class="glyphicon glyphicon-ok form-glyphicon"></div>
+      // "<div class='glyphicon glyphicon-remove form-glyphicon'></div>"
+  </script>
 
 
 
