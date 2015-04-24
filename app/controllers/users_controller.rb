@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     if params[:id].to_i == current_user.id
       @followed_projects = current_user.projects_followed
       @projects = Project.all
-      @project = Project.find(params[:id])
+      # @project = Project.find(params[:id])
       render "profile"
     else
       visitor_id = User.find(params[:id]).id
