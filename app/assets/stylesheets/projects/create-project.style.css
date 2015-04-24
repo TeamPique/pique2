@@ -53,7 +53,7 @@ hr.hr-style {
     border-left: 6px solid;
     display: inline-block;
     height: 0;
-    opacity: 0.3;
+    opacity: 0.4;
     vertical-align: middle;
     width: 0;
     margin: 0 10px;
@@ -69,38 +69,67 @@ hr.hr-style {
   color: #fff;
 }
 
-.gold-step {
-
-}
-
 .form-container {
   margin: 30px;
-          width: 1000px;
-        clear: both;
+  width: 1000px;
+  clear: both;
 }
 
 
-#create-project-form {
-
+#create-project-form p {
+  vertical-align: top;
+  margin-bottom: 20px;
 }
 
 #create-project-form label {
   width: 147px;
+  margin: 0;
 
 }
 
-#create-project-form p {
+.create-project-form-item {
+  margin-top: 20px;
 }
 
-#create-project-form input, select, textarea {
+#create-project-form input, select, textarea, .add-project-logo-container-form {
   width: 400px;
   border: 2px solid #ddd;
   outline: none;
   border-radius: 2px;
   clear: both;
+  background: #fff;
+  vertical-align: top;
+  padding: 5px 10px 5px 10px;
 }
 
+#create-project-form select {
+  height: 50px;
+}
 
+#create-project-form textarea {
+  height: 74px;
+}
+
+#create-project-form ul {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+}
+
+#create-project-form .skill-item-link {
+  padding: 3px 5px;
+  border-radius: 2px;
+  background: #EBEFF3;
+  color: #9B9B9F;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+#create-project-form .skill-item-link.active-skill {
+  background: #129075;
+  color: #fff;
+}
 
 
 #create-project-form .create-project-btn-container {
@@ -133,7 +162,112 @@ hr.hr-style {
   color: #fff;
 }
 
-#create-project-form input[type="submit"] {
 
+.mandatory-fields {
+  color: #2C93CD;
+  font-size: 12px;
+  margin: 15px 0 0 150px;
 }
 
+
+
+
+/*p2*/
+
+.add-project-logo-container-form {
+  display: inline-block;
+}
+
+.add-project-logo-box-form {
+  height: 120px;
+  width: 120px;
+  margin: 5px auto 5px auto;
+  background: #F9FAFC;
+  border: 2px solid #ddd;
+  border-radius: 2px;
+  font: italic 14px 'Source Sans Pro', sans-serif;
+  color: #ddd;
+  text-align: center;
+  border: none
+}
+
+.add-project-logo-box-form img {
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+
+/*p3*/
+
+.add-new-position-to-project {
+  margin: 20px 0 0 150px;
+}
+.add-new-position-to-project a {
+  color: #2C93CD;
+}
+
+
+/*edit project*/
+
+#logo-div {
+  height: 100px;
+  width: 100px;
+}
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  background: none;
+  color: #2C93CD;
+  border: none;
+  text-shadow: none;
+  border-color: none;
+  font-family: 'Nunito', sans-serif;
+}
+
+.fileUpload:hover {
+  background: none;
+  border: none;
+  border-color: none;
+  color: #2C93CD;
+  font-family: 'Nunito', sans-serif;
+}
+
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-color: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  background: none;
+  filter: alpha(opacity=0);
+}
+
+.fileUpload input.upload:hover {
+  background: none;
+  color: #2C93CD;
+}
+
+label#cant-see {
+  visibility: hidden;
+}
+
+form#create-project-form fieldset p input.half-input {
+  width: 200px;
+}
+
+#create-project-form .create-project-btn.delete-btn {
+  background: #C4C5C5;
+  border: none;
+}
+
+.project-project {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2C93CD;
+}

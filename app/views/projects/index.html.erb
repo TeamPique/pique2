@@ -13,13 +13,13 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="head-font" class="nav navbar-nav navbar-left">
-                <li><a href="#">People</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="/users">People</a></li>
+                <li><a href="/projects">Projects</a></li>
                 <li><a href="#">About</a></li>
               </ul>
               <ul id="nav" class="nav navbar-nav navbar-right">
-                <li><a><img src="../assets/circle-plus.png"></a></li>
-                <li><a><img src="../assets/speech.png"></a></li>
+                <li><a href="/projects/new"><img src="../assets/circle-plus.png"></a></li>
+                <li><a href="/conversations"><img src="../assets/speech.png"></a></li>
                 <li id="notification_li">
                   <a href="#" id="notificationLink">
                     <img src="../assets/check.png">
@@ -62,36 +62,6 @@
       </div>
 
       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 pull-right activity-feed">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 activity-item-container">
-
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 activity-element">
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">2 hours ago</div>
-            <div class="col-xs-5 col-xs-offset-3 col-sm-5 col-sm-offset-3 col-md-5 col-md-offset-3 col-lg-5 col-lg-offset-3 goto-project"><a href="#">Go to project</a></div>
-          </div>
-
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 activity-element">
-            <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="http://piqueapp.github.io/assets/img/av.png" alt="profile-pic">
-            <p class="col-xs-8 col-sm-8 col-md-8 col-lg-8 activity-item-description">Julie went to the store. The store got robbed while she was there. Lying on the floor, she wondered why her cat was burping all the time.</p>
-          </div>
-
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 activity-element">
-            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-              <ul class="list-unstyled list-inline">
-                <li><a href="#">Like</a></li>
-                <li><a href="#">Comment</a></li>
-                <li><a href="#">Share</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-              <ul class="list-unstyled list-inline">
-                <li><a href="#">25</a></li>
-                <li><a href="#">10</a></li>
-                <li><a href="#">2</a></li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
       </div>
 
 
@@ -106,14 +76,14 @@
         <div class="project-type-container">
           <table>
             <tr>
-              <td><a href="#">EDUCATION</a></td>
-              <td><a href="#">FASHION</a></td>
-              <td><a href="#">DESIGN</a></td>
+              <td><a href="/projects?utf8=✓&category=SG">SOCIAL GOOD</a></td>
+              <td><a href="/projects?utf8=✓&category=SM">SOCIAL</a></td>
+              <td><a href="/projects?utf8=✓&category=ET">ED TECH</a></td>
             </tr>
             <tr>
-              <td><a href="#">LIFESTYLE</a></td>
-              <td><a href="#">TECH</a></td>
-              <td><a href="#">PUBLISHING</a></td>
+              <td><a href="/projects?utf8=✓&category=FT">FIN TECH</a></td>
+              <td><a href="/projects?utf8=✓&category=L">LIFESTYLE</a></td>
+              <td><a href="/projects">ALL PROJECTS</a></td>
             </tr>
           </table>
         </div>
@@ -127,10 +97,10 @@
         </div>
 
               <div class="row filter-profiles-row">
-                <%= form_tag(projects_path, :method => "get", id: "search-form") do %>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
-                  <button onclick="javascript:resetPage()" class="form-control">Browse All!</button>
+                  <button onclick="window.location='/projects';">Browse All</button>
                 </div>
+                <%= form_tag(projects_path, :method => "get", id: "search-form") do %>
                 <div class="col-xs-3 col-sm-3 col-md-3 filter-profiles-input">
                   <%= text_field_tag :name, params[:name], class: "form-control", placeholder: "Project Name" %>
                 </div>
@@ -143,17 +113,7 @@
                 <button class="btn" type="submit"><i class="icon-search"></i></button>
               <% end %>
 
-<!--               evan, can you help with this script? need it to clear the search form and refresh the page with no query params -->
-              <script type="text/javascript">
-                function resetPage(){
-                  $("#search-form").trigger('reset')
-                  window.location.reload();
-                };
-              </script>
-
               </div>
-<%= button_to 'Add another project', new_project_path, method: 'get' %><br>
-
 
 <% if @search_results != nil %>
   <h2>Search Results</h2>
@@ -183,7 +143,35 @@
 <% end %>
 <% end %>
 
-<% if @search_results == nil %>
+<% if @category_results != nil %>
+  <h2>Search Results</h2>
+<% @category_results.each_slice(3) do |project_batch| %>
+        <div class="col-xs-12 col-sm-12 col-md-12 recommended-projects-container">
+<% project_batch.each do |project| %>
+          <div class="col-xs-4 col-sm-4 col-md-4 recommended-project">
+            <img src="http://piqueapp.github.io/assets/img/av.png" alt="recommended project">
+            <div class="recommended-projects-content">
+              <h5><%= project.name %></h5>
+              <p><%= project.about %></p>
+              <ul class="project-popularity-list list-unstyled ">
+                <li><%= project.location %></li>
+                <li><%= project.length %></li>
+                <li>Created by: <%= project.owner %></li>
+              </ul>
+              <ul class="project-tags-list list-unstyled">
+                <li class="project-tag"><a href="#">#WEeee</a></li>
+                <li class="project-tag"><a href="#">#WEeee</a></li>
+                <li class="project-tag"><a href="#">#WEeee</a></li>
+                <li class="project-tag"><a href="#">#WEeee</a></li>
+              </ul>
+            </div>
+          </div>
+          <% end %>
+        </div>
+<% end %>
+<% end %>
+
+<% if @search_results == nil && @category_results == nil %>
 <% @projects.each_slice(3) do |project_batch| %>
         <div class="col-xs-12 col-sm-12 col-md-12 recommended-projects-container">
 <% project_batch.each do |project| %>

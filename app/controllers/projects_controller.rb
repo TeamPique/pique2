@@ -16,6 +16,11 @@ class ProjectsController < ApplicationController
       location = params[:location].titleize
     end
 
+    if params[:category]
+      category = params[:category]
+      @category_results = Project.where(category: category)
+    end
+
     # .search is defined in the project.rb model file
     @search_results = Project.search(name, about, location)
   end
@@ -66,6 +71,6 @@ class ProjectsController < ApplicationController
 
 
   def project_params
-    params.require(:project).permit(:owner, :name, :about, :team, :openings, :location, :length)
+    params.require(:project).permit(:owner, :name, :about, :category, :team, :openings, :location, :length)
   end
 end

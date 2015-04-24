@@ -1,4 +1,3 @@
-
 <html>
 <head>
   
@@ -18,8 +17,6 @@
   <link rel="stylesheet" href="../../../app/assets/stylesheets/activity-feed/activity-feed.style.css">
   <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-
-
 </head>
 <body class="create-project-page">
 
@@ -63,50 +60,103 @@
    <div class="col-xs-8 col-sm-8 col-md-8 create-project-container">
 
     <div class="create-project-header">
-       <h3>Create a project</h3>
+       <h3>Edit your project</h3>
        <hr class="hr-style">
-    </div>
-
-    
-    <div class="create-project-steps-container">
-      <ul class="list-unstyled list-inline">
-        <li class="blue-step">1. Basic Info</li>
-        <b class="caret-right"></b>
-        <li>2. Project Details</li>
-        <b class="caret-right"></b>
-        <li>3. Collaborators and Openings</li>
-      </ul>
     </div>
 
     <div class="form-container">
     <form action="" method="post" id="create-project-form">
       <fieldset>
+        <p class="project-project">Project Information</p>
         <p>
-          <label for="name">Project name*</label>
+          <label for="name">Project name</label>
           <input type="text">
         </p>
         <p>
-          <label for="description">One sentence description of your project*</label>
+          <label for="description">Website link</label>
+          <input type="text">
+        </p>
+          <label for="description">Location</label>
+          <input type="text">
+        </p>
+        <p>
+          <label for="description">Product category</label>
+          <input type="text">
+        </p>
+        <p>
+          <label for="description">One line description</label>
           <textarea form="create-project-form"></textarea>
         </p>
         <p>
-          <label for="category">Select project category*</label>
-          <select form="create-project-form">
-            <option value="Wickiup">Wickiup</option>
-          </select>
+          <label for="description">Logo</label>
+          <textarea id="logo-div" disabled></textarea>
         </p>
         <p>
-          <label for="link">Add a link</label>
-          <input type="text">
+          <div class="fileUpload btn btn-primary">
+            <label id="cant-see">upload</label>
+            <span>+ Upload</span>
+            <input type="file" class="upload">
+          </div>
         </p>
-        <div class="mandatory-fields">*Fields are mandatory</div>
-        <div class="create-project-btn-container">
-          <input class="create-project-btn" type="submit" value="Continue">
-        </div>
+        <p>
+          <label>Team Members</label>
+          <select form="create-project-form">
+            <option value="Brian Rucker">Brian Rucker</option>
+          </select>
+        </p>
+          <label for="description">Project description</label>
+          <textarea></textarea>
+        </p>
+        <p>
+          <label for="link">Project links</label>
+          <input class="half-input" type="text" placeholder="Survey">
+          <input class="half-input" type="text" placeholder="http://pique.nyc">
+          <div class="add-new-position-to-project"><a href="#">+ Add another link</a></div>
+        </p>
       </fieldset>
     </form>
     </div>
 
+    <div class="create-project-header">
+      <hr class="hr-style">
+    </div>
+
+    <div class="form-container">
+    <form action="" method="post" id="create-project-form">
+      <fieldset>
+        <p class="project-project">Project Openings</p>
+        <div class="create-project-form-item">
+          <label for="position-name">Position name</label>
+          <input type="text">
+        </div>
+        <div class="create-project-form-item">
+          <label for="position-description">Description</label>
+          <textarea form="create-project-form"></textarea>
+        </div>
+        <div class="create-project-form-item">
+          <label for="key-skills">Pick key skills (up to 5)</label>
+          <ul class="key-skills-list-form list-unstyled list-inline">
+            <li class="skill-item"><a class="skill-item-link" href="#">CSS</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">Ruby on Rails</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">Javascript</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">HMTL5</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">Adobe Illustrator</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">Adobe After Effects</a></li>
+            <li class="skill-item"><a class="skill-item-link" href="#">Adobe Photoshop</a></li>
+          </ul>
+        </div>
+        <div class="create-project-form-item">
+          <label for="link">Hours per week</label>
+          <input type="text">
+        </div>
+        <div class="add-new-position-to-project"><a href="#">+ Add another position</a></div>
+       <div class="create-project-btn-container">
+          <input class="create-project-btn" type="submit" value="Save">
+          <input class="create-project-btn delete-btn" type="submit" value="Delete">
+        </div>
+      </fieldset>
+    </form>
+    </div>
 
 
   </div>
@@ -116,5 +166,3 @@
 
 </body>
 </html>
-
-       
