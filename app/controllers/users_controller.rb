@@ -35,6 +35,48 @@ class UsersController < ApplicationController
       @followed_projects = current_user.projects_followed
       @projects = Project.all
       @project = Project.find(params[:id])
+      interests = current_user.questionnaire.Question_3
+
+      if interests == "SG"
+        @interests = ["Social Good"]
+      elsif interests == "SM"
+        @interests = ["Social Media"]
+      elsif interests == "ET"
+        @interests = ["Ed Tech"]
+      elsif interests == "FT"
+        @interests = ["Fin Tech"]
+      elsif interests == "Fas"
+        @interests = ["Fashion"]
+      elsif interests == "L"
+        @interests = ["Lifestyle"]
+      else
+        @interests = ["Social Good", "Social Media", "Ed Tech", "Fin Tech", "Fashion", "Lifestyle"]
+      end
+
+      availability = current_user.questionnaire.Question_4
+
+      if availability == "1"
+        @availability = "1-4"
+      elsif availability == "2"
+        @availability = "4-8"
+      elsif availability == "3"
+        @availability = "8-12"
+      else
+        @availability = "12+"
+      end
+
+      available_for = current_user.questionnaire.Question_5
+
+      if available_for == "Net"
+        @available_for = "NETWORKING"
+      elsif available_for == "BP"
+        @available_for = "BUILDING PORTFOLIO"
+      elsif available_for == "BM"
+        @available_for = "BUILDING MVP"
+      else
+        @available_for = "BUILDING COOL THINGS"
+      end
+
       render "profile"
     else
       visitor_id = User.find(params[:id]).id
@@ -47,7 +89,9 @@ class UsersController < ApplicationController
     end
       visitor = params[:visitor]
       cur_user = @current_user.id
+
   end
+
   def new
     @user = User.new
   end

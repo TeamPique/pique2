@@ -23,7 +23,7 @@
               <ul id="nav" class="nav navbar-nav navbar-right">
                 <li><a><img src="../assets/circle-plus.png"></a></li>
                 <li><a><img src="../assets/speech.png"></a></li>
-                <li id="notification_li">
+                <!-- <li id="notification_li">
                   <a href="#" id="notificationLink">
                     <img src="../assets/check.png">
                   </a>
@@ -35,7 +35,7 @@
                             <img class="img-responsive message-av notification" src="http://pique.nyc/assets/img/av.png">
                           </div>
                           <div class="col-xs-7 col-sm-7 col-md-7 message-info-preview notification">
-                            <p><strong class="preview-username notification">Tom Jones</strong> We need to talk about bagels.</p>
+                            <p><strong class="preview-username notification"><%#= current_user.name %></strong> We need to talk about bagels.</p>
                           </div>
                         </div>
                         <div class="row">
@@ -49,7 +49,7 @@
                       </div>
                     <div id="notificationFooter"><a href="#">See All</a></div>
                   </div>
-                </li>
+                </li> -->
                 <li><a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
                       <img src="../assets/settings.png">
                     </a>
@@ -77,20 +77,22 @@
 
         <div class="profile-header">
 
-          <img class="img-responsive profile-pic" src="http://piqueapp.github.io/assets/img/av.png">
+          <img class="img-responsive profile-pic" src="<%= current_user.image %>">
 
           <div class="send-message-btn-container">
-            <button class="btn-default btn-lg send-message-btn" data-toggle="modal" data-target="#profile-modal">SEND MESSAGE</button>
+            <a href="/message/new"><button class="btn-default btn-lg send-message-btn" data-toggle="modal" data-target="#profile-modal">SEND MESSAGE</button></a>
           </div>
 
           <div class="profile-name-loc-title">
-            <h3 class="profile-user-name">Thom Jones</h3>
-            <h7 class="profile-user-loc"><small>Derprrrr, DerpderrDer</small></h7>
-            <h7 class="profile-user-title"><small>Vorld Vide Veb Deweloper</small></h7>
+            <h3 class="profile-user-name"><%= current_user.name %></h3>
+            <h7 class="profile-user-loc"><small><%= current_user.location %></small></h7>
+            <h7 class="profile-user-title"><small><%= current_user.headline %></small></h7>
+            <h7 class="profile-user-title"><small><%= current_user.industry %></small></h7>
+            <h7 class="profile-user-title"><small>I am available for <strong><%= @availability %></strong> hour(s) a week.</small></h7><br />
           </div>
 
           <div class="profile-bio">
-            <h7>Wow. Me? Really? Ok. Well, I like dags. Dags are great. They eat grass, and in a lot of ways they are like small cows. I love dags. They might eat your hands though. I'm willing to take the necessary prevarications though.</h7>
+<!--             <h7>this is where the user's bio will eventually go</h7> -->
           </div>
 
         </div>
@@ -99,7 +101,7 @@
 
         <div class="container profile-body">
 
-          <h7 class="job-status"><small>Looking for </small><a href="#">A LITTLE</a>. I'm available <a href="#">SOMETHING SOMETHING</a></h7>
+          <h7 class="job-status"><small>I'm available for <%= @available_for %></h7>
 
 
           <div class="row center-me">
@@ -114,15 +116,9 @@
             <div class="col-sm-4 col-md-4 col-lg-4 interests-container sm-profile-container separation-left">
               <div class="interests-header"><h6>Interests</h6></div>
               <div class="trait-content">
-                <div class="user-trait">Test Item</div>
-                <div class="user-trait">Test Item</div>
-                <div class="user-trait">Test Item</div>
-                <div class="user-trait">Test Item</div>
-                <div class="user-trait">Test Item</div>
-                <div class="user-trait">Test Item</div>
-                <div class="user-trait">Test Item</div>
-                <div class="user-trait">Test Item</div>
-                <div class="user-trait">Test Item</div>
+                <% @interests.each do |interest| %>
+                <div class="user-trait"><%= interest %></div>
+                <% end %>
 
               </div>
             </div>
@@ -130,7 +126,7 @@
 
           <div class="row center-me">
 
-            <div class="col-sm-4 col-md-4 col-lg-4 a-container sm-profile-container col-centered separation-right">
+            <!-- <div class="col-sm-4 col-md-4 col-lg-4 a-container sm-profile-container col-centered separation-right">
               <div class="a-header"><h6>Not Sure What This Is Yet</h6></div>
               <div class="trait-content">
                 <div class="user-trait">Test Item</div>
@@ -142,13 +138,13 @@
               <div class="trait-content">
                 <div class="user-trait">Test Item</div>
               </div>
-            </div>
+            </div> -->
 
           </div>
 
           <div class="row center-me">
             <div class="col-sm-8 col-md-8 col-lg-8 experience-container">
-              <div class="experience-header"><h6>Past Experience</h6></div>
+              <div class="experience-header"><h6>Past Projects</h6></div>
               <div class="experience-content"></div>
 
             </div>
