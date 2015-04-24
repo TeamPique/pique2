@@ -1,6 +1,6 @@
 <div class="wrapper message-view">
 
-    <header class="message-header">
+    <header class="header">
       <div id="multimenu" class="menu-wrapper">
         <nav class="navbar yamm navbar-default" role="navigation">
           <div class="container-fluid">
@@ -9,50 +9,24 @@
                 <span class="sr-only">Toggle navigation</span>
                 <span class="fa fa-bars"></span>
               </button>
-              <a class="navbar-brand" href="/"><img class="img-responsive nav-logo" src="http://piqueapp.github.io/assets/img/av.png"></a>
+              <a class="navbar-brand" href="#"><img class="img-responsive nav-logo" src="http://piqueapp.github.io/assets/img/av.png"></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="head-font" class="nav navbar-nav navbar-left">
+
                 <li><a href="/users">People</a></li>
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="#">About</a></li>
+
               </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a><img src="assets/circle-plus.png"></a></li>
-                <li><a><img src="assets/speech.png"></a></li>
-                <li id="notification_li">
-                  <a href="#" id="notificationLink">
-                    <img src="../assets/check.png">
-                  </a>
-                  <div id="notificationContainer" class="clearfix">
-                    <div id="notificationTitle">Notifications</div>
-                      <div id="notificationsBody" class="notifications"> 
-                        <div class="row">
-                          <div class="col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 message-user-av notification">
-                            <img class="img-responsive message-av notification" src="http://pique.nyc/assets/img/av.png">
-                          </div>
-                          <div class="col-xs-7 col-sm-7 col-md-7 message-info-preview notification">
-                            <p><strong class="preview-username notification">Tom Jones</strong> We need to talk about bagels.</p>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 message-user-av notification">
-                            <img class="img-responsive message-av notification" src="http://pique.nyc/assets/img/av.png">
-                          </div>
-                          <div class="col-xs-7 col-sm-7 col-md-7 message-info-preview notification">
-                            <p><strong class="preview-username notification">Nick Nolte</strong> I think I killed someone last night.</p>
-                          </div>
-                        </div>
-                      </div>
-                    <div id="notificationFooter"><a href="#">See All</a></div>
-                  </div>
-                </li>
+              <ul id="nav" class="nav navbar-nav navbar-right">
+                <li><a href="/projects/new"><img src="../assets/circle-plus.png"></a></li>
+                <li><a href="/conversations"><img src="../assets/speech.png"></a></li>
                 <li><a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
                       <img src="../assets/settings.png">
                     </a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Profile</a></li>
-                    <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+                    <li class="settings-dropdown" role="presentation"><%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -81,7 +55,7 @@
               </div>
               <div class="row conversation-inbox-item">
                 <p>Trash</p>
-              </div>  
+              </div>
             </div>
           </div>
 
@@ -91,7 +65,7 @@
 
           </div>
 
-          <div id="post-content" class="col-md-7 col-sm-7">   
+          <div id="post-content" class="col-md-7 col-sm-7">
             <div class="row">
               <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 conversations-list">
                 <div class="navbar-collapse collapse conversations-nav">
@@ -104,77 +78,77 @@
                     <li>All</li>
                   </ul>
                 </div>
-                <div class="row conversation first"> 
+                <div class="row conversation first">
                   <p class="conversation-timestamp">7:50pm</p>
                   <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
                     <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
                   </div>
                   <div class="col-sm-7 col-md-7 conversation-text">
                     <p><strong>Steve Martin</strong></p>
-                    <p>I'm choking on a bag of cheerios but can still type. Hit me up when you're back.</p>    
+                    <p>I'm choking on a bag of cheerios but can still type. Hit me up when you're back.</p>
                   </div>
                 </div>
 
-                <div class="row conversation"> 
+                <div class="row conversation">
                   <p class="conversation-timestamp">5:30am</p>
                   <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
                     <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
                   </div>
                   <div class="col-sm-7 col-md-7 conversation-text">
                     <p><strong>Phyllis Diller</strong></p>
-                    <p>I've been shot and I need money to pay for my hospital bills</p>    
+                    <p>I've been shot and I need money to pay for my hospital bills</p>
                   </div>
                 </div>
-              
-                <div class="row conversation"> 
+
+                <div class="row conversation">
                   <p class="conversation-timestamp">7:50pm</p>
                   <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
                     <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
                   </div>
                   <div class="col-sm-7 col-md-7 conversation-text">
                     <p><strong>Steve Martin</strong></p>
-                    <p>I'm choking on a bag of cheerios but can still type. Hit me up when you're back.</p>    
+                    <p>I'm choking on a bag of cheerios but can still type. Hit me up when you're back.</p>
                   </div>
                 </div>
 
-                <div class="row conversation"> 
+                <div class="row conversation">
                   <p class="conversation-timestamp">5:30am</p>
                   <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
                     <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
                   </div>
                   <div class="col-sm-7 col-md-7 conversation-text">
                     <p><strong>Phyllis Diller</strong></p>
-                    <p>I've been shot and I need money to pay for my hospital bills</p>    
+                    <p>I've been shot and I need money to pay for my hospital bills</p>
                   </div>
-                </div>                
+                </div>
 
-                <div class="row conversation"> 
+                <div class="row conversation">
                   <p class="conversation-timestamp">7:50pm</p>
                   <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
                     <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
                   </div>
                   <div class="col-sm-7 col-md-7 conversation-text">
                     <p><strong>Steve Martin</strong></p>
-                    <p>I'm choking on a bag of cheerios but can still type. Hit me up when you're back.</p>    
+                    <p>I'm choking on a bag of cheerios but can still type. Hit me up when you're back.</p>
                   </div>
                 </div>
 
-                <div class="row conversation"> 
+                <div class="row conversation">
                   <p class="conversation-timestamp">5:30am</p>
                   <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
                     <img class="img-responsive" src="http://piqueapp.github.io/assets/img/av.png">
                   </div>
                   <div class="col-sm-7 col-md-7 conversation-text">
                     <p><strong>Phyllis Diller</strong></p>
-                    <p>I've been shot and I need money to pay for my hospital bills</p>    
+                    <p>I've been shot and I need money to pay for my hospital bills</p>
                   </div>
                 </div>
 
               </div>
             </div>
           </div>
-      
-    
+
+
   </section>
 
 </div>
