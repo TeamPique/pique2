@@ -31,24 +31,23 @@ class UsersController < ApplicationController
   end
 
   def show
-    # if params[:id].to_i == current_user.id
-      # @followed_projects = current_user.projects_followed
+    if params[:id].to_i == current_user.id
+      @followed_projects = current_user.projects_followed
       @projects = Project.all
       @project = Project.find(params[:id])
       render "profile"
-    # else
-      # visitor_id = User.find(params[:id]).id
-      # have_visited = Visitor.where({user_id: visitor_id, visitor_id: current_user.id})
-      # if have_visited.empty? == true
-      #   Visitor.create({user_id: visitor_id, visitor_id: current_user.id, date: Date.today})
-      # end
+    else
+      visitor_id = User.find(params[:id]).id
+      have_visited = Visitor.where({user_id: visitor_id, visitor_id: current_user.id})
+      if have_visited.empty? == true
+        Visitor.create({user_id: visitor_id, visitor_id: current_user.id, date: Date.today})
+      end
       @user = User.find(params[:id])
       render "show"
     end
       # visitor = params[:visitor]
       # cur_user = @current_user.id
   end
-
   def new
     @user = User.new
   end
@@ -75,22 +74,8 @@ class UsersController < ApplicationController
 # current_user -- accesses signed-in user's info
 # user_session -- accesses the scope for the session
 
-def portfolio_params
-  params.permit(:portfolio,:id)
+# def portfolio_params
+#   params.permit(:portfolio,:id)
 
-  def index
-    @users = User.all
-  end
-
-  def new
-    @user = User.new
-  end
-
-  private
-
-  def portfolio_params
-    params.permit(:portfolio,:id)
-  end
-
-
+# end
 end

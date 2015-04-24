@@ -1,20 +1,114 @@
-Start Conversation
+<div class="wrapper message-view">
 
-<%= form_tag messages_path, method: :post do %>
-  <div class="form-group">
-    <%= label_tag 'message[subject]', 'Subject' %>
-    <%= text_field_tag 'message[subject]', nil, class: 'form-control', required: true %>
-  </div>
+    <header class="message-header">
+      <div id="multimenu" class="menu-wrapper">
+        <nav class="navbar yamm navbar-default" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+              </button>
+              <a class="navbar-brand" href="/"><img class="img-responsive nav-logo" src="http://piqueapp.github.io/assets/img/av.png"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul id="head-font" class="nav navbar-nav navbar-left">
+                <li><a href="/users">People</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <!-- <li><a href="#">About</a></li> -->
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/messages/new"><img src="assets/circle-plus.png"></a></li>
+                <li><a href="/conversations"><img src="assets/speech.png"></a></li>
+                <li><a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                      <img src="../assets/settings.png">
+                    </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <!-- <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Profile</a></li> -->
+                    <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!--/.container-fluid -->
+        </nav>
+      </div><!-- end menu-wrapper -->
+    </header><!-- end header -->
 
-  <div class="form-group">
-    <%= label_tag 'message[body]', 'Message' %>
-    <%= text_area_tag 'message[body]', nil, cols: 3, class: 'form-control', required: true %>
-  </div>
+    <section id="page-content" class="conversations-page-content clearfix">
+      <div class="container-fluid">
+        <div class="row">
+          <div id="sidebar" class="col-md-3 col-sm-3 col-xs-3 pull-left">
+<!--             <form>
+              <input type="text" placeholder="Search" class="form-control" autocomplete="off">
+            </form> -->
+            <div class="row sidebar-row compose-message">
+              <%= button_to "COMPOSE MESSAGE", new_message_path, :method => :get, :class => "btn-default btn-lg compose-message-btn" %>
+            </div>
+            <div id="sidebar-items">
+                <ul class="nav nav-pills nav-stacked">
+                  <%= mailbox_section 'inbox', @box %>
+                  <%= mailbox_section 'sent', @box %>
+                  <%#= mailbox_section 'trash', @box %>
+                </ul>
+            </div>
+<!--             <div id="sidebar-items">
+              <div class="row conversation-inbox-item">
+                <p><a href="/conversations"> Inbox </p>
+              </div>
+              <div class="row conversation-inbox-item">
+                <p><a href="/conversations?box=sent">Sent</a></p>
+              </div>
+              <div class="row conversation-inbox-item">
+                <p><a href="/conversations?box=trash">Trash</a></p>
+              </div>
+            </div> -->
+          </div>
 
-  <div class="form-group">
-    <%= label_tag 'recipients', 'Choose recipients' %>
-    <%= select_tag 'recipients', recipients_options, multiple: true, class: 'form-control chosen-it' %>
-  </div>
+          <div class="col-md-2 pull-right activity-feed">
+<!-- activity feed -->
 
-  <%= submit_tag 'Send', class: 'btn btn-primary' %>
-<% end %>
+
+          </div>
+
+          <div id="post-content" class="col-md-7 col-sm-7">
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 conversations-list">
+                <div class="navbar-collapse collapse conversations-nav">
+                  <p>Start Conversation</p>
+                </div>
+
+                <%= form_tag messages_path, method: :post do %>
+                  <div class="form-group">
+                    <%= label_tag 'message[subject]', 'Subject' %>
+                    <%= text_field_tag 'message[subject]', nil, class: 'form-control', required: true %>
+                  </div>
+
+                  <div class="form-group">
+                    <%= label_tag 'message[body]', 'Message' %>
+                    <%= text_area_tag 'message[body]', nil, cols: 3, class: 'form-control', required: true %>
+                  </div>
+
+                  <div class="form-group">
+                    <%= label_tag 'recipients', 'Choose recipients' %>
+                    <%= select_tag 'recipients', recipients_options, multiple: true, class: 'form-control chosen-it' %>
+                  </div>
+
+                  <%= submit_tag 'Send', class: 'btn btn-primary' %>
+                <% end %>
+
+
+              </div>
+            </div>
+          </div>
+
+
+  </section>
+
+</div>
+
+
+
+
+
+
