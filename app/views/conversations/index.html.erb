@@ -39,15 +39,22 @@
       <div class="container-fluid">
         <div class="row">
           <div id="sidebar" class="col-md-3 col-sm-3 col-xs-3 pull-left">
-            <form>
+<!--             <form>
               <input type="text" placeholder="Search" class="form-control" autocomplete="off">
-            </form>
+            </form> -->
             <div class="row sidebar-row compose-message">
               <%= button_to "COMPOSE MESSAGE", new_message_path, :method => :get, :class => "btn-default btn-lg compose-message-btn" %>
             </div>
             <div id="sidebar-items">
+                <ul class="nav nav-pills nav-stacked">
+                  <%= mailbox_section 'inbox', @box %>
+                  <%= mailbox_section 'sent', @box %>
+                  <%#= mailbox_section 'trash', @box %>
+                </ul>
+            </div>
+<!--             <div id="sidebar-items">
               <div class="row conversation-inbox-item">
-                <p><a href="/conversations"> Inbox </a></p>
+                <p><a href="/conversations"> Inbox </p>
               </div>
               <div class="row conversation-inbox-item">
                 <p><a href="/conversations?box=sent">Sent</a></p>
@@ -55,7 +62,7 @@
               <div class="row conversation-inbox-item">
                 <p><a href="/conversations?box=trash">Trash</a></p>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div class="col-md-2 pull-right activity-feed">
@@ -68,30 +75,21 @@
             <div class="row">
               <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 conversations-list">
                 <div class="navbar-collapse collapse conversations-nav">
-                  <ul class="nav navbar-left conversations-filters">
+                  <p>Your Conversations</p>
+                  <!-- <ul class="nav navbar-left conversations-filters">
                     <li>Mark Read</li>
                     <li>Mark Unread</li>
                     <li><i class="fa fa-trash"></i> Delete</li>
-                  </ul>
-                  <ul class="nav navbar-nav navbar-right">
-                    <li>All</li>
-                  </ul>
+                  </ul> -->
                 </div>
 
-                <% @conversations.each do |convo| %>
-                  <% convo.messages.each do |message| %>
-                <div class="row conversation first">
-                  <p class="conversation-timestamp"><%= message.created_at.strftime("%b, %d %Y") %> | <%= message.created_at.strftime("%H:%M") %></p>
-                  <div class="col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 conversation-av">
-                    <img class="img-responsive" src="<%= message.sender.image %>">
-                  </div>
-                  <div class="col-sm-7 col-md-7 conversation-text">
-                    <p><strong><%= message.sender.name %></strong></p>
-                    <p><%= message.subject %></p>
-                  </div>
-                </div>
-                  <% end %>
+                <%= render partial: 'conversations/conversation', collection: @conversations %>
+
+                <%= will_paginate %>
+
+                <%= form_tag messages_path, method: :post do %>
                 <% end %>
+
               </div>
             </div>
           </div>
@@ -101,37 +99,6 @@
 
 </div>
 
-
-Your Conversations
-
-
-<!-- ignore -->
-<div class="row">
-  <div class="col-sm-3">
-    <ul class="nav nav-pills nav-stacked">
-      <%= mailbox_section 'inbox', @box %>
-      <%= mailbox_section 'sent', @box %>
-      <%= mailbox_section 'trash', @box %>
-    </ul>
-  </div>
-
-
-<!-- ignore -->
-  <div class="col-sm-9">
-    <% if @box == 'trash' %>
-      <p><%= link_to 'Empty trash', empty_trash_conversations_path, class: 'btn btn-danger', method: :delete,
-                     data: {confirm: 'Are you sure?'} %></p>
-    <% end %>
-    <ul class="list-group">
-      <%= render partial: 'conversations/conversation', collection: @conversations %>
-    </ul>
-
-    <%= will_paginate %>
-  </div>
-  <%= form_tag messages_path, method: :post do %>
-        <% end %>
-
-</div>
 
 
 
