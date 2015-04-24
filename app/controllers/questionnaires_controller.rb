@@ -1,21 +1,26 @@
 class QuestionnairesController < ApplicationController
-	def index
-		@questionnaires = Questionnaire.all
-	end
+	# def index
+	# 	@questionnaires = Questionnaire.all
+	# 	# @users = User.all
+	# end
 
 	def show
 		@questionnaire = Questionnaire.find(params[:id])
+		@users = User.all
+		@user = User.find(params[:id]).user_id
 	end
 
 	def new
 		@questionnaire = Questionnaire.new
 		@user = User.find_by(params[:id]).name
+		@users = User.all
+		# redirect_to new_questionnaire_path
 	end
 
 	def create
 		questionnaire = Questionnaire.create(questionnaire_params)
 		questionnaire.save!
-		redirect_to questionnaires_path
+		redirect_to questionnaire
 	end
 
 	def edit
