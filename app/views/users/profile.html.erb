@@ -1,7 +1,7 @@
 
   <div class="wrapper message-view">
 
-    <header class="header">
+        <header class="header">
       <div id="multimenu" class="menu-wrapper">
         <nav class="navbar yamm navbar-default" role="navigation">
           <div class="container-fluid">
@@ -17,45 +17,17 @@
 
                 <li><a href="/users">People</a></li>
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="#">About</a></li>
 
               </ul>
               <ul id="nav" class="nav navbar-nav navbar-right">
-                <li><a><img src="../assets/circle-plus.png"></a></li>
-                <li><a><img src="../assets/speech.png"></a></li>
-                <!-- <li id="notification_li">
-                  <a href="#" id="notificationLink">
-                    <img src="../assets/check.png">
-                  </a>
-                  <div id="notificationContainer" class="clearfix">
-                    <div id="notificationTitle">Notifications</div>
-                      <div id="notificationsBody" class="notifications">
-                        <div class="row">
-                          <div class="col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 message-user-av notification">
-                            <img class="img-responsive message-av notification" src="http://pique.nyc/assets/img/av.png">
-                          </div>
-                          <div class="col-xs-7 col-sm-7 col-md-7 message-info-preview notification">
-                            <p><strong class="preview-username notification"><%#= current_user.name %></strong> We need to talk about bagels.</p>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-1 message-user-av notification">
-                            <img class="img-responsive message-av notification" src="http://pique.nyc/assets/img/av.png">
-                          </div>
-                          <div class="col-sm-7 col-md-7 message-info-preview notification">
-                            <p><strong class="preview-username notification">Nick Nolte</strong> I think I killed someone last night.</p>
-                          </div>
-                        </div>
-                      </div>
-                    <div id="notificationFooter"><a href="#">See All</a></div>
-                  </div>
-                </li> -->
+                <li><a href="/projects/new"><img src="../assets/circle-plus.png"></a></li>
+                <li><a href="/conversations"><img src="../assets/speech.png"></a></li>
                 <li><a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
                       <img src="../assets/settings.png">
                     </a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Profile</a></li>
-                    <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+                    <li class="settings-dropdown" role="presentation"><%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+                    </li>
                   </ul>
                 </li>
               </ul>

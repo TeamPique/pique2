@@ -83,7 +83,6 @@ class UsersController < ApplicationController
         Visitor.create({user_id: visitor_id, visitor_id: current_user.id, date: Date.today})
       end
       @user = User.find_by(id: params[:id])
-      binding.pry
       # @followed_projects = @user.projects_followed
       @projects = Project.where(owner: @user.name)
       interests = @user.questionnaire.Question_3
