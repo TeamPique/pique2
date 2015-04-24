@@ -204,18 +204,18 @@
   <!-- </div> --><!-- /.modal-dialog -->
 <!-- </div> --><!-- /.modal -->
 
-<div class"container">
+<!-- <div class"container">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
 
 
-<h1> <%= current_user.name %> </h1>
+<h1> <%#= current_user.name %> </h1>
 
-<img src="<%= current_user.image %>">
-<input type="hidden" name="visitors" value=<%=current_user.id%>>
-<%= form_for current_user, :url => '#', :html => { :multipart => true, :id => "paperclipPortfolio" }  do |form| %>
-  <%= form.file_field :portfolio %>
-<% end %>
+<img src="<%#= current_user.image %>">
+<input type="hidden" name="visitors" value=<%#=current_user.id%>>
+<%#= form_for current_user, :url => '#', :html => { :multipart => true, :id => "paperclipPortfolio" }  do |form| %>
+  <%#= form.file_field :portfolio %>
+<%# end %>
 
 <script>
 $('#paperclipPortfolio').on('change', paperclipAjax);
@@ -231,7 +231,7 @@ function paperclipAjax(e){
   $.ajax({
     dataType: "json",
     method: "PATCH",
-    url: "<%= user_path(current_user.id)%>",
+    url: "<%#= user_path(current_user.id)%>",
     data: formData,
     processData: false,
     contentType: false,
@@ -256,7 +256,7 @@ function paperclipAjax(e){
       <li><%#= project.name %> + <%#= project.collaborators %></li>
     </ul>
   <%# end %>
-</div>
+</div> -->
 
     </div>
   </div>

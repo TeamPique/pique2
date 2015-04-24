@@ -1,31 +1,139 @@
-<h1><%= @user.name %></h1>
-<img src="<%= @user.image %>">
-<% if @projects != nil %>
-<div class='projects'>Projects:
+
+  <div class="wrapper message-view">
+
+    <header class="header">
+      <div id="multimenu" class="menu-wrapper">
+        <nav class="navbar yamm navbar-default" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img class="img-responsive nav-logo" src="http://piqueapp.github.io/assets/img/av.png"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul id="head-font" class="nav navbar-nav navbar-left">
+
+                <li><a href="/users">People</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="#">About</a></li>
+
+              </ul>
+              <ul id="nav" class="nav navbar-nav navbar-right">
+                <li><a><img src="../assets/circle-plus.png"></a></li>
+                <li><a><img src="../assets/speech.png"></a></li>
+                <li><a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                      <img src="../assets/settings.png">
+                    </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Profile</a></li>
+                    <li class="settings-dropdown" role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!--/.container-fluid -->
+        </nav>
+      </div><!-- end menu-wrapper -->
+    </header><!-- end header -->
+
+    <section id="profile-page-content">
 
 
-  <li><% @projects.each do |project| %>
-  <a href="<%= project_path(project) %>" alt=""><%= @project.id %></a><br></li>
+      <div class="col-sm-3 col-md-3 col-lg-3 pull-right activity-feed">
+      </div>
 
-  <% end %>
-  <li><%= @project %></li>
+      <!-- <div id="profile-content" class="col-md-10 col-sm-10 col-xs-10"> -->
+
+      <div class="col-sm-8 col-md-8 profile-container">
+
+        <div class="profile-header">
+
+          <img class="img-responsive profile-pic" src="<%= @user.image %>">
+
+          <div class="send-message-btn-container">
+            <a href="/messages/new"><button class="btn-default btn-lg send-message-btn" data-toggle="modal" data-target="#profile-modal">SEND MESSAGE</button></a>
+          </div>
+
+          <div class="profile-name-loc-title">
+            <h3 class="profile-user-name"><%= @user.name %></h3>
+            <h7 class="profile-user-loc"><small><%= @user.location %></small></h7>
+            <h7 class="profile-user-title"><small><%= @user.headline %></small></h7>
+            <h7 class="profile-user-title"><small><%= @user.industry %></small></h7>
+            <h7 class="profile-user-title"><small>I am available for <strong><%= @availability %></strong> hour(s) a week.</small></h7><br />
+          </div>
+
+          <div class="profile-bio">
+<!--             <h7>this is where the user's bio will eventually go</h7> -->
+          </div>
+
+        </div>
+
+
+
+        <div class="container profile-body">
+
+          <h7 class="job-status"><small>I'm available for <%= @available_for %></h7>
+
+
+          <div class="row center-me">
+
+            <div class="col-sm-4 col-md-4 col-lg-4 skills-container sm-profile-container separation-right">
+              <div class="skills-header"><h6>Skills (coming soon!)</h6></div>
+              <div class="trait-content">
+                <div class="user-trait">Your skills here.</div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 interests-container sm-profile-container separation-left">
+              <div class="interests-header"><h6>Interests</h6></div>
+              <div class="trait-content">
+                <% @interests.each do |interest| %>
+                <div class="user-trait"><%= interest %></div>
+                <% end %>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row center-me">
+
+            <!-- <div class="col-sm-4 col-md-4 col-lg-4 a-container sm-profile-container col-centered separation-right">
+              <div class="a-header"><h6>Not Sure What This Is Yet</h6></div>
+              <div class="trait-content">
+                <div class="user-trait">Test Item</div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 b-container sm-profile-container col-centered separation-left">
+              <div class="b-header"><h6>Waiting For Details</h6></div>
+              <div class="trait-content">
+                <div class="user-trait">Test Item</div>
+              </div>
+            </div> -->
+
+          </div>
+
+          <div class="row center-me">
+            <div class="col-sm-8 col-md-8 col-lg-8 experience-container">
+              <div class="experience-header"><h6>Past Projects</h6></div>
+              <div class="experience-content">
+                <% @projects.each do |project| %>
+                <a href="/projects/<%= project.id %>"><div class="user-trait"><%= project.name %></div></a>
+                <% end %>
+              </div>
+            </div>
+          </div>
+
+          <!-- </div> -->
+        </div>
+      </div>
+
+    </section>
+
 </div>
-<% end %>
 
-
-
-
-
-
-<%#= current_user.name %>
-<!-- <img src="<%#= current_user.image %>"> -->
-<!-- <div class='projects'>Projects:
-  <li><%# @projects.each do |project| %>
-  <a href="<%#= project_path(project) %>" alt=""><%#= @project.id %></a><br></li>
-
-
-  <%# end %>
-  <li><%#= @project %></li>
+    </div>
+  </div>
 </div>
-
- -->
