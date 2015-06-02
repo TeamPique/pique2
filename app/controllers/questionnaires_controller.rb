@@ -8,7 +8,7 @@ class QuestionnairesController < ApplicationController
 	def show
 		@questionnaire = Questionnaire.find(params[:id])
 		@users = User.all
-		@user = User.find(params[:id]).user_id
+		@user = User.find(params[:id])
 	end
 
 
